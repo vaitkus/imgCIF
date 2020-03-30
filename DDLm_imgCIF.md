@@ -57,7 +57,7 @@ name of ``_diffrn.id``.
 ## mmCIF incompatibility
 
 imgCIF extends certain mmCIF categories in a way that renders some
-legitimate imgCIF data files incompatible with the mmCIF schema, by
+conforming imgCIF data files incompatible with the mmCIF schema, by
 adding extra key data names to categories:
 
 ### ``diffrn_detector``
@@ -90,13 +90,14 @@ imgCIF and DDLm
 DDLm dictionaries may be extended by creating an expansion dictionary
 that (among other things) can append keys to categories. This change
 in the schema is signalled by a new value of ``_audit.schema``.  The
-above modifications to the mmCIF schema can be captured by defining a
-``mmcif`` imgCIF dictionary that matches precisely the mmCIF schema,
-and a ``default`` dictionary that includes the extra key data names.
+above modifications by imgCIF to the mmCIF schema can be captured by defining a
+``mmcif`` imgCIF dictionary (in DDLm) that matches precisely the mmCIF schema,
+leaving the current imgCIF dictionary (DDLm version) as the ``default``
+schema.
 
 Going in the other direction, the core CIF dictionary does not loop
 ``diffrn``, and so a further dictionary is possible that does not use
-``_diffrn.id`` and its children as a key data names at all.  So there
+``_diffrn.id`` and its children as key data names at all.  So there
 are 3 schemas: no ``_diffrn.id``, ``_diffrn.id`` only, and full
 imgCIF.
 
