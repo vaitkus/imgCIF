@@ -153,11 +153,11 @@ Program of work
 
 Given the above considerations, it is proposed that:
 
-1. A ``mmCIF`` schema is defined that loops the categories that are
+1. A DDLm cif core schema is defined, provisionally labelled ``multi``, that loops the categories that are
 looped in mmCIF.
 
 2. Versions of DDLm imgCIF are defined corresponding to the 3 schemes
-outlined above ('core', 'mmCIF' and 'default').
+outlined above ('core', 'multi' and 'default').
 
 3. Instructions for including raw data that can be described using
 imgCIF data names are prepared.
