@@ -9,7 +9,7 @@ This repository holds a DDLm version of the imgCIF dictionary found in the
 main branch of that repository in this repository's main branch. This DDLm
 version may be used as a data name reference.
 
-# Deriving the DDLm version from the DDL2 version
+## Deriving the DDLm version from the DDL2 version
 
 The DDLm version was automatically obtained from the DDL2 version by running the
 command:
