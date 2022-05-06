@@ -4,8 +4,8 @@ data_CIF_IMG.DIC
 
     _dictionary.title             Cif_img.dic
     _dictionary.class             Instance
-    _dictionary.version           1.8.4
-    _dictionary.date              2021-03-16
+    _dictionary.version           1.8.5
+    _dictionary.date              2021-07-09
     _dictionary.ddl_conformance   3.14.0
     _dictionary.namespace         Ddlm
     _description.text
@@ -15,8 +15,10 @@ data_CIF_IMG.DIC
 #             and Crystallographic Binary File Dictionary (CBF)              #
 #            Extending the Macromolecular CIF Dictionary (mmCIF)             #
 #                                                                            #
-#                              Version 1.8.4                                 #
-#                              of 2021-03-20                                 #
+#                              Version 1.8.5                                 #
+#                              of 2021-07-09                                 #
+#                                                                            #
+#                                                                            #
 #    ###################################################################     #
 #    # *** WARNING *** THIS IS A DRAFT FOR DISCUSSION *** WARNING ***  #     #
 #    #                 SUBJECT TO CHANGE WITHOUT NOTICE                #     #
@@ -53,10 +55,12 @@ data_CIF_IMG.DIC
 #                  _array_data.array_id
 #                  _array_data.binary_id
 #                  _array_data.data
+#                  _array_data.external_data_id
 #                  _array_data.header_contents
 #                  _array_data.header_convention
 #                  _array_data.variant
 #
+#        category  ARRAY_DATA_EXTERNAL_DATA
 #        category  ARRAY_ELEMENT_SIZE
 #
 #                  _array_element_size.array_id
@@ -404,6 +408,15 @@ data_CIF_IMG.DIC
 |                ||                          |                                                                      ||
 |                ||                          | For full processing and archiving, most of the tags in this          ||
 |                ||                          | dictionary will need to be populated.                                ||
+|                ||-------------------------------------------------------------------------------------------------||
+|                || +---------------------------------------------------------------------------------------------+ ||
+|                || |   | ARRAY_DATA_EXTERNAL_DATA     | Data items in the ARRAY_DATA_EXTERNAL_DATA category      | ||
+|                || |   |                              | record information needed to refer to data arrays in     | ||
+|                || |   |                              | external datasets.  All necessary metadata must also     | ||
+|                || |   |                              | be copied or linked.                                     | ||
+|                || |   |-----------------------------------------------------------------------------------------| ||
+|                || +---------------------------------------------------------------------------------------------+ ||
+|                |+-------------------------------------------------------------------------------------------------+|
 |                ||--------------------------+----------------------------------------------------------------------||
 |                || ARRAY_ELEMENT_SIZE       | Data items in the ARRAY_ELEMENT_SIZE category record the physical    ||
 |                ||                          | size of array elements along each array dimension.                   ||
@@ -687,8 +700,8 @@ save_HEAD
     _import.get
         [
           {
- 'file':https://raw.githubusercontent.com/COMCIFS/cif_core/master/cif_core.dic
-          'mode':Full  'save':cif_core
+  'file':https://raw.githubusercontent.com/COMCIFS/cif_core/master/cif_core.dic
+  'if_dupl':Ignore  'mode':Full  'save':cif_core
           }
         ]
 
@@ -1161,6 +1174,29 @@ save_array_data.data
 
 save_
 
+save_array_data.external_data_id
+
+    _definition.id                '_array_data.external_data_id'
+    _description.text
+;
+    This item is a pointer to _array_data_external_data.id in the
+     ARRAY_DATA_EXTERNAL_DATA category.
+
+     If not given, it defaults to 1.
+;
+    _name.category_id             array_data
+    _name.object_id               external_data_id
+    _name.linked_item_id          '_array_data_external_data.id'
+    _name.ddl2_mandatory          Implicit
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+    _type.ddl2_code               Code
+    _enumeration.default          1
+
+save_
+
 save_array_data.header_contents
 
     _definition.id                '_array_data.header_contents'
@@ -1168,11 +1204,7 @@ save_array_data.header_contents
 ;
     This item is a text field for use in minimal CBF files to carry
      essential header information to be kept with image data
-     in _array_data.data when the tags that normally carry the
-     structured metadata for the image have not been populated.
-
-     Normally this data item should not appear when the full set
-     of tags has been populated and _diffrn_data_frame.details
+     in _array_data.data_diffrn_data_frame.details
      appears.
 ;
     _name.category_id             array_data
@@ -1236,6 +1268,285 @@ save_array_data.variant
     _type.contents                Text
     _type.ddl2_code               Code
     _enumeration.default          .
+
+save_
+
+save_ARRAY_DATA_EXTERNAL_DATA
+
+    _definition.id                ARRAY_DATA_EXTERNAL_DATA
+    _definition.scope             Category
+    _definition.class             Loop
+    _description.text
+;
+    Data items in the ARRAY_DATA_EXTERNAL_DATA category optionally
+     record the location and essential characteristics of arrays of data for
+    use in  ARRAY_DATA that are found external to the cif_img file.
+;
+    _name.category_id             HEAD
+    _name.object_id               ARRAY_DATA_EXTERNAL_DATA
+    _name.ddl2_mandatory          No
+    _category_key.name            '_array_data_external_data.id'
+
+save_
+
+save_array_data_external_data.format
+
+    _definition.id                '_array_data_external_data.format'
+    _description.text
+;
+    The format in which raw array data referenced by
+    _array_data_external_data.uri and following archive extraction can be
+    accessed. Items in array_structure and array_structure_list refer
+    to the data after any decompressions and other transformations
+    performed by standard libraries associated with the format as
+    described in the description of each format below.
+;
+    _name.category_id             array_data_external_data
+    _name.object_id               format
+    _name.ddl2_mandatory          No
+
+    loop_
+      _enumeration_set.state
+      _enumeration_set.detail
+         CBF
+;
+         The contents of _array_data.data in a single-frame imgCBF file. Other
+         datanames in the external file are ignored.
+;
+         SMV
+;
+         An unprocessed sequence of bytes contained in a file conforming to the
+         SMV format as used by ADSC and other CCD manufacturers.
+;
+         HDF5
+;
+         A narray of numbers contained in a dataset in an HDF5 file as returned
+         by HDF5 library functions. '_array_data_external_data.path' is the
+         internal HDF5 path. In an HDF5 file, the path typically identifies a
+         dataset with multiple images.
+;
+         MAR
+;
+         An array of numbers corresponding to a decompressed single frame
+         contained within a MARCCD file (TIFF format).
+;
+         Bruker
+;
+         An array of numbers corresponding to a decompressed single frame from
+         a data file generated by Bruker equipment.
+;
+
+    loop_
+      _description_example.case
+      _description_example.detail
+;
+         loop_
+         _array_data.array_id
+         _array_data.binary_id
+         _array_data.external_data_id
+         1 1 1
+         1 2 2
+         loop_
+         _array_data_external_data.id
+         _array_data_external_data.format
+         _array_data_external_data.uri
+         _array_data_external_data.path
+         _array_data_external_data.frame
+         1 HDF5 https://zenodo.org/record/12345/files/tartaric.h5
+         /entry1/detector1/data 1 2 HDF5
+         https://zenodo.org/record/12345/files/tartaric.h5
+         /entry1/detector1/data 2 ...
+;
+;
+         The frames are contained in a single HDF5-format file accessible
+         at https://zenodo.org/record/12345/files/tartaric.h5. An array of 2D
+         images is found at HDF5 location entry1/detector1/data
+;
+;
+         loop_
+         _array_data.array_id
+         _array_data.binary_id
+         _array_data.external_data_id
+         1 1 1
+         1 2 2
+         loop_
+         _array_data_external_data.id
+         _array_data_external_data.format
+         _array_data_external_data.version
+         _array_data_external_data.uri
+         1 Bruker Smart6000 https://uni_repo.edu/5341/run1/tartaric.001
+         2 Bruker Smart6000 https://uni_repo.edu/5341/run1/tartaric.002
+         ...
+;
+;
+         Frames are contained in individual Smart6000 Bruker-format files
+         accessible using https://uni_repo.edu/5341 in subdirectory run1.
+;
+;
+                  loop_
+                  _array_data.array_id
+                  _array_data.binary_id
+                  _array_data.external_data_id
+                  1 1 1
+                  1 2 2
+                  loop_
+                  _array_data_external_data.format
+                  _array_data_external_data.uri
+                  _array_data_external_data.format
+                  _array_data_external_data.path
+                  1 SMV
+https://data.proteindiffraction.org/ssgcid/MyulA_01062_a_B12-sddc0001574_7k69.tar.bz2
+                      TBZ
+MyulA_01062_a_B12-sddc0001574_7k69/data/317895h4_y_0001.img
+                  2 SMV
+https://data.proteindiffraction.org/ssgcid/MyulA_01062_a_B12-sddc0001574_7k69.tar.bz2
+                      TBZ
+MyulA_01062_a_B12-sddc0001574_7k69/data/317895h4_y_0002.img
+;
+;
+         Frames with SMV format are contained at data.proteindiffraction.org in
+         a tarred archive compressed with bzip2.
+;
+
+save_
+
+save_array_data_external_data.frame
+
+    _definition.id                '_array_data_external_data.frame'
+    _description.text
+;
+    The position of the raw data array in what may possibly be a
+    multi-dimensional array of data referenced by
+       _array_data_external_data.uri and _array_data_external_data.path.
+    For many of the formats, data for a single frame is identified by that
+    reference.  If data for multiple frames or data for portions of
+    one or more frames is referenced, the desired portion can be
+    identified dimension by dimension as an array section identifier
+    the form
+       ARRAYID(start1:end1:stride1,start2:end2:stride2, ...)
+    or other valid ARRAY_STRUCTURE_LIST_SECTION
+    identifier.
+
+    Note that the precendence ordering of dimensions varies, even within a
+    single specified format.  For example HDF5 supports both C slowest first
+    and Fortran fastest first, so it is essential to properly populate
+    ARRAY_STRUCTURE_LIST category.
+;
+    _name.category_id             array_data_external_data
+    _name.object_id               frame
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Integer
+    _type.ddl2_code               Int
+    _enumeration.default          1
+    _description_example.case     4
+    _description_example.detail
+        'The fourth frame in the referenced data array'
+
+save_
+
+save_array_data_external_data.id
+
+    _definition.id                '_array_data_external_data.id'
+    _description.text
+;
+    The value of _array_data_external_data.id must uniquely identify
+     each item of array_data_external_data.
+
+     This item has been made implicit and given a default value of 1
+     as a convenience in writing miniCBF files.  Normally an
+     explicit name with useful content should be used.
+;
+    _name.category_id             array_data_external_data
+    _name.object_id               id
+    _name.ddl2_mandatory          Implicit
+    _type.purpose                 Key
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+    _type.ddl2_code               Code
+    _enumeration.default          1
+
+save_
+
+save_array_data_external_data.path
+
+    _definition.id                '_array_data_external_data.path'
+    _description.text
+;
+    An optional format-dependent path that is used to locate the
+    external image within the object referenced by the combination of
+    _array_data_external_data.uri and _array_data_external_data.path.
+;
+    _name.category_id             array_data_external_data
+    _name.object_id               path
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+    _type.ddl2_code               Text
+
+save_
+
+save_array_data_external_data.uri
+
+    _definition.id                '_array_data_external_data.uri'
+    _description.text
+;
+    A URI describing the location of an image external to the current data block
+;
+    _name.category_id             array_data_external_data
+    _name.object_id               uri
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+    _type.ddl2_code               Code
+
+save_
+
+save_array_data_external_data.variant
+
+    _definition.id                '_array_data_external_data.variant'
+    _description.text
+;
+    The value of _array_data_external_data.variant gives the variant
+     to which the given ARRAY_DATA_EXTERNAL_DATA row is related.
+
+     If this value is not given, the variant is assumed to be
+     the default null variant.
+
+     This item is a pointer to _variant.variant in the
+     VARIANT category.
+;
+    _name.category_id             array_data_external_data
+    _name.object_id               variant
+    _name.ddl2_mandatory          Implicit
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+    _type.ddl2_code               Code
+    _enumeration.default          .
+
+save_
+
+save_array_data_external_data.version
+
+    _definition.id                '_array_data_external_data.version'
+    _description.text
+;
+    An identifier for the version of the file format described by
+    '_array_data_external_data.format'.
+;
+    _name.category_id             array_data_external_data
+    _name.object_id               version
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+    _type.ddl2_code               Code
 
 save_
 
@@ -2762,9 +3073,6 @@ save_ARRAY_STRUCTURE_LIST_SECTION
     max(_array_structure_list_section.start,
     _array_structure_list_section.end)].
 
-
-
-
      The ordering of these elements is determined by the overall ordering of
      _array_structure_list_section.array_id and not by the ordering implied
      by the stride.
@@ -2946,7 +3254,6 @@ save_array_structure_list_section.start
       max(_array_structure_list_section.start,
          _array_structure_list_section.end)].
 
-
      The ordering of these elements is determined by the overall
      ordering of _array_structure_list_section.array_id and not by
      the ordering implied by the stride.
@@ -3053,7 +3360,6 @@ save_AXIS
 
       THE IMGCIF STANDARD LABORATORY COORDINATE SYSTEM
 
-
       The imgCIF standard laboratory coordinate system is a right-handed
       orthogonal coordinate system similar to that used by MOSFLM,
       but imgCIF puts Z along the X-ray beam, rather than putting X along the
@@ -3072,7 +3378,6 @@ save_AXIS
       For this definition the sample positioning system will be set at
       its initial reference position for the experiment.
 
-
                               | Y (to complete right-handed system)
                               |
                               |
@@ -3086,9 +3391,6 @@ save_AXIS
                           /
                          /
                         /Z (to source)
-
-
-
 
       Axis 1 (X): The X-axis is aligned to the mechanical axis pointing from
       the sample or specimen along the  principal axis of the goniometer or
@@ -3161,7 +3463,6 @@ save_AXIS
       with the centre of the sample.
 
       THE NEXUS/HDF5 MCSTAS LABORATORY COORDINATE SYSTEM
-
 
       The standard coordinate frame in NeXus is the McStas coordinate frame,
       in which the Z-axis points in the direction of the incident beam, the
@@ -3261,8 +3562,6 @@ save_AXIS
     calculation, because the   offsets of dependent axes are given with all
     axes at their zero settings.
 
-
-
       The cbf_location attribute gives a mapping back into the CBF AXIS category
       in dotted notation.  The first component is the data block.  The second
       component is "axis".  The third component is either "vector" or
@@ -3270,9 +3569,7 @@ save_AXIS
       AXIS.OFFSET[...] respectively.  The last component is the CBF row number
       to facilitate recovering the original CBF layout.
 
-
       THE DIRECT LATTICE (FRACTIONAL COORDINATES)
-
 
       The unit cell, reciprocal cell and crystallographic orthogonal
       Cartesian coordinate system are defined by the CELL and the matrices
@@ -3291,7 +3588,6 @@ save_AXIS
       into a repeating regular array of unit cells.  Each unit cell is defined
       by three vectors, a, b and c.  To quote from Drenth (2001),
 
-
       "The choice of the unit cell is not unique and therefore, guidelines
       have been established for selecting the standard basis vectors and
       the origin.  They are based on symmetry and metric considerations:
@@ -3305,7 +3601,7 @@ save_AXIS
         (5)  Of those not directed along a, none is shorter than b.
         (6)  Of those not lying in the ab plane, none is shorter than c.
         (7)  The three angles between the basis vectors a, b and c are
-        either all acute (<90 degrees) or all obtuse (>=90 degrees)."
+        either all acute (< 90 degrees) or all obtuse ( >= 90 degrees)."
 
       These rules do not produce a unique result that is stable under
       the assumption of experimental errors, and the resulting cell
@@ -3324,7 +3620,6 @@ save_AXIS
       grid coordinates of (1,1,1), i.e. array indices of (1,1,1).
 
       THE ORTHOGONAL CARTESIAN COORDINATE SYSTEM (REAL SPACE)
-
 
       The orthogonal Cartesian coordinate system is a transformation of
       the direct lattice to the actual physical coordinates of atoms in
@@ -3347,7 +3642,6 @@ save_AXIS
 
       THE RECIPROCAL LATTICE
 
-
       The reciprocal lattice coordinate system is used for diffraction
       intensities.  It is based on the reciprocal cell, the dual of the cell,
       in which reciprocal cell edges are derived from direct cell faces:
@@ -3365,8 +3659,6 @@ save_AXIS
       \%angstr\"oms (\%A^-1^).  A dimensionless form can be obtained by
       multiplying by the wavelength.  Reflections are commonly indexed against
       this coordinate system as (h, k, l) triples.
-
-
 
       References:
 
@@ -3706,7 +3998,6 @@ save_AXIS
          ELE_D0Q3S6A1 CSPAD_FRONT
          ELE_D0Q3S7A0 CSPAD_FRONT
          ELE_D0Q3S7A1 CSPAD_FRONT
-
 
           loop_
          _axis.id
@@ -4135,7 +4426,6 @@ save_AXIS
          ELE_D0Q3S6A1 CSPAD_FRONT
          ELE_D0Q3S7A0 CSPAD_FRONT
          ELE_D0Q3S7A1 CSPAD_FRONT
-
 
           loop_
          _axis.id
@@ -4898,7 +5188,6 @@ save_AXIS
          This defines a rotation axis around the z axis in the frame of
          quadrant 2.
 
-
          Next a translation axis is listed:
          AXIS_D0Q2S5 translation detector
              AXIS_D0Q2 . . . 34.5494875 -24.1901 0.0 89.68154 AXIS_D0Q2S5_ROT
@@ -5300,7 +5589,7 @@ save_DIFFRN_DATA_FRAME
     _definition.id                DIFFRN_DATA_FRAME
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2022-04-05
+    _definition.update            2022-05-06
     _description.text
 ;
     Data items in the DIFFRN_DATA_FRAME category record
@@ -5623,7 +5912,7 @@ save_
 save_diffrn_data_frame.diffrn_id
 
     _definition.id                '_diffrn_data_frame.diffrn_id'
-    _definition.update            2022-04-05
+    _definition.update            2022-05-06
     _description.text
 ;
     Identifier for data collection. Values of this item are drawn from values
@@ -5692,7 +5981,7 @@ save_DIFFRN_DETECTOR
     _definition.id                DIFFRN_DETECTOR
     _definition.scope             Category
     _definition.class             Set
-    _definition.update            2022-04-05
+    _definition.update            2022-05-06
     _description.text
 ;
     Data items in the DIFFRN_DETECTOR category describe the
@@ -5984,7 +6273,7 @@ save_DIFFRN_DETECTOR_AXIS
     _definition.id                DIFFRN_DETECTOR_AXIS
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2022-04-05
+    _definition.update            2022-05-06
     _description.text
 ;
     Data items in the DIFFRN_DETECTOR_AXIS category associate
@@ -6052,7 +6341,7 @@ save_
 save_diffrn_detector_axis.diffrn_id
 
     _definition.id                '_diffrn_detector_axis.diffrn_id'
-    _definition.update            2022-04-05
+    _definition.update            2022-05-06
     _description.text
 ;
     Identifier for data collection. Values of this item are drawn from values
@@ -6121,7 +6410,7 @@ save_DIFFRN_DETECTOR_ELEMENT
     _definition.id                DIFFRN_DETECTOR_ELEMENT
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2022-04-05
+    _definition.update            2022-05-06
     _description.text
 ;
     Data items in the DIFFRN_DETECTOR_ELEMENT category record
@@ -6273,7 +6562,7 @@ save_
 save_diffrn_detector_element.diffrn_id
 
     _definition.id                '_diffrn_detector_element.diffrn_id'
-    _definition.update            2022-04-05
+    _definition.update            2022-05-06
     _description.text
 ;
     Identifier for data collection. Values of this item are drawn from values
@@ -6448,7 +6737,7 @@ save_DIFFRN_FRAME_DATA
     _definition.id                DIFFRN_FRAME_DATA
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2022-04-05
+    _definition.update            2022-05-06
     _description.text
 ;
     Data items in the DIFFRN_FRAME_DATA category record
@@ -6581,7 +6870,7 @@ save_
 save_diffrn_frame_data.diffrn_id
 
     _definition.id                '_diffrn_frame_data.diffrn_id'
-    _definition.update            2022-04-05
+    _definition.update            2022-05-06
     _description.text
 ;
     Identifier for data collection. Values of this item are drawn from values
@@ -6623,7 +6912,7 @@ save_DIFFRN_MEASUREMENT
     _definition.id                DIFFRN_MEASUREMENT
     _definition.scope             Category
     _definition.class             Set
-    _definition.update            2022-04-05
+    _definition.update            2022-05-06
     _description.text
 ;
     Data items in the DIFFRN_MEASUREMENT category record details
@@ -7018,7 +7307,7 @@ save_DIFFRN_MEASUREMENT_AXIS
     _definition.id                DIFFRN_MEASUREMENT_AXIS
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2022-04-05
+    _definition.update            2022-05-06
     _description.text
 ;
     Data items in the DIFFRN_MEASUREMENT_AXIS category associate
@@ -7061,7 +7350,7 @@ save_
 save_diffrn_measurement_axis.diffrn_id
 
     _definition.id                '_diffrn_measurement_axis.diffrn_id'
-    _definition.update            2022-04-05
+    _definition.update            2022-05-06
     _description.text
 ;
     Identifier for data collection. Values of this item are drawn from values
@@ -7176,7 +7465,7 @@ save_DIFFRN_RADIATION
     _definition.id                DIFFRN_RADIATION
     _definition.scope             Category
     _definition.class             Set
-    _definition.update            2022-04-05
+    _definition.update            2022-05-06
     _description.text
 ;
     Data items in the DIFFRN_RADIATION category describe
@@ -7952,7 +8241,7 @@ save_diffrn_radiation.polarizn_stokes_v
     _definition.id                '_diffrn_radiation.polarizn_Stokes_V'
     _description.text
 ;
-    The quantity2*sqrt(IpIn), with a + sign for right-handed
+    The quantity +/-2*sqrt(IpIn), with a + sign for right-handed
      circular polarization, where Ip is the intensity
      (amplitude squared) of the electric vector in the plane of
      polarization and In is the intensity (amplitude squared) of
@@ -7997,7 +8286,7 @@ save_diffrn_radiation.polarizn_stokes_v_esd
 ;
     The standard uncertainty (estimated standard deviation, e.s.d.)
      of _diffrn_radiation.polarizn_Stokes_V,
-    2*sqrt(IpIn), with a + sign for right-handed circular
+     +/-2*sqrt(IpIn), with a + sign for right-handed circular
      polarization, where Ip is the intensity
      (amplitude squared) of the electric vector in the plane of
      polarization and In is the intensity (amplitude squared) of
@@ -8277,7 +8566,7 @@ save_DIFFRN_SCAN
     _definition.id                DIFFRN_SCAN
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2022-04-05
+    _definition.update            2022-05-06
     _description.text
 ;
     Data items in the DIFFRN_SCAN category describe the parameters of one
@@ -8779,7 +9068,6 @@ AABRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAZBQSr1sKNBOeOe9HITdMdDUnbq7bg
          0 0 0            ELEMENT_RAD      translation detector ELEMENT_ROT 0 1
          0 0 0 0
 
-
                    # category ARRAY_STRUCTURE_LIST
                    loop_
                    _array_structure_list.array_id
@@ -8946,7 +9234,7 @@ save_
 save_diffrn_scan.diffrn_id
 
     _definition.id                '_diffrn_scan.diffrn_id'
-    _definition.update            2022-04-05
+    _definition.update            2022-05-06
     _description.text
 ;
     Identifier for data collection. Values of this item are drawn from values
@@ -9162,7 +9450,7 @@ save_DIFFRN_SCAN_AXIS
     _definition.id                DIFFRN_SCAN_AXIS
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2022-04-05
+    _definition.update            2022-05-06
     _description.text
 ;
     Data items in the DIFFRN_SCAN_AXIS category describe the settings of
@@ -9323,7 +9611,7 @@ save_
 save_diffrn_scan_axis.diffrn_id
 
     _definition.id                '_diffrn_scan_axis.diffrn_id'
-    _definition.update            2022-04-05
+    _definition.update            2022-05-06
     _description.text
 ;
     Identifier for data collection. Values of this item are drawn from values
@@ -9574,7 +9862,7 @@ save_DIFFRN_SCAN_COLLECTION
     _definition.id                DIFFRN_SCAN_COLLECTION
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2022-04-05
+    _definition.update            2022-05-06
     _description.text
 ;
     Data items in the DIFFRN_SCAN_COLLECTION category describe
@@ -9631,7 +9919,7 @@ save_
 save_diffrn_scan_collection.diffrn_id
 
     _definition.id                '_diffrn_scan_collection.diffrn_id'
-    _definition.update            2022-04-05
+    _definition.update            2022-05-06
     _description.text
 ;
     Identifier for data collection. Values of this item are drawn from values
@@ -9750,7 +10038,7 @@ save_DIFFRN_SCAN_FRAME
     _definition.id                DIFFRN_SCAN_FRAME
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2022-04-05
+    _definition.update            2022-05-06
     _description.text
 ;
     Data items in the DIFFRN_SCAN_FRAME category describe
@@ -9790,7 +10078,7 @@ save_
 save_diffrn_scan_frame.diffrn_id
 
     _definition.id                '_diffrn_scan_frame.diffrn_id'
-    _definition.update            2022-04-05
+    _definition.update            2022-05-06
     _description.text
 ;
     Identifier for data collection. Values of this item are drawn from values
@@ -10091,7 +10379,7 @@ save_diffrn_scan_frame.polarizn_stokes_v
     _definition.id                '_diffrn_scan_frame.polarizn_Stokes_V'
     _description.text
 ;
-    The quantity2*sqrt(IpIn), with a + sign for right-handed
+    The quantity +/-2*sqrt(IpIn), with a + sign for right-handed
      circular polarization, where Ip is the intensity
      (amplitude squared) of the electric vector in the plane of
      polarization and In is the intensity (amplitude squared) of
@@ -10136,7 +10424,7 @@ save_diffrn_scan_frame.polarizn_stokes_v_esd
 ;
     The standard uncertainty (estimated standard deviation, e.s.d.)
      of _diffrn_scan_frame.polarizn_Stokes_V,
-    2*sqrt(IpIn), with a + sign for right-handed circular
+     +/-2*sqrt(IpIn), with a + sign for right-handed circular
      polarization, where Ip is the intensity
      (amplitude squared) of the electric vector in the plane of
      polarization and In is the intensity (amplitude squared) of
@@ -10268,7 +10556,7 @@ save_DIFFRN_SCAN_FRAME_AXIS
     _definition.id                DIFFRN_SCAN_FRAME_AXIS
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2022-04-05
+    _definition.update            2022-05-06
     _description.text
 ;
     Data items in the DIFFRN_SCAN_FRAME_AXIS category describe the
@@ -10396,7 +10684,7 @@ save_
 save_diffrn_scan_frame_axis.diffrn_id
 
     _definition.id                '_diffrn_scan_frame_axis.diffrn_id'
-    _definition.update            2022-04-05
+    _definition.update            2022-05-06
     _description.text
 ;
     Identifier for data collection. Values of this item are drawn from values
@@ -10608,7 +10896,7 @@ save_DIFFRN_SCAN_FRAME_MONITOR
     _definition.id                DIFFRN_SCAN_FRAME_MONITOR
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2022-04-05
+    _definition.update            2022-05-06
     _description.text
 ;
     Data items in the DIFFRN_SCAN_FRAME_MONITOR category record
@@ -10670,7 +10958,6 @@ save_DIFFRN_SCAN_FRAME_MONITOR
      MAR345-SN26 DETECTOR_PITCH
      BSM01 MONITOR_Z
 
-
     # category DIFFRN_DATA_FRAME
     loop_
     _diffrn_data_frame.id
@@ -10678,7 +10965,6 @@ save_DIFFRN_SCAN_FRAME_MONITOR
     _diffrn_data_frame.array_id
     _diffrn_data_frame.binary_id
      FRAME1 ELEMENT1 ARRAY1 1
-
 
     # category DIFFRN_SCAN
     loop_
@@ -10808,7 +11094,7 @@ save_
 save_diffrn_scan_frame_monitor.diffrn_id
 
     _definition.id                '_diffrn_scan_frame_monitor.diffrn_id'
-    _definition.update            2022-04-05
+    _definition.update            2022-05-06
     _description.text
 ;
     Identifier for data collection. Values of this item are drawn from values
@@ -11745,7 +12031,22 @@ save_
       _dictionary_audit.version
       _dictionary_audit.date
       _dictionary_audit.revision
-         1.8.4                    2021-03-16
+         1.8.5                    2021-07-09
+;
+       Handling of external data (jrh, ab, hjb)
+
+        + Remove preliminary versions of external data tags in ARRAY_DATA
+        + Add ARRAY_DATA_EXTERNAL_DATA
+        + Add _array_data.external_data_id
+        + Add _array_data_external_data.format
+        + Add _array_data_external_data.frame
+        + Add _array_data_external_data.id
+        + Add _array_data_external_data.path
+        + Add _array_data_external_data.uri
+        + Add _array_data_external_data.variant
+        + Add _array_data_external_data.version
+;
+         1.8.4                    2021-04-15
 ;
        Copy-editing refinements (bm)
 
@@ -11755,6 +12056,20 @@ save_
         + Change uses of \%Angstroms to \%angstr\"oms
         + Change category save frames to upper case names
         + Fix misssing superscript terminating ^
+
+        Preliminary version of external data tags (jrh)
+
+        + Add _array_data.external_format
+        + Add _array_data.external_version
+        + Add _array_data.external_location_uri
+        + Add _array_data.external_path
+        + Add _array_data.external_frame
+        + Add _array_data.external_archive_path
+        + Add _array_data.external_archive_format
+
+        Note the second block of mads is a preliminary version.  When they are
+        done they may well be removed from here and reappear in a 1.8.5
+        dictionary.
 ;
          1.8.3                    2021-02-28
 ;
@@ -12198,7 +12513,6 @@ save_
 
        + Change '_diffrn_detector_axis.id' to
        '_diffrn_detector_axis.detector_id'.
-
 
        + Add '_diffrn_measurement_axis.measurement_device' and change
          '_diffrn_measurement_axis.id' to
