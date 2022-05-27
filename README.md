@@ -15,7 +15,7 @@ The DDLm version was automatically obtained from the DDL2 version by running the
 command:
 
 ```
-julia ddl_to_ddl.jl -c cif_core.dic -i -k _diffrn.id -t "Identifier for data collection." -o cif_img.dic cif_img_1.8.4.dic ddl2
+julia ddl_to_ddl.jl -c cif_core.dic -i -k _diffrn.id -t "Identifier for data collection." -o cif_img.dic cif_img_1.8.6.dic ddl2
 ```
 
 using the `ddl_to_ddl.jl` tool and associated translation dictionaries from the
