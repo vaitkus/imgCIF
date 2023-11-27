@@ -712,7 +712,7 @@ save_HEAD
         [
           {
           'dupl':Ignore
-   'file':https://raw.githubusercontent.com/COMCIFS/cif_core/master/cif_core.dic
+   'file':https://www.iucr.org/__data/iucr/cif/dictionaries/cif_core_3.2.0.dic
           'mode':Full  'save':cif_core
           }
         ]
