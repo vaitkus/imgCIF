@@ -3,7 +3,7 @@
 The imgCIF dictionary provides 
 data names for description of raw image data, usually from diffraction experiments. 
 Currently the main development of imgCIF takes place
-in the [cbflib repository](https://github.com/yayahjb/cbflib/tree/master/doc).
+in the [cbflib repository](https://github.com/dials/cbflib/tree/main/doc).
 
 This repository holds a DDLm version of the imgCIF dictionary found in the
 main branch of that repository in this repository's main branch. This DDLm
