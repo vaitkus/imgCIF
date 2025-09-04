@@ -781,7 +781,7 @@ save_
 
 save_ARRAY_DATA
 
-    _definition.id                array_data
+    _definition.id                ARRAY_DATA
     _definition.scope             Category
     _definition.class             Loop
     _description.text
@@ -805,7 +805,7 @@ save_ARRAY_DATA
      dictionary will need to be populated.
 ;
     _name.category_id             HEAD
-    _name.object_id               array_data
+    _name.object_id               ARRAY_DATA
     _name.ddl2_mandatory          no
 
     loop_
@@ -985,8 +985,8 @@ save_array_data.array_id
     _name.object_id               array_id
     _name.linked_item_id          '_array_structure.id'
     _name.ddl2_mandatory          implicit
-    _type.purpose                 Key
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -1016,8 +1016,8 @@ save_array_data.binary_id
     _name.category_id             array_data
     _name.object_id               binary_id
     _name.ddl2_mandatory          implicit
-    _type.purpose                 Link
-    _type.source                  Related
+    _type.purpose                 Key
+    _type.source                  Assigned
     _type.container               Single
     _type.contents                Integer
     _type.ddl2_code               int
@@ -1298,8 +1298,8 @@ save_array_data.external_data_id
     _name.object_id               external_data_id
     _name.linked_item_id          '_array_data_external_data.id'
     _name.ddl2_mandatory          implicit
-    _type.purpose                 Describe
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -1373,8 +1373,8 @@ save_array_data.variant
     _name.object_id               variant
     _name.linked_item_id          '_variant.variant'
     _name.ddl2_mandatory          implicit
-    _type.purpose                 Key
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -1384,7 +1384,7 @@ save_
 
 save_ARRAY_DATA_EXTERNAL_DATA
 
-    _definition.id                array_data_external_data
+    _definition.id                ARRAY_DATA_EXTERNAL_DATA
     _definition.scope             Category
     _definition.class             Loop
     _description.text
@@ -1394,7 +1394,7 @@ save_ARRAY_DATA_EXTERNAL_DATA
     use in  ARRAY_DATA that are found external to the cif_img file.
 ;
     _name.category_id             HEAD
-    _name.object_id               array_data_external_data
+    _name.object_id               ARRAY_DATA_EXTERNAL_DATA
     _name.ddl2_mandatory          no
     _category_key.name            '_array_data_external_data.id'
     _nx_mapping.details
@@ -1724,8 +1724,8 @@ save_array_data_external_data.id
     _name.category_id             array_data_external_data
     _name.object_id               id
     _name.ddl2_mandatory          implicit
-    _type.purpose                 Link
-    _type.source                  Related
+    _type.purpose                 Key
+    _type.source                  Assigned
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -1823,7 +1823,7 @@ save_
 
 save_ARRAY_ELEMENT_SIZE
 
-    _definition.id                array_element_size
+    _definition.id                ARRAY_ELEMENT_SIZE
     _definition.scope             Category
     _definition.class             Loop
     _description.text
@@ -1832,7 +1832,7 @@ save_ARRAY_ELEMENT_SIZE
      size of array elements along each array dimension.
 ;
     _name.category_id             HEAD
-    _name.object_id               array_element_size
+    _name.object_id               ARRAY_ELEMENT_SIZE
     _name.ddl2_mandatory          no
 
     loop_
@@ -1908,8 +1908,8 @@ save_array_element_size.index
     _name.object_id               index
     _name.linked_item_id          '_array_structure_list.index'
     _name.ddl2_mandatory          yes
-    _type.purpose                 Key
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Integer
     _type.ddl2_code               int
@@ -1956,8 +1956,8 @@ save_array_element_size.variant
     _name.object_id               variant
     _name.linked_item_id          '_variant.variant'
     _name.ddl2_mandatory          implicit
-    _type.purpose                 Key
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -1967,7 +1967,7 @@ save_
 
 save_ARRAY_INTENSITIES
 
-    _definition.id                array_intensities
+    _definition.id                ARRAY_INTENSITIES
     _definition.scope             Category
     _definition.class             Loop
     _description.text
@@ -1987,7 +1987,7 @@ save_ARRAY_INTENSITIES
      and _array_intensities.gain will not be used.
 ;
     _name.category_id             HEAD
-    _name.object_id               array_intensities
+    _name.object_id               ARRAY_INTENSITIES
     _name.ddl2_mandatory          no
 
     loop_
@@ -2086,8 +2086,8 @@ save_array_intensities.array_id
     _name.object_id               array_id
     _name.linked_item_id          '_array_structure.id'
     _name.ddl2_mandatory          implicit
-    _type.purpose                 Key
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -2105,8 +2105,8 @@ save_array_intensities.binary_id
     _name.object_id               binary_id
     _name.linked_item_id          '_array_data.binary_id'
     _name.ddl2_mandatory          implicit
-    _type.purpose                 Key
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Integer
     _type.ddl2_code               int
@@ -2515,8 +2515,8 @@ save_array_intensities.variant
     _name.object_id               variant
     _name.linked_item_id          '_variant.variant'
     _name.ddl2_mandatory          implicit
-    _type.purpose                 Key
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -2526,7 +2526,7 @@ save_
 
 save_ARRAY_STRUCTURE
 
-    _definition.id                array_structure
+    _definition.id                ARRAY_STRUCTURE
     _definition.scope             Category
     _definition.class             Loop
     _description.text
@@ -2535,7 +2535,7 @@ save_ARRAY_STRUCTURE
      encoding of array data that may be stored in the ARRAY_DATA category.
 ;
     _name.category_id             HEAD
-    _name.object_id               array_structure
+    _name.object_id               ARRAY_STRUCTURE
     _name.ddl2_mandatory          no
 
     loop_
@@ -2751,8 +2751,8 @@ save_array_structure.id
     _name.category_id             array_structure
     _name.object_id               id
     _name.ddl2_mandatory          implicit
-    _type.purpose                 Link
-    _type.source                  Related
+    _type.purpose                 Key
+    _type.source                  Assigned
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -2777,8 +2777,8 @@ save_array_structure.variant
     _name.object_id               variant
     _name.linked_item_id          '_variant.variant'
     _name.ddl2_mandatory          implicit
-    _type.purpose                 Key
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -2788,7 +2788,7 @@ save_
 
 save_ARRAY_STRUCTURE_LIST
 
-    _definition.id                array_structure_list
+    _definition.id                ARRAY_STRUCTURE_LIST
     _definition.scope             Category
     _definition.class             Loop
     _description.text
@@ -2798,7 +2798,7 @@ save_ARRAY_STRUCTURE_LIST
      The relationship to physical axes may be given.
 ;
     _name.category_id             HEAD
-    _name.object_id               array_structure_list
+    _name.object_id               ARRAY_STRUCTURE_LIST
     _name.ddl2_mandatory          no
 
     loop_
@@ -3009,8 +3009,8 @@ save_array_structure_list.array_id
     _name.object_id               array_id
     _name.linked_item_id          '_array_structure.id'
     _name.ddl2_mandatory          implicit
-    _type.purpose                 Key
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -3056,8 +3056,8 @@ save_array_structure_list.axis_set_id
     _name.category_id             array_structure_list
     _name.object_id               axis_set_id
     _name.ddl2_mandatory          yes
-    _type.purpose                 Link
-    _type.source                  Related
+    _type.purpose                 Describe
+    _type.source                  Assigned
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -3127,8 +3127,8 @@ save_array_structure_list.index
     _name.category_id             array_structure_list
     _name.object_id               index
     _name.ddl2_mandatory          yes
-    _type.purpose                 Link
-    _type.source                  Related
+    _type.purpose                 Key
+    _type.source                  Assigned
     _type.container               Single
     _type.contents                Integer
     _type.ddl2_code               int
@@ -3186,8 +3186,8 @@ save_array_structure_list.variant
     _name.object_id               variant
     _name.linked_item_id          '_variant.variant'
     _name.ddl2_mandatory          implicit
-    _type.purpose                 Key
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -3197,7 +3197,7 @@ save_
 
 save_ARRAY_STRUCTURE_LIST_AXIS
 
-    _definition.id                array_structure_list_axis
+    _definition.id                ARRAY_STRUCTURE_LIST_AXIS
     _definition.scope             Category
     _definition.class             Loop
     _description.text
@@ -3220,7 +3220,7 @@ save_ARRAY_STRUCTURE_LIST_AXIS
      of an array.
 ;
     _name.category_id             HEAD
-    _name.object_id               array_structure_list_axis
+    _name.object_id               ARRAY_STRUCTURE_LIST_AXIS
     _name.ddl2_mandatory          no
 
     loop_
@@ -3495,8 +3495,8 @@ save_array_structure_list_axis.axis_id
     _name.object_id               axis_id
     _name.linked_item_id          '_axis.id'
     _name.ddl2_mandatory          yes
-    _type.purpose                 Key
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -3524,8 +3524,8 @@ save_array_structure_list_axis.axis_set_id
     _name.object_id               axis_set_id
     _name.linked_item_id          '_array_structure_list.axis_set_id'
     _name.ddl2_mandatory          implicit
-    _type.purpose                 Key
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -3721,8 +3721,8 @@ save_array_structure_list_axis.variant
     _name.object_id               variant
     _name.linked_item_id          '_variant.variant'
     _name.ddl2_mandatory          implicit
-    _type.purpose                 Key
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -3732,7 +3732,7 @@ save_
 
 save_ARRAY_STRUCTURE_LIST_SECTION
 
-    _definition.id                array_structure_list_section
+    _definition.id                ARRAY_STRUCTURE_LIST_SECTION
     _definition.scope             Category
     _definition.class             Loop
     _description.text
@@ -3759,7 +3759,7 @@ save_ARRAY_STRUCTURE_LIST_SECTION
     by the stride.
 ;
     _name.category_id             HEAD
-    _name.object_id               array_structure_list_section
+    _name.object_id               ARRAY_STRUCTURE_LIST_SECTION
     _name.ddl2_mandatory          no
 
     loop_
@@ -3846,8 +3846,8 @@ save_array_structure_list_section.array_id
     _name.object_id               array_id
     _name.linked_item_id          '_array_structure.id'
     _name.ddl2_mandatory          implicit
-    _type.purpose                 Key
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -3904,8 +3904,8 @@ save_array_structure_list_section.id
     _name.category_id             array_structure_list_section
     _name.object_id               id
     _name.ddl2_mandatory          yes
-    _type.purpose                 Link
-    _type.source                  Related
+    _type.purpose                 Key
+    _type.source                  Assigned
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -3931,8 +3931,8 @@ save_array_structure_list_section.index
     _name.object_id               index
     _name.linked_item_id          '_array_structure_list.index'
     _name.ddl2_mandatory          implicit
-    _type.purpose                 Key
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Integer
     _type.ddl2_code               int
@@ -4043,7 +4043,7 @@ save_
 
 save_AXIS
 
-    _definition.id                axis
+    _definition.id                AXIS
     _definition.scope             Category
     _definition.class             Loop
     _description.text
@@ -4384,7 +4384,7 @@ save_AXIS
      Brookhaven National Laboratory.
 ;
     _name.category_id             HEAD
-    _name.object_id               axis
+    _name.object_id               AXIS
     _name.ddl2_mandatory          no
 
     loop_
@@ -5937,8 +5937,8 @@ save_axis.id
     _name.category_id             axis
     _name.object_id               id
     _name.ddl2_mandatory          yes
-    _type.purpose                 Link
-    _type.source                  Related
+    _type.purpose                 Key
+    _type.source                  Assigned
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -6157,8 +6157,8 @@ save_axis.variant
     _name.object_id               variant
     _name.linked_item_id          '_variant.variant'
     _name.ddl2_mandatory          implicit
-    _type.purpose                 Key
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -6237,7 +6237,7 @@ save_
 
 save_DIFFRN
 
-    _definition.id                diffrn
+    _definition.id                DIFFRN
     _definition.scope             Category
     _definition.class             Set
     _definition.update            2025-09-04
@@ -6251,7 +6251,7 @@ save_DIFFRN
                dictionary
 ;
     _name.category_id             HEAD
-    _name.object_id               diffrn
+    _name.object_id               DIFFRN
     _name.ddl2_mandatory          no
     _category_key.name            '_diffrn.id'
 
@@ -6276,8 +6276,8 @@ save_diffrn.id
     _name.category_id             diffrn
     _name.object_id               id
     _name.ddl2_mandatory          yes
-    _type.purpose                 Link
-    _type.source                  Related
+    _type.purpose                 Key
+    _type.source                  Assigned
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -6286,7 +6286,7 @@ save_
 
 save_DIFFRN_DATA_FRAME
 
-    _definition.id                diffrn_data_frame
+    _definition.id                DIFFRN_DATA_FRAME
     _definition.scope             Category
     _definition.class             Loop
     _description.text
@@ -6299,7 +6299,7 @@ save_DIFFRN_DATA_FRAME
               as aliases but should not be used for new work.
 ;
     _name.category_id             HEAD
-    _name.object_id               diffrn_data_frame
+    _name.object_id               DIFFRN_DATA_FRAME
     _name.ddl2_mandatory          no
 
     loop_
@@ -6412,8 +6412,8 @@ save_diffrn_data_frame.array_id
     _name.object_id               array_id
     _name.linked_item_id          '_array_structure.id'
     _name.ddl2_mandatory          implicit
-    _type.purpose                 Describe
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -6431,8 +6431,8 @@ save_diffrn_data_frame.array_section_id
     _name.object_id               array_section_id
     _name.linked_item_id          '_array_structure_list_section.id'
     _name.ddl2_mandatory          implicit
-    _type.purpose                 Describe
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -6454,12 +6454,11 @@ save_diffrn_data_frame.binary_id
     _name.object_id               binary_id
     _name.linked_item_id          '_array_data.binary_id'
     _name.ddl2_mandatory          implicit
-    _type.purpose                 Number
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Integer
     _type.ddl2_code               int
-    _units.code                   none
 
 save_
 
@@ -6663,8 +6662,8 @@ save_diffrn_data_frame.detector_element_id
     _name.object_id               detector_element_id
     _name.linked_item_id          '_diffrn_detector_element.id'
     _name.ddl2_mandatory          yes
-    _type.purpose                 Key
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -6682,8 +6681,8 @@ save_diffrn_data_frame.diffrn_id
     _name.object_id               diffrn_id
     _name.linked_item_id          '_diffrn.id'
     _name.ddl2_mandatory          implicit
-    _type.purpose                 Describe
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -6704,8 +6703,8 @@ save_diffrn_data_frame.id
     _name.category_id             diffrn_data_frame
     _name.object_id               id
     _name.ddl2_mandatory          yes
-    _type.purpose                 Link
-    _type.source                  Related
+    _type.purpose                 Key
+    _type.source                  Assigned
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -6729,8 +6728,8 @@ save_diffrn_data_frame.variant
     _name.object_id               variant
     _name.linked_item_id          '_variant.variant'
     _name.ddl2_mandatory          implicit
-    _type.purpose                 Key
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -6740,7 +6739,7 @@ save_
 
 save_DIFFRN_DETECTOR
 
-    _definition.id                diffrn_detector
+    _definition.id                DIFFRN_DETECTOR
     _definition.scope             Category
     _definition.class             Set
     _definition.update            2025-09-04
@@ -6751,7 +6750,7 @@ save_DIFFRN_DETECTOR
      any analyser and post-sample collimation.
 ;
     _name.category_id             HEAD
-    _name.object_id               diffrn_detector
+    _name.object_id               DIFFRN_DETECTOR
     _name.ddl2_mandatory          no
 
     loop_
@@ -6871,8 +6870,8 @@ save_diffrn_detector.diffrn_id
     _name.object_id               diffrn_id
     _name.linked_item_id          '_diffrn.id'
     _name.ddl2_mandatory          yes
-    _type.purpose                 Key
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -6955,8 +6954,8 @@ save_diffrn_detector.id
     _name.category_id             diffrn_detector
     _name.object_id               id
     _name.ddl2_mandatory          implicit
-    _type.purpose                 Link
-    _type.source                  Related
+    _type.purpose                 Key
+    _type.source                  Assigned
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -7067,8 +7066,8 @@ save_diffrn_detector.variant
     _name.object_id               variant
     _name.linked_item_id          '_variant.variant'
     _name.ddl2_mandatory          implicit
-    _type.purpose                 Key
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -7078,7 +7077,7 @@ save_
 
 save_DIFFRN_DETECTOR_AXIS
 
-    _definition.id                diffrn_detector_axis
+    _definition.id                DIFFRN_DETECTOR_AXIS
     _definition.scope             Category
     _definition.class             Loop
     _description.text
@@ -7087,7 +7086,7 @@ save_DIFFRN_DETECTOR_AXIS
      axes with detectors.
 ;
     _name.category_id             HEAD
-    _name.object_id               diffrn_detector_axis
+    _name.object_id               DIFFRN_DETECTOR_AXIS
     _name.ddl2_mandatory          no
 
     loop_
@@ -7127,8 +7126,8 @@ save_diffrn_detector_axis.axis_id
     _name.object_id               axis_id
     _name.linked_item_id          '_axis.id'
     _name.ddl2_mandatory          yes
-    _type.purpose                 Key
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -7154,8 +7153,8 @@ save_diffrn_detector_axis.detector_id
     _name.object_id               detector_id
     _name.linked_item_id          '_diffrn_detector.id'
     _name.ddl2_mandatory          yes
-    _type.purpose                 Key
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -7173,8 +7172,8 @@ save_diffrn_detector_axis.diffrn_id
     _name.object_id               diffrn_id
     _name.linked_item_id          '_diffrn.id'
     _name.ddl2_mandatory          implicit
-    _type.purpose                 Describe
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -7218,8 +7217,8 @@ save_diffrn_detector_axis.variant
     _name.object_id               variant
     _name.linked_item_id          '_variant.variant'
     _name.ddl2_mandatory          implicit
-    _type.purpose                 Key
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -7229,7 +7228,7 @@ save_
 
 save_DIFFRN_DETECTOR_ELEMENT
 
-    _definition.id                diffrn_detector_element
+    _definition.id                DIFFRN_DETECTOR_ELEMENT
     _definition.scope             Category
     _definition.class             Loop
     _description.text
@@ -7244,7 +7243,7 @@ save_DIFFRN_DETECTOR_ELEMENT
      detector element.
 ;
     _name.category_id             HEAD
-    _name.object_id               diffrn_detector_element
+    _name.object_id               DIFFRN_DETECTOR_ELEMENT
     _name.ddl2_mandatory          no
 
     loop_
@@ -7427,8 +7426,8 @@ save_diffrn_detector_element.diffrn_id
     _name.object_id               diffrn_id
     _name.linked_item_id          '_diffrn.id'
     _name.ddl2_mandatory          implicit
-    _type.purpose                 Describe
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -7445,8 +7444,8 @@ save_diffrn_detector_element.id
     _name.category_id             diffrn_detector_element
     _name.object_id               id
     _name.ddl2_mandatory          yes
-    _type.purpose                 Link
-    _type.source                  Related
+    _type.purpose                 Key
+    _type.source                  Assigned
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -7578,8 +7577,8 @@ save_diffrn_detector_element.variant
     _name.object_id               variant
     _name.linked_item_id          '_variant.variant'
     _name.ddl2_mandatory          implicit
-    _type.purpose                 Key
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -7589,7 +7588,7 @@ save_
 
 save_DIFFRN_FRAME_DATA
 
-    _definition.id                diffrn_frame_data
+    _definition.id                DIFFRN_FRAME_DATA
     _definition.scope             Category
     _definition.class             Loop
     _definition.update            2025-09-04
@@ -7618,7 +7617,7 @@ save_DIFFRN_FRAME_DATA
      All _item.mandatory_code values have been changed to 'no'.
 ;
     _name.category_id             HEAD
-    _name.object_id               diffrn_frame_data
+    _name.object_id               DIFFRN_FRAME_DATA
     _name.ddl2_mandatory          no
 
     loop_
@@ -7775,7 +7774,7 @@ save_
 
 save_DIFFRN_MEASUREMENT
 
-    _definition.id                diffrn_measurement
+    _definition.id                DIFFRN_MEASUREMENT
     _definition.scope             Category
     _definition.class             Set
     _definition.update            2025-09-04
@@ -7787,7 +7786,7 @@ save_DIFFRN_MEASUREMENT
      diffraction data were measured.
 ;
     _name.category_id             HEAD
-    _name.object_id               diffrn_measurement
+    _name.object_id               DIFFRN_MEASUREMENT
     _name.ddl2_mandatory          no
 
     loop_
@@ -7916,8 +7915,8 @@ save_diffrn_measurement.device
     _name.category_id             diffrn_measurement
     _name.object_id               device
     _name.ddl2_mandatory          implicit
-    _type.purpose                 Link
-    _type.source                  Related
+    _type.purpose                 Key
+    _type.source                  Assigned
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               text
@@ -7998,8 +7997,8 @@ save_diffrn_measurement.diffrn_id
     _name.object_id               diffrn_id
     _name.linked_item_id          '_diffrn.id'
     _name.ddl2_mandatory          yes
-    _type.purpose                 Key
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -8028,8 +8027,8 @@ save_diffrn_measurement.id
     _name.category_id             diffrn_measurement
     _name.object_id               id
     _name.ddl2_mandatory          implicit
-    _type.purpose                 Link
-    _type.source                  Related
+    _type.purpose                 Key
+    _type.source                  Assigned
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -8207,8 +8206,8 @@ save_diffrn_measurement.variant
     _name.object_id               variant
     _name.linked_item_id          '_variant.variant'
     _name.ddl2_mandatory          implicit
-    _type.purpose                 Key
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -8218,7 +8217,7 @@ save_
 
 save_DIFFRN_MEASUREMENT_AXIS
 
-    _definition.id                diffrn_measurement_axis
+    _definition.id                DIFFRN_MEASUREMENT_AXIS
     _definition.scope             Category
     _definition.class             Loop
     _description.text
@@ -8227,7 +8226,7 @@ save_DIFFRN_MEASUREMENT_AXIS
      axes with goniometers.
 ;
     _name.category_id             HEAD
-    _name.object_id               diffrn_measurement_axis
+    _name.object_id               DIFFRN_MEASUREMENT_AXIS
     _name.ddl2_mandatory          no
 
     loop_
@@ -8273,8 +8272,8 @@ save_diffrn_measurement_axis.axis_id
     _name.object_id               axis_id
     _name.linked_item_id          '_axis.id'
     _name.ddl2_mandatory          yes
-    _type.purpose                 Key
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -8324,8 +8323,8 @@ save_diffrn_measurement_axis.measurement_device
     _name.object_id               measurement_device
     _name.linked_item_id          '_diffrn_measurement.device'
     _name.ddl2_mandatory          implicit
-    _type.purpose                 Key
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               text
@@ -8351,8 +8350,8 @@ save_diffrn_measurement_axis.measurement_id
     _name.object_id               measurement_id
     _name.linked_item_id          '_diffrn_measurement.id'
     _name.ddl2_mandatory          implicit
-    _type.purpose                 Key
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -8376,8 +8375,8 @@ save_diffrn_measurement_axis.variant
     _name.object_id               variant
     _name.linked_item_id          '_variant.variant'
     _name.ddl2_mandatory          implicit
-    _type.purpose                 Key
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -8387,7 +8386,7 @@ save_
 
 save_DIFFRN_RADIATION
 
-    _definition.id                diffrn_radiation
+    _definition.id                DIFFRN_RADIATION
     _definition.scope             Category
     _definition.class             Set
     _definition.update            2025-09-04
@@ -8400,7 +8399,7 @@ save_DIFFRN_RADIATION
               items in the DIFFRN_DETECTOR category.
 ;
     _name.category_id             HEAD
-    _name.object_id               diffrn_radiation
+    _name.object_id               DIFFRN_RADIATION
     _name.ddl2_mandatory          no
 
     loop_
@@ -8739,8 +8738,8 @@ save_diffrn_radiation.diffrn_id
     _name.object_id               diffrn_id
     _name.linked_item_id          '_diffrn.id'
     _name.ddl2_mandatory          yes
-    _type.purpose                 Key
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -9651,8 +9650,8 @@ save_diffrn_radiation.variant
     _name.object_id               variant
     _name.linked_item_id          '_variant.variant'
     _name.ddl2_mandatory          implicit
-    _type.purpose                 Key
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -9711,7 +9710,7 @@ save_
 
 save_DIFFRN_REFLN
 
-    _definition.id                diffrn_refln
+    _definition.id                DIFFRN_REFLN
     _definition.scope             Category
     _definition.class             Loop
     _description.text
@@ -9732,7 +9731,7 @@ save_DIFFRN_REFLN
      _diffrn_refln.frame_id
 ;
     _name.category_id             HEAD
-    _name.object_id               diffrn_refln
+    _name.object_id               DIFFRN_REFLN
     _name.ddl2_mandatory          no
 
     loop_
@@ -9765,8 +9764,8 @@ save_diffrn_refln.diffrn_id
     _name.object_id               diffrn_id
     _name.linked_item_id          '_diffrn.id'
     _name.ddl2_mandatory          yes
-    _type.purpose                 Key
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -9784,8 +9783,8 @@ save_diffrn_refln.frame_id
     _name.object_id               frame_id
     _name.linked_item_id          '_diffrn_data_frame.id'
     _name.ddl2_mandatory          yes
-    _type.purpose                 Key
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -9827,8 +9826,8 @@ save_diffrn_refln.variant
     _name.object_id               variant
     _name.linked_item_id          '_variant.variant'
     _name.ddl2_mandatory          implicit
-    _type.purpose                 Key
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -9848,7 +9847,7 @@ save_
 
 save_DIFFRN_SCAN
 
-    _definition.id                diffrn_scan
+    _definition.id                DIFFRN_SCAN
     _definition.scope             Category
     _definition.class             Loop
     _description.text
@@ -9857,7 +9856,7 @@ save_DIFFRN_SCAN
      or more scans, relating axis positions to frames.
 ;
     _name.category_id             HEAD
-    _name.object_id               diffrn_scan
+    _name.object_id               DIFFRN_SCAN
     _name.ddl2_mandatory          no
 
     loop_
@@ -10574,8 +10573,8 @@ save_diffrn_scan.frame_id_end
     _name.object_id               frame_id_end
     _name.linked_item_id          '_diffrn_data_frame.id'
     _name.ddl2_mandatory          yes
-    _type.purpose                 Describe
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -10596,8 +10595,8 @@ save_diffrn_scan.frame_id_start
     _name.object_id               frame_id_start
     _name.linked_item_id          '_diffrn_data_frame.id'
     _name.ddl2_mandatory          yes
-    _type.purpose                 Describe
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -10641,8 +10640,8 @@ save_diffrn_scan.id
     _name.category_id             diffrn_scan
     _name.object_id               id
     _name.ddl2_mandatory          yes
-    _type.purpose                 Link
-    _type.source                  Related
+    _type.purpose                 Key
+    _type.source                  Assigned
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -10751,8 +10750,8 @@ save_diffrn_scan.variant
     _name.object_id               variant
     _name.linked_item_id          '_variant.variant'
     _name.ddl2_mandatory          implicit
-    _type.purpose                 Key
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -10762,7 +10761,7 @@ save_
 
 save_DIFFRN_SCAN_AXIS
 
-    _definition.id                diffrn_scan_axis
+    _definition.id                DIFFRN_SCAN_AXIS
     _definition.scope             Category
     _definition.class             Loop
     _description.text
@@ -10772,7 +10771,7 @@ save_DIFFRN_SCAN_AXIS
      their zero points.
 ;
     _name.category_id             HEAD
-    _name.object_id               diffrn_scan_axis
+    _name.object_id               DIFFRN_SCAN_AXIS
     _name.ddl2_mandatory          no
 
     loop_
@@ -10955,8 +10954,8 @@ save_diffrn_scan_axis.axis_id
     _name.object_id               axis_id
     _name.linked_item_id          '_axis.id'
     _name.ddl2_mandatory          yes
-    _type.purpose                 Key
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -11170,8 +11169,8 @@ save_diffrn_scan_axis.scan_id
     _name.object_id               scan_id
     _name.linked_item_id          '_diffrn_scan.id'
     _name.ddl2_mandatory          yes
-    _type.purpose                 Key
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -11195,8 +11194,8 @@ save_diffrn_scan_axis.variant
     _name.object_id               variant
     _name.linked_item_id          '_variant.variant'
     _name.ddl2_mandatory          implicit
-    _type.purpose                 Key
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -11206,7 +11205,7 @@ save_
 
 save_DIFFRN_SCAN_COLLECTION
 
-    _definition.id                diffrn_scan_collection
+    _definition.id                DIFFRN_SCAN_COLLECTION
     _definition.scope             Category
     _definition.class             Loop
     _description.text
@@ -11218,7 +11217,7 @@ save_DIFFRN_SCAN_COLLECTION
      synchrotron and XFEL collection strategies evolve.
 ;
     _name.category_id             HEAD
-    _name.object_id               diffrn_scan_collection
+    _name.object_id               DIFFRN_SCAN_COLLECTION
     _name.ddl2_mandatory          no
 
     loop_
@@ -11290,8 +11289,8 @@ save_diffrn_scan_collection.diffrn_id
     _name.object_id               diffrn_id
     _name.linked_item_id          '_diffrn.id'
     _name.ddl2_mandatory          implicit
-    _type.purpose                 Describe
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -11383,8 +11382,8 @@ save_diffrn_scan_collection.variant
     _name.object_id               variant
     _name.linked_item_id          '_variant.variant'
     _name.ddl2_mandatory          implicit
-    _type.purpose                 Key
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -11394,7 +11393,7 @@ save_
 
 save_DIFFRN_SCAN_FRAME
 
-    _definition.id                diffrn_scan_frame
+    _definition.id                DIFFRN_SCAN_FRAME
     _definition.scope             Category
     _definition.class             Loop
     _description.text
@@ -11403,7 +11402,7 @@ save_DIFFRN_SCAN_FRAME
      the relationships of particular frames to scans.
 ;
     _name.category_id             HEAD
-    _name.object_id               diffrn_scan_frame
+    _name.object_id               DIFFRN_SCAN_FRAME
     _name.ddl2_mandatory          no
 
     loop_
@@ -11479,8 +11478,8 @@ save_diffrn_scan_frame.diffrn_id
     _name.object_id               diffrn_id
     _name.linked_item_id          '_diffrn.id'
     _name.ddl2_mandatory          implicit
-    _type.purpose                 Describe
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -11501,8 +11500,8 @@ save_diffrn_scan_frame.frame_id
     _name.object_id               frame_id
     _name.linked_item_id          '_diffrn_data_frame.id'
     _name.ddl2_mandatory          yes
-    _type.purpose                 Key
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -11902,8 +11901,8 @@ save_diffrn_scan_frame.scan_id
     _name.object_id               scan_id
     _name.linked_item_id          '_diffrn_scan.id'
     _name.ddl2_mandatory          yes
-    _type.purpose                 Key
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -11984,8 +11983,8 @@ save_diffrn_scan_frame.variant
     _name.object_id               variant
     _name.linked_item_id          '_variant.variant'
     _name.ddl2_mandatory          implicit
-    _type.purpose                 Key
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -11995,7 +11994,7 @@ save_
 
 save_DIFFRN_SCAN_FRAME_AXIS
 
-    _definition.id                diffrn_scan_frame_axis
+    _definition.id                DIFFRN_SCAN_FRAME_AXIS
     _definition.scope             Category
     _definition.class             Loop
     _description.text
@@ -12008,7 +12007,7 @@ save_DIFFRN_SCAN_FRAME_AXIS
      simply inferred from values in DIFFRN_SCAN_AXIS.
 ;
     _name.category_id             HEAD
-    _name.object_id               diffrn_scan_frame_axis
+    _name.object_id               DIFFRN_SCAN_FRAME_AXIS
     _name.ddl2_mandatory          no
 
     loop_
@@ -12161,8 +12160,8 @@ save_diffrn_scan_frame_axis.axis_id
     _name.object_id               axis_id
     _name.linked_item_id          '_axis.id'
     _name.ddl2_mandatory          yes
-    _type.purpose                 Key
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -12180,8 +12179,8 @@ save_diffrn_scan_frame_axis.diffrn_id
     _name.object_id               diffrn_id
     _name.linked_item_id          '_diffrn.id'
     _name.ddl2_mandatory          implicit
-    _type.purpose                 Describe
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -12281,8 +12280,8 @@ save_diffrn_scan_frame_axis.frame_id
     _name.object_id               frame_id
     _name.linked_item_id          '_diffrn_data_frame.id'
     _name.ddl2_mandatory          yes
-    _type.purpose                 Key
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -12363,8 +12362,8 @@ save_diffrn_scan_frame_axis.variant
     _name.object_id               variant
     _name.linked_item_id          '_variant.variant'
     _name.ddl2_mandatory          implicit
-    _type.purpose                 Key
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -12374,7 +12373,7 @@ save_
 
 save_DIFFRN_SCAN_FRAME_MONITOR
 
-    _definition.id                diffrn_scan_frame_monitor
+    _definition.id                DIFFRN_SCAN_FRAME_MONITOR
     _definition.scope             Category
     _definition.class             Loop
     _description.text
@@ -12405,7 +12404,7 @@ save_DIFFRN_SCAN_FRAME_MONITOR
      omitted.
 ;
     _name.category_id             HEAD
-    _name.object_id               diffrn_scan_frame_monitor
+    _name.object_id               DIFFRN_SCAN_FRAME_MONITOR
     _name.ddl2_mandatory          no
 
     loop_
@@ -12538,8 +12537,7 @@ save_DIFFRN_SCAN_FRAME_MONITOR
       MONITOR_Z        translation detector . 0 0 1 0 0 0
 ;
     _description_example.detail
-;
-    Example 1. The beam intensity for frame FRAME1 is being tracked
+;    Example 1. The beam intensity for frame FRAME1 is being tracked
      by a beamstop monitor detector BSM01, made from metal foil and
      a PIN diode, located 20 mm in front of a MAR345 detector and being
      sampled every 2 seconds in a 20 second scan.
@@ -12583,8 +12581,8 @@ save_diffrn_scan_frame_monitor.detector_id
     _name.object_id               detector_id
     _name.linked_item_id          '_diffrn_detector.id'
     _name.ddl2_mandatory          yes
-    _type.purpose                 Key
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -12602,8 +12600,8 @@ save_diffrn_scan_frame_monitor.diffrn_id
     _name.object_id               diffrn_id
     _name.linked_item_id          '_diffrn.id'
     _name.ddl2_mandatory          implicit
-    _type.purpose                 Describe
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -12621,8 +12619,8 @@ save_diffrn_scan_frame_monitor.frame_id
     _name.object_id               frame_id
     _name.linked_item_id          '_diffrn_data_frame.id'
     _name.ddl2_mandatory          implicit
-    _type.purpose                 Key
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -12781,8 +12779,8 @@ save_diffrn_scan_frame_monitor.variant
     _name.object_id               variant
     _name.linked_item_id          '_variant.variant'
     _name.ddl2_mandatory          implicit
-    _type.purpose                 Key
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -12792,7 +12790,7 @@ save_
 
 save_DIFFRN_SOURCE
 
-    _definition.id                diffrn_source
+    _definition.id                DIFFRN_SOURCE
     _definition.scope             Category
     _definition.class             Set
     _definition.update            2025-09-04
@@ -12804,7 +12802,7 @@ save_DIFFRN_SOURCE
                specified in the mmCIF_PDBx dictionary
 ;
     _name.category_id             HEAD
-    _name.object_id               diffrn_source
+    _name.object_id               DIFFRN_SOURCE
     _name.ddl2_mandatory          no
     _category_key.name            '_diffrn_source.diffrn_id'
 
@@ -12902,7 +12900,7 @@ save_
 
 save_MAP
 
-    _definition.id                map
+    _definition.id                MAP
     _definition.scope             Category
     _definition.class             Loop
     _description.text
@@ -12919,7 +12917,7 @@ save_MAP
      Examples are given in the MAP_SEGMENT category.
 ;
     _name.category_id             HEAD
-    _name.object_id               map
+    _name.object_id               MAP
     _name.ddl2_mandatory          no
 
     loop_
@@ -13007,8 +13005,8 @@ save_map.diffrn_id
     _name.object_id               diffrn_id
     _name.linked_item_id          '_diffrn.id'
     _name.ddl2_mandatory          implicit
-    _type.purpose                 Key
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -13043,8 +13041,8 @@ save_map.id
     _name.category_id             map
     _name.object_id               id
     _name.ddl2_mandatory          yes
-    _type.purpose                 Link
-    _type.source                  Related
+    _type.purpose                 Key
+    _type.source                  Assigned
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -13068,8 +13066,8 @@ save_map.variant
     _name.object_id               variant
     _name.linked_item_id          '_variant.variant'
     _name.ddl2_mandatory          implicit
-    _type.purpose                 Key
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -13079,7 +13077,7 @@ save_
 
 save_MAP_SEGMENT
 
-    _definition.id                map_segment
+    _definition.id                MAP_SEGMENT
     _definition.scope             Category
     _definition.class             Loop
     _description.text
@@ -13088,7 +13086,7 @@ save_MAP_SEGMENT
      the details about each segment (section or brick) of a map.
 ;
     _name.category_id             HEAD
-    _name.object_id               map_segment
+    _name.object_id               MAP_SEGMENT
     _name.ddl2_mandatory          no
 
     loop_
@@ -13169,8 +13167,8 @@ save_map_segment.array_section_id
     _name.object_id               array_section_id
     _name.linked_item_id          '_array_structure_list_section.id'
     _name.ddl2_mandatory          yes
-    _type.purpose                 Describe
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -13234,8 +13232,8 @@ save_map_segment.id
     _name.object_id               id
     _name.linked_item_id          '_map.id'
     _name.ddl2_mandatory          yes
-    _type.purpose                 Key
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -13350,8 +13348,8 @@ save_map_segment.variant
     _name.object_id               variant
     _name.linked_item_id          '_variant.variant'
     _name.ddl2_mandatory          implicit
-    _type.purpose                 Key
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -13361,7 +13359,7 @@ save_
 
 save_VARIANT
 
-    _definition.id                variant
+    _definition.id                VARIANT
     _definition.scope             Category
     _definition.class             Loop
     _description.text
@@ -13406,7 +13404,7 @@ save_VARIANT
      be used.
 ;
     _name.category_id             HEAD
-    _name.object_id               variant
+    _name.object_id               VARIANT
     _name.ddl2_mandatory          no
 
     loop_
@@ -13485,8 +13483,7 @@ save_variant.details
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               text
-    _description_example.case
-        'indexed cell and refined beam centre'
+    _description_example.case     'indexed cell and refined beam centre'
 
 save_
 
@@ -13501,8 +13498,8 @@ save_variant.diffrn_id
     _name.object_id               diffrn_id
     _name.linked_item_id          '_diffrn.id'
     _name.ddl2_mandatory          implicit
-    _type.purpose                 Key
-    _type.source                  Assigned
+    _type.purpose                 Link
+    _type.source                  Related
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -13606,8 +13603,8 @@ save_variant.variant
     _name.category_id             variant
     _name.object_id               variant
     _name.ddl2_mandatory          implicit
-    _type.purpose                 Link
-    _type.source                  Related
+    _type.purpose                 Key
+    _type.source                  Assigned
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
