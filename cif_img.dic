@@ -964,11 +964,6 @@ save_ARRAY_DATA
             @CBF_header_convention="HEADERCONVENTION"
 ;
 
-    loop_
-      _ddl2_category_group.id
-         inclusive_group
-         array_data_group
-
 save_
 
 save_array_data.array_id
@@ -1023,12 +1018,6 @@ save_array_data.binary_id
     _type.ddl2_code               int
     _enumeration.range            1:
     _enumeration.default          1
-
-    loop_
-      _ddl2_enumeration_range.minimum
-      _ddl2_enumeration_range.maximum
-         1                        1
-         1                        .
 
 save_
 
@@ -1431,11 +1420,6 @@ save_ARRAY_DATA_EXTERNAL_DATA
             @CBF_external_data_path="DATAPATH"
             @CBF_external_data_frame="DATAFRAME"
 ;
-
-    loop_
-      _ddl2_category_group.id
-         inclusive_group
-         array_data_group
 
 save_
 
@@ -1872,11 +1856,6 @@ save_ARRAY_ELEMENT_SIZE
     _array_element_size.index == 1,2, or 3 respectively
 ;
 
-    loop_
-      _ddl2_category_group.id
-         inclusive_group
-         array_data_group
-
 save_
 
 save_array_element_size.array_id
@@ -1934,8 +1913,6 @@ save_array_element_size.size
     _type.ddl2_code               float
     _type.ddl2_units              metres
     _units.code                   metres
-    _ddl2_enumeration_range.minimum 0.0
-    _ddl2_enumeration_range.maximum .
 
 save_
 
@@ -2068,11 +2045,6 @@ save_ARRAY_INTENSITIES
     both uses.
 ;
 
-    loop_
-      _ddl2_category_group.id
-         inclusive_group
-         array_data_group
-
 save_
 
 save_array_intensities.array_id
@@ -2150,10 +2122,6 @@ save_array_intensities.gain
     _type.ddl2_code               float
     _type.ddl2_units              counts_per_photon
     _units.code                   counts_per_photon
-    _ddl2_enumeration_range.minimum 0.0
-    _ddl2_enumeration_range.maximum .
-    _ddl2_item_related.related_name '_array_intensities.gain_esd'
-    _ddl2_item_related.function_code associated_value
 
 save_
 
@@ -2175,10 +2143,6 @@ save_array_intensities.gain_esd
     _type.ddl2_code               float
     _type.ddl2_units              counts_per_photon
     _units.code                   counts_per_photon
-    _ddl2_enumeration_range.minimum 0.0
-    _ddl2_enumeration_range.maximum .
-    _ddl2_item_related.related_name '_array_intensities.gain'
-    _ddl2_item_related.function_code associated_esd
 
 save_
 
@@ -2396,8 +2360,6 @@ save_array_intensities.pixel_fast_bin_size
     _type.ddl2_units              pixels_per_element
     _enumeration.default          1.
     _units.code                   pixels_per_element
-    _ddl2_enumeration_range.minimum 0.0
-    _ddl2_enumeration_range.maximum .
 
 save_
 
@@ -2429,8 +2391,6 @@ save_array_intensities.pixel_slow_bin_size
     _type.ddl2_units              pixels_per_element
     _enumeration.default          1.
     _units.code                   pixels_per_element
-    _ddl2_enumeration_range.minimum 0.0
-    _ddl2_enumeration_range.maximum .
 
 save_
 
@@ -2566,11 +2526,6 @@ save_ARRAY_STRUCTURE
     At present NeXus does not expose this information.  This should be
     discussed.
 ;
-
-    loop_
-      _ddl2_category_group.id
-         inclusive_group
-         array_data_group
 
 save_
 
@@ -2991,11 +2946,6 @@ save_ARRAY_STRUCTURE_LIST
            same ordering.
 ;
 
-    loop_
-      _ddl2_category_group.id
-         inclusive_group
-         array_data_group
-
 save_
 
 save_array_structure_list.array_id
@@ -3082,12 +3032,6 @@ save_array_structure_list.dimension
     _enumeration.range            1:
     _units.code                   none
 
-    loop_
-      _ddl2_enumeration_range.minimum
-      _ddl2_enumeration_range.maximum
-         1                        1
-         1                        .
-
 save_
 
 save_array_structure_list.direction
@@ -3134,12 +3078,6 @@ save_array_structure_list.index
     _type.ddl2_code               int
     _enumeration.range            1:
 
-    loop_
-      _ddl2_enumeration_range.minimum
-      _ddl2_enumeration_range.maximum
-         1                        1
-         1                        .
-
 save_
 
 save_array_structure_list.precedence
@@ -3160,12 +3098,6 @@ save_array_structure_list.precedence
     _type.ddl2_code               int
     _enumeration.range            1:
     _units.code                   none
-
-    loop_
-      _ddl2_enumeration_range.minimum
-      _ddl2_enumeration_range.maximum
-         1                        1
-         1                        .
 
 save_
 
@@ -3388,11 +3320,6 @@ save_ARRAY_STRUCTURE_LIST_AXIS
            and the array section information will be organized by the
            same ordering.
 ;
-
-    loop_
-      _ddl2_category_group.id
-         inclusive_group
-         array_data_group
 
 save_
 
@@ -3828,11 +3755,6 @@ save_ARRAY_STRUCTURE_LIST_SECTION
              /data_stride[...] the strides of ARRAYSECTIONID
 ;
 
-    loop_
-      _ddl2_category_group.id
-         inclusive_group
-         array_data_group
-
 save_
 
 save_array_structure_list_section.array_id
@@ -3881,12 +3803,6 @@ save_array_structure_list_section.end
     _type.ddl2_code               int
     _enumeration.range            1:
     _units.code                   none
-
-    loop_
-      _ddl2_enumeration_range.minimum
-      _ddl2_enumeration_range.maximum
-         1                        1
-         1                        .
 
 save_
 
@@ -3977,12 +3893,6 @@ save_array_structure_list_section.start
     _enumeration.range            1:
     _units.code                   none
 
-    loop_
-      _ddl2_enumeration_range.minimum
-      _ddl2_enumeration_range.maximum
-         1                        1
-         1                        .
-
 save_
 
 save_array_structure_list_section.stride
@@ -4006,12 +3916,6 @@ save_array_structure_list_section.stride
     _enumeration.range            1:
     _enumeration.default          1
     _units.code                   none
-
-    loop_
-      _ddl2_enumeration_range.minimum
-      _ddl2_enumeration_range.maximum
-         1                        1
-         1                        .
 
 save_
 
@@ -5847,12 +5751,6 @@ for AXISEQUIPMENT=="general"}
               @vector=coordxform([V1,V2,V3])
 ;
 
-    loop_
-      _ddl2_category_group.id
-         inclusive_group
-         axis_group
-         diffrn_group
-
 save_
 
 save_axis.depends_on
@@ -5965,7 +5863,6 @@ save_axis.offset[1]
     _type.ddl2_units              millimetres
     _enumeration.default          0.0
     _units.code                   millimetres
-    _ddl2_sub_category.id         vector
 
 save_
 
@@ -5989,7 +5886,6 @@ save_axis.offset[2]
     _type.ddl2_units              millimetres
     _enumeration.default          0.0
     _units.code                   millimetres
-    _ddl2_sub_category.id         vector
 
 save_
 
@@ -6013,7 +5909,6 @@ save_axis.offset[3]
     _type.ddl2_units              millimetres
     _enumeration.default          0.0
     _units.code                   millimetres
-    _ddl2_sub_category.id         vector
 
 save_
 
@@ -6185,7 +6080,6 @@ save_axis.vector[1]
     _type.ddl2_code               float
     _enumeration.default          0.0
     _units.code                   none
-    _ddl2_sub_category.id         vector
 
 save_
 
@@ -6208,7 +6102,6 @@ save_axis.vector[2]
     _type.ddl2_code               float
     _enumeration.default          0.0
     _units.code                   none
-    _ddl2_sub_category.id         vector
 
 save_
 
@@ -6231,7 +6124,6 @@ save_axis.vector[3]
     _type.ddl2_code               float
     _enumeration.default          0.0
     _units.code                   none
-    _ddl2_sub_category.id         vector
 
 save_
 
@@ -6240,7 +6132,7 @@ save_DIFFRN
     _definition.id                DIFFRN
     _definition.scope             Category
     _definition.class             Set
-    _definition.update            2025-09-04
+    _definition.update            2025-09-05
     _description.text
 ;              Data items in the DIFFRN category record details about the
                diffraction data and their measurement.
@@ -6254,11 +6146,6 @@ save_DIFFRN
     _name.object_id               DIFFRN
     _name.ddl2_mandatory          no
     _category_key.name            '_diffrn.id'
-
-    loop_
-      _ddl2_category_group.id
-         inclusive_group
-         diffrn_group
 
 save_
 
@@ -6388,12 +6275,6 @@ save_DIFFRN_DATA_FRAME
     and a fast index of the number of detector elements.  There is a middle
     index for CENTERARRAY in the order fast and then slow.
 ;
-
-    loop_
-      _ddl2_category_group.id
-         inclusive_group
-         array_data_group
-         diffrn_group
 
 save_
 
@@ -6742,7 +6623,7 @@ save_DIFFRN_DETECTOR
     _definition.id                DIFFRN_DETECTOR
     _definition.scope             Category
     _definition.class             Set
-    _definition.update            2025-09-04
+    _definition.update            2025-09-05
     _description.text
 ;
     Data items in the DIFFRN_DETECTOR category describe the
@@ -6793,11 +6674,6 @@ save_DIFFRN_DETECTOR
               /description="DETTYPE"
               /gain_setting="GAINSETTING"
 ;
-
-    loop_
-      _ddl2_category_group.id
-         inclusive_group
-         diffrn_group
 
 save_
 
@@ -6906,12 +6782,6 @@ save_diffrn_detector.dtime
     _enumeration.range            0.0:
     _units.code                   microseconds
 
-    loop_
-      _ddl2_enumeration_range.minimum
-      _ddl2_enumeration_range.maximum
-         0.0                      .
-         0.0                      0.0
-
 save_
 
 save_diffrn_detector.gain_setting
@@ -6981,12 +6851,6 @@ save_diffrn_detector.layer_thickness
     _enumeration.range            0.0:
     _units.code                   millimetres
 
-    loop_
-      _ddl2_enumeration_range.minimum
-      _ddl2_enumeration_range.maximum
-         0.0                      .
-         0.0                      0.0
-
 save_
 
 save_diffrn_detector.number_of_axes
@@ -7019,12 +6883,6 @@ save_diffrn_detector.number_of_axes
     _type.ddl2_code               int
     _enumeration.range            1:
     _units.code                   none
-
-    loop_
-      _ddl2_enumeration_range.minimum
-      _ddl2_enumeration_range.maximum
-         1                        .
-         1                        1
 
 save_
 
@@ -7108,11 +6966,6 @@ This information normally will duplicate information obtained from
 the ARRAY_STRUCTURE_LIST_AXIS.
 ;
 
-    loop_
-      _ddl2_category_group.id
-         inclusive_group
-         diffrn_group
-
 save_
 
 save_diffrn_detector_axis.axis_id
@@ -7174,26 +7027,6 @@ save_diffrn_detector_axis.diffrn_id
     _name.ddl2_mandatory          implicit
     _type.purpose                 Link
     _type.source                  Related
-    _type.container               Single
-    _type.contents                Text
-    _type.ddl2_code               code
-
-save_
-
-save_diffrn_detector_axis.id
-
-    _definition.id                '_diffrn_detector_axis.id'
-    _description.text
-;             This data item is a pointer to _diffrn_detector.id in
-              the DIFFRN_DETECTOR category.
-
-              DEPRECATED -- DO NOT USE
-;
-    _name.category_id             diffrn_detector_axis
-    _name.object_id               id
-    _name.ddl2_mandatory          no
-    _type.purpose                 Describe
-    _type.source                  Assigned
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
@@ -7309,12 +7142,6 @@ save_DIFFRN_DETECTOR_ELEMENT
      inserts ELEMENTID into the colon-separated list of units
 ;
 
-    loop_
-      _ddl2_category_group.id
-         inclusive_group
-         array_data_group
-         diffrn_group
-
 save_
 
 save_diffrn_detector_element.center[1]
@@ -7351,9 +7178,6 @@ save_diffrn_detector_element.center[1]
     _type.ddl2_units              millimetres
     _enumeration.default          0.0
     _units.code                   millimetres
-    _ddl2_sub_category.id         vector
-    _ddl2_item_related.related_name '_diffrn_data_frame.center_fast'
-    _ddl2_item_related.function_code replacedby
 
 save_
 
@@ -7391,9 +7215,6 @@ save_diffrn_detector_element.center[2]
     _type.ddl2_units              millimetres
     _enumeration.default          0.0
     _units.code                   millimetres
-    _ddl2_sub_category.id         vector
-    _ddl2_item_related.related_name '_diffrn_data_frame.center_slow'
-    _ddl2_item_related.function_code replacedby
 
 save_
 
@@ -7591,7 +7412,6 @@ save_DIFFRN_FRAME_DATA
     _definition.id                DIFFRN_FRAME_DATA
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2025-09-04
     _description.text
 ;
     Data items in the DIFFRN_FRAME_DATA category record
@@ -7624,7 +7444,6 @@ save_DIFFRN_FRAME_DATA
       _category_key.name
          '_diffrn_frame_data.id'
          '_diffrn_frame_data.detector_element_id'
-         '_diffrn_frame_data.diffrn_id'
 
     _description_example.case
 ;
@@ -7635,141 +7454,6 @@ save_DIFFRN_FRAME_DATA
     THE DIFFRN_FRAME_DATA category is deprecated and should not be used.
 ;
 
-    loop_
-      _ddl2_category_group.id
-         inclusive_group
-         array_data_group
-
-save_
-
-save_diffrn_frame_data.array_id
-
-    _definition.id                '_diffrn_frame_data.array_id'
-    _description.text
-;             This item is a pointer to _array_structure.id in the
-              ARRAY_STRUCTURE category.
-
-              DEPRECATED -- DO NOT USE
-;
-    _name.category_id             diffrn_frame_data
-    _name.object_id               array_id
-    _name.ddl2_mandatory          no
-    _type.purpose                 Describe
-    _type.source                  Assigned
-    _type.container               Single
-    _type.contents                Text
-    _type.ddl2_code               code
-    _ddl2_item_related.related_name '_diffrn_data_frame.array_id'
-    _ddl2_item_related.function_code replacedby
-
-save_
-
-save_diffrn_frame_data.binary_id
-
-    _definition.id                '_diffrn_frame_data.binary_id'
-    _description.text
-;             This item is a pointer to _array_data.binary_id in the
-              ARRAY_STRUCTURE category.
-
-              DEPRECATED -- DO NOT USE
-;
-    _name.category_id             diffrn_frame_data
-    _name.object_id               binary_id
-    _name.ddl2_mandatory          implicit
-    _type.purpose                 Number
-    _type.source                  Assigned
-    _type.container               Single
-    _type.contents                Integer
-    _type.ddl2_code               int
-    _units.code                   none
-    _ddl2_item_related.related_name '_diffrn_data_frame.binary_id'
-    _ddl2_item_related.function_code replacedby
-
-save_
-
-save_diffrn_frame_data.details
-
-    _definition.id                '_diffrn_frame_data.details'
-    _description.text
-;             The value of _diffrn_frame_data.details should give a
-              description of special aspects of each frame of data.
-
-              DEPRECATED -- DO NOT USE
-;
-    _name.category_id             diffrn_frame_data
-    _name.object_id               details
-    _name.ddl2_mandatory          no
-    _type.purpose                 Describe
-    _type.source                  Assigned
-    _type.container               Single
-    _type.contents                Text
-    _type.ddl2_code               text
-    _ddl2_item_related.related_name '_diffrn_data_frame.details'
-    _ddl2_item_related.function_code replacedby
-
-save_
-
-save_diffrn_frame_data.detector_element_id
-
-    _definition.id                '_diffrn_frame_data.detector_element_id'
-    _description.text
-;             This item is a pointer to _diffrn_detector_element.id
-              in the DIFFRN_DETECTOR_ELEMENT category.
-
-              DEPRECATED -- DO NOT USE
-;
-    _name.category_id             diffrn_frame_data
-    _name.object_id               detector_element_id
-    _name.ddl2_mandatory          yes
-    _type.purpose                 Key
-    _type.source                  Assigned
-    _type.container               Single
-    _type.contents                Text
-    _type.ddl2_code               code
-    _ddl2_item_related.related_name '_diffrn_data_frame.detector_element_id'
-    _ddl2_item_related.function_code replacedby
-
-save_
-
-save_diffrn_frame_data.diffrn_id
-
-    _definition.id                '_diffrn_frame_data.diffrn_id'
-    _definition.update            2025-09-04
-    _description.text
-;
-    Identifier for data collection conditions. Values of this item are drawn
-    from values of _diffrn.id.
-;
-    _name.category_id             diffrn_frame_data
-    _name.object_id               diffrn_id
-    _name.linked_item_id          '_diffrn.id'
-    _type.purpose                 Link
-    _type.source                  Related
-    _type.container               Single
-    _type.contents                Word
-
-save_
-
-save_diffrn_frame_data.id
-
-    _definition.id                '_diffrn_frame_data.id'
-    _description.text
-;             The value of _diffrn_frame_data.id must uniquely identify
-              each complete frame of data.
-
-              DEPRECATED -- DO NOT USE
-;
-    _name.category_id             diffrn_frame_data
-    _name.object_id               id
-    _name.ddl2_mandatory          yes
-    _type.purpose                 Key
-    _type.source                  Assigned
-    _type.container               Single
-    _type.contents                Text
-    _type.ddl2_code               code
-    _ddl2_item_related.related_name '_diffrn_data_frame.id'
-    _ddl2_item_related.function_code replacedby
-
 save_
 
 save_DIFFRN_MEASUREMENT
@@ -7777,7 +7461,7 @@ save_DIFFRN_MEASUREMENT
     _definition.id                DIFFRN_MEASUREMENT
     _definition.scope             Category
     _definition.class             Set
-    _definition.update            2025-09-04
+    _definition.update            2025-09-05
     _description.text
 ;
     Data items in the DIFFRN_MEASUREMENT category record details
@@ -7857,11 +7541,6 @@ save_DIFFRN_MEASUREMENT
         /CBF_diffrn_measurement__sample_detector_voffset=VOFST
           @units="mm"    
 ;
-
-    loop_
-      _ddl2_category_group.id
-         inclusive_group
-         diffrn_group
 
 save_
 
@@ -8081,12 +7760,6 @@ save_diffrn_measurement.number_of_axes
     _enumeration.range            1:
     _units.code                   none
 
-    loop_
-      _ddl2_enumeration_range.minimum
-      _ddl2_enumeration_range.maximum
-         1                        .
-         1                        1
-
 save_
 
 save_diffrn_measurement.sample_detector_distance
@@ -8108,8 +7781,6 @@ save_diffrn_measurement.sample_detector_distance
     _type.ddl2_code               float
     _type.ddl2_units              millimetres
     _units.code                   millimetres
-    _ddl2_enumeration_range.minimum 0.0
-    _ddl2_enumeration_range.maximum .
 
 save_
 
@@ -8155,8 +7826,6 @@ save_diffrn_measurement.sample_detector_voffset
     _type.ddl2_units              millimetres
     _enumeration.range            :
     _units.code                   millimetres
-    _ddl2_enumeration_range.minimum .
-    _ddl2_enumeration_range.maximum .
 
 save_
 
@@ -8254,11 +7923,6 @@ save_DIFFRN_MEASUREMENT_AXIS
           /CBF_diffrn_measurement__device="DEVICE"
 ;
 
-    loop_
-      _ddl2_category_group.id
-         inclusive_group
-         diffrn_group
-
 save_
 
 save_diffrn_measurement_axis.axis_id
@@ -8287,28 +7951,6 @@ save_diffrn_measurement_axis.diffrn_id
     _name.object_id               diffrn_id
     _name.linked_item_id          '_diffrn.id'
     _name.ddl2_mandatory          implicit
-
-save_
-
-save_diffrn_measurement_axis.id
-
-    _definition.id                '_diffrn_measurement_axis.id'
-    _description.text
-;             This data item is a pointer to _diffrn_measurement.id in
-              the DIFFRN_MEASUREMENT category.
-
-              DEPRECATED -- DO NOT USE
-;
-    _name.category_id             diffrn_measurement_axis
-    _name.object_id               id
-    _name.ddl2_mandatory          no
-    _type.purpose                 Describe
-    _type.source                  Assigned
-    _type.container               Single
-    _type.contents                Text
-    _type.ddl2_code               code
-    _ddl2_item_related.related_name '_diffrn_measurement_axis.measurement_id'
-    _ddl2_item_related.function_code replacedby
 
 save_
 
@@ -8389,7 +8031,7 @@ save_DIFFRN_RADIATION
     _definition.id                DIFFRN_RADIATION
     _definition.scope             Category
     _definition.class             Set
-    _definition.update            2025-09-04
+    _definition.update            2025-09-05
     _description.text
 ;             Data items in the DIFFRN_RADIATION category describe
               the radiation used for measuring diffraction intensities,
@@ -8519,11 +8161,6 @@ save_DIFFRN_RADIATION
 
          With the incident_polarisation_stokes array indexed by FRAMENO
 ;
-
-    loop_
-      _ddl2_category_group.id
-         inclusive_group
-         diffrn_group
 
 save_
 
@@ -8872,12 +8509,6 @@ save_diffrn_radiation.filter_edge
     _enumeration.range            0.0:
     _units.code                   angstroms
 
-    loop_
-      _ddl2_enumeration_range.minimum
-      _ddl2_enumeration_range.maximum
-         0.0                      .
-         0.0                      0.0
-
 save_
 
 save_diffrn_radiation.inhomogeneity
@@ -8902,12 +8533,6 @@ save_diffrn_radiation.inhomogeneity
     _type.ddl2_units              millimetres
     _enumeration.range            0.0:
     _units.code                   millimetres
-
-    loop_
-      _ddl2_enumeration_range.minimum
-      _ddl2_enumeration_range.maximum
-         0.0                      .
-         0.0                      0.0
 
 save_
 
@@ -8965,13 +8590,6 @@ save_diffrn_radiation.polarisn_norm
     _enumeration.range            -90.0:90.0
     _units.code                   degrees
 
-    loop_
-      _ddl2_enumeration_range.minimum
-      _ddl2_enumeration_range.maximum
-         90.0                     90.0
-         -90.0                    90.0
-         -90.0                    -90.0
-
 save_
 
 save_diffrn_radiation.polarisn_norm_esd
@@ -8995,15 +8613,6 @@ save_diffrn_radiation.polarisn_norm_esd
     _type.ddl2_units              degrees
     _enumeration.range            0.0:
     _units.code                   degrees
-
-    loop_
-      _ddl2_enumeration_range.minimum
-      _ddl2_enumeration_range.maximum
-         0.0                      .
-         0.0                      0.0
-
-    _ddl2_item_related.related_name '_diffrn_radiation.polarisn_norm'
-    _ddl2_item_related.function_code associated_value
 
 save_
 
@@ -9034,12 +8643,6 @@ save_diffrn_radiation.polarisn_ratio
     _enumeration.range            0.0:
     _units.code                   none
 
-    loop_
-      _ddl2_enumeration_range.minimum
-      _ddl2_enumeration_range.maximum
-         0.0                      .
-         0.0                      0.0
-
 save_
 
 save_diffrn_radiation.polarisn_ratio_esd
@@ -9061,15 +8664,6 @@ save_diffrn_radiation.polarisn_ratio_esd
     _type.ddl2_code               float
     _enumeration.range            0.0:
     _units.code                   none
-
-    loop_
-      _ddl2_enumeration_range.minimum
-      _ddl2_enumeration_range.maximum
-         0.0                      .
-         0.0                      0.0
-
-    _ddl2_item_related.related_name '_diffrn_radiation.polarisn_ratio'
-    _ddl2_item_related.function_code associated_value
 
 save_
 
@@ -9111,13 +8705,6 @@ save_diffrn_radiation.polarizn_source_norm
     _enumeration.default          0.0
     _units.code                   degrees
 
-    loop_
-      _ddl2_enumeration_range.minimum
-      _ddl2_enumeration_range.maximum
-         90.0                     90.0
-         -90.0                    90.0
-         -90.0                    -90.0
-
 save_
 
 save_diffrn_radiation.polarizn_source_norm_esd
@@ -9141,15 +8728,6 @@ save_diffrn_radiation.polarizn_source_norm_esd
     _type.ddl2_units              degrees
     _enumeration.range            0.0:
     _units.code                   degrees
-
-    loop_
-      _ddl2_enumeration_range.minimum
-      _ddl2_enumeration_range.maximum
-         0.0                      .
-         0.0                      0.0
-
-    _ddl2_item_related.related_name '_diffrn_radiation.polarizn_source_norm'
-    _ddl2_item_related.function_code associated_value
 
 save_
 
@@ -9206,13 +8784,6 @@ save_diffrn_radiation.polarizn_source_ratio
     _enumeration.range            -1.0:1.0
     _units.code                   none
 
-    loop_
-      _ddl2_enumeration_range.minimum
-      _ddl2_enumeration_range.maximum
-         1.0                      1.0
-         -1.0                     1.0
-         -1.0                     -1.0
-
 save_
 
 save_diffrn_radiation.polarizn_source_ratio_esd
@@ -9237,15 +8808,6 @@ save_diffrn_radiation.polarizn_source_ratio_esd
     _type.ddl2_code               float
     _enumeration.range            0.0:
     _units.code                   none
-
-    loop_
-      _ddl2_enumeration_range.minimum
-      _ddl2_enumeration_range.maximum
-         0.0                      .
-         0.0                      0.0
-
-    _ddl2_item_related.related_name '_diffrn_radiation.polarizn_source_ratio'
-    _ddl2_item_related.function_code associated_value
 
 save_
 
@@ -9292,12 +8854,6 @@ save_diffrn_radiation.polarizn_stokes_i
     _enumeration.default          1.0
     _units.code                   none
 
-    loop_
-      _ddl2_enumeration_range.minimum
-      _ddl2_enumeration_range.maximum
-         0.0                      .
-         0.0                      0.0
-
 save_
 
 save_diffrn_radiation.polarizn_stokes_i_esd
@@ -9323,15 +8879,6 @@ save_diffrn_radiation.polarizn_stokes_i_esd
     _type.ddl2_code               float
     _enumeration.range            0.0:
     _units.code                   none
-
-    loop_
-      _ddl2_enumeration_range.minimum
-      _ddl2_enumeration_range.maximum
-         0.0                      .
-         0.0                      0.0
-
-    _ddl2_item_related.related_name '_diffrn_radiation.polarizn_Stokes_I'
-    _ddl2_item_related.function_code associated_value
 
 save_
 
@@ -9403,15 +8950,6 @@ save_diffrn_radiation.polarizn_stokes_q_esd
     _enumeration.range            0.0:
     _units.code                   none
 
-    loop_
-      _ddl2_enumeration_range.minimum
-      _ddl2_enumeration_range.maximum
-         0.0                      .
-         0.0                      0.0
-
-    _ddl2_item_related.related_name '_diffrn_radiation.polarizn_Stokes_Q'
-    _ddl2_item_related.function_code associated_value
-
 save_
 
 save_diffrn_radiation.polarizn_stokes_u
@@ -9481,15 +9019,6 @@ save_diffrn_radiation.polarizn_stokes_u_esd
     _type.ddl2_code               float
     _enumeration.range            0.0:
     _units.code                   none
-
-    loop_
-      _ddl2_enumeration_range.minimum
-      _ddl2_enumeration_range.maximum
-         0.0                      .
-         0.0                      0.0
-
-    _ddl2_item_related.related_name '_diffrn_radiation.polarizn_Stokes_U'
-    _ddl2_item_related.function_code associated_value
 
 save_
 
@@ -9562,15 +9091,6 @@ save_diffrn_radiation.polarizn_stokes_v_esd
     _type.ddl2_code               float
     _enumeration.range            0.0:
     _units.code                   none
-
-    loop_
-      _ddl2_enumeration_range.minimum
-      _ddl2_enumeration_range.maximum
-         0.0                      .
-         0.0                      0.0
-
-    _ddl2_item_related.related_name '_diffrn_radiation.polarizn_Stokes_V'
-    _ddl2_item_related.function_code associated_value
 
 save_
 
@@ -9745,11 +9265,6 @@ save_DIFFRN_REFLN
 ;
     This category will be addressed at a future date.
 ;
-
-    loop_
-      _ddl2_category_group.id
-         inclusive_group
-         diffrn_group
 
 save_
 
@@ -10486,11 +10001,6 @@ save_DIFFRN_SCAN
     for which the value of _diffrn_scan_frame.frame_id equals FRAMEENDID   
 ;
 
-    loop_
-      _ddl2_category_group.id
-         inclusive_group
-         diffrn_group
-
 save_
 
 save_diffrn_scan.date_end
@@ -10621,12 +10131,6 @@ save_diffrn_scan.frames
     _enumeration.range            1:
     _units.code                   none
 
-    loop_
-      _ddl2_enumeration_range.minimum
-      _ddl2_enumeration_range.maximum
-         1                        .
-         1                        1
-
 save_
 
 save_diffrn_scan.id
@@ -10668,8 +10172,6 @@ save_diffrn_scan.integration_time
     _type.ddl2_code               float
     _type.ddl2_units              seconds
     _units.code                   seconds
-    _ddl2_enumeration_range.minimum 0.0
-    _ddl2_enumeration_range.maximum .
 
 save_
 
@@ -10692,8 +10194,6 @@ save_diffrn_scan.time_period
     _type.ddl2_code               float
     _type.ddl2_units              seconds
     _units.code                   seconds
-    _ddl2_enumeration_range.minimum 0.0
-    _ddl2_enumeration_range.maximum .
 
 save_
 
@@ -10728,8 +10228,6 @@ save_diffrn_scan.time_rstrt_incr
     _type.ddl2_code               float
     _type.ddl2_units              seconds
     _units.code                   seconds
-    _ddl2_enumeration_range.minimum 0.0
-    _ddl2_enumeration_range.maximum .
 
 save_
 
@@ -10821,11 +10319,6 @@ save_DIFFRN_SCAN_AXIS
              @diffrn_scan_axis__reference_angle=ANG
              @diffrn_scan_axis__reference_displacement=DISP
 ;
-
-    loop_
-      _ddl2_category_group.id
-         inclusive_group
-         diffrn_group
 
 save_
 
@@ -11253,11 +10746,6 @@ save_DIFFRN_SCAN_COLLECTION
               /translation_width=["TRANSLATION_WIDTH"]
 ;
 
-    loop_
-      _ddl2_category_group.id
-         inclusive_group
-         diffrn_group
-
 save_
 
 save_diffrn_scan_collection.details
@@ -11443,11 +10931,6 @@ save_DIFFRN_SCAN_FRAME
      where each array element is inserted at index FRAMENUMBER          
 ;
 
-    loop_
-      _ddl2_category_group.id
-         inclusive_group
-         diffrn_group
-
 save_
 
 save_diffrn_scan_frame.date
@@ -11529,12 +11012,6 @@ save_diffrn_scan_frame.frame_number
     _enumeration.range            0:
     _units.code                   none
 
-    loop_
-      _ddl2_enumeration_range.minimum
-      _ddl2_enumeration_range.maximum
-         0                        .
-         0                        0
-
 save_
 
 save_diffrn_scan_frame.integration_time
@@ -11557,8 +11034,6 @@ save_diffrn_scan_frame.integration_time
     _type.ddl2_code               float
     _type.ddl2_units              seconds
     _units.code                   seconds
-    _ddl2_enumeration_range.minimum 0.0
-    _ddl2_enumeration_range.maximum .
 
 save_
 
@@ -11605,12 +11080,6 @@ save_diffrn_scan_frame.polarizn_stokes_i
     _enumeration.default          1.0
     _units.code                   none
 
-    loop_
-      _ddl2_enumeration_range.minimum
-      _ddl2_enumeration_range.maximum
-         0.0                      .
-         0.0                      0.0
-
 save_
 
 save_diffrn_scan_frame.polarizn_stokes_i_esd
@@ -11636,15 +11105,6 @@ save_diffrn_scan_frame.polarizn_stokes_i_esd
     _type.ddl2_code               float
     _enumeration.range            0.0:
     _units.code                   none
-
-    loop_
-      _ddl2_enumeration_range.minimum
-      _ddl2_enumeration_range.maximum
-         0.0                      .
-         0.0                      0.0
-
-    _ddl2_item_related.related_name '_diffrn_scan_frame.polarizn_Stokes_I'
-    _ddl2_item_related.function_code associated_value
 
 save_
 
@@ -11716,15 +11176,6 @@ save_diffrn_scan_frame.polarizn_stokes_q_esd
     _enumeration.range            0.0:
     _units.code                   none
 
-    loop_
-      _ddl2_enumeration_range.minimum
-      _ddl2_enumeration_range.maximum
-         0.0                      .
-         0.0                      0.0
-
-    _ddl2_item_related.related_name '_diffrn_scan_frame.polarizn_Stokes_Q'
-    _ddl2_item_related.function_code associated_value
-
 save_
 
 save_diffrn_scan_frame.polarizn_stokes_u
@@ -11794,15 +11245,6 @@ save_diffrn_scan_frame.polarizn_stokes_u_esd
     _type.ddl2_code               float
     _enumeration.range            0.0:
     _units.code                   none
-
-    loop_
-      _ddl2_enumeration_range.minimum
-      _ddl2_enumeration_range.maximum
-         0.0                      .
-         0.0                      0.0
-
-    _ddl2_item_related.related_name '_diffrn_scan_frame.polarizn_Stokes_U'
-    _ddl2_item_related.function_code associated_value
 
 save_
 
@@ -11876,15 +11318,6 @@ save_diffrn_scan_frame.polarizn_stokes_v_esd
     _enumeration.range            0.0:
     _units.code                   none
 
-    loop_
-      _ddl2_enumeration_range.minimum
-      _ddl2_enumeration_range.maximum
-         0.0                      .
-         0.0                      0.0
-
-    _ddl2_item_related.related_name '_diffrn_scan_frame.polarizn_Stokes_V'
-    _ddl2_item_related.function_code associated_value
-
 save_
 
 save_diffrn_scan_frame.scan_id
@@ -11927,8 +11360,6 @@ save_diffrn_scan_frame.time_period
     _type.ddl2_code               float
     _type.ddl2_units              seconds
     _units.code                   seconds
-    _ddl2_enumeration_range.minimum 0.0
-    _ddl2_enumeration_range.maximum .
 
 save_
 
@@ -11961,8 +11392,6 @@ save_diffrn_scan_frame.time_rstrt_incr
     _type.ddl2_code               float
     _type.ddl2_units              seconds
     _units.code                   seconds
-    _ddl2_enumeration_range.minimum 0.0
-    _ddl2_enumeration_range.maximum .
 
 save_
 
@@ -12062,11 +11491,6 @@ save_DIFFRN_SCAN_FRAME_AXIS
 
     The remaining tags similarly populate the attribute arrays
 ;
-
-    loop_
-      _ddl2_category_group.id
-         inclusive_group
-         diffrn_group
 
 save_
 
@@ -12562,11 +11986,6 @@ save_DIFFRN_SCAN_FRAME_MONITOR
             /count_time=[INTEGRATIONTIME] 
 ;
 
-    loop_
-      _ddl2_category_group.id
-         inclusive_group
-         diffrn_group
-
 save_
 
 save_diffrn_scan_frame_monitor.detector_id
@@ -12651,12 +12070,6 @@ save_diffrn_scan_frame_monitor.id
     _enumeration.range            1:
     _enumeration.default          1
 
-    loop_
-      _ddl2_enumeration_range.minimum
-      _ddl2_enumeration_range.maximum
-         1                        1
-         1                        .
-
 save_
 
 save_diffrn_scan_frame_monitor.integration_time
@@ -12677,8 +12090,6 @@ save_diffrn_scan_frame_monitor.integration_time
     _type.ddl2_code               float
     _type.ddl2_units              seconds
     _units.code                   seconds
-    _ddl2_enumeration_range.minimum 0.0
-    _ddl2_enumeration_range.maximum .
 
 save_
 
@@ -12710,8 +12121,6 @@ save_diffrn_scan_frame_monitor.monitor_value
     _type.contents                Real
     _type.ddl2_code               float
     _units.code                   none
-    _ddl2_enumeration_range.minimum 0.0
-    _ddl2_enumeration_range.maximum .
 
 save_
 
@@ -12730,35 +12139,6 @@ save_diffrn_scan_frame_monitor.scan_id
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               code
-
-save_
-
-save_diffrn_scan_frame_monitor.value
-
-    _definition.id                '_diffrn_scan_frame_monitor.value'
-    _description.text
-;             This is a deprecated version of
-              _diffrn_scan_frame_monitor.monitor_value.
-
-              The value is typed as float to allow of monitors for very
-              intense beams that cannot report all digits, but when available,
-              all digits of the monitor should be recorded.
-
-              DEPRECATED -- DO NOT USE
-;
-    _name.category_id             diffrn_scan_frame_monitor
-    _name.object_id               value
-    _name.ddl2_mandatory          no
-    _type.purpose                 Number
-    _type.source                  Assigned
-    _type.container               Single
-    _type.contents                Real
-    _type.ddl2_code               float
-    _units.code                   none
-    _ddl2_enumeration_range.minimum 0.0
-    _ddl2_enumeration_range.maximum .
-    _ddl2_item_related.related_name '_diffrn_scan_frame_monitor.monitor_value'
-    _ddl2_item_related.function_code replacedby
 
 save_
 
@@ -12793,7 +12173,7 @@ save_DIFFRN_SOURCE
     _definition.id                DIFFRN_SOURCE
     _definition.scope             Category
     _definition.class             Set
-    _definition.update            2025-09-04
+    _definition.update            2025-09-05
     _description.text
 ;              Data items in the DIFFRN_SOURCE category record details of
                the source of radiation used in the diffraction experiment.
@@ -12805,11 +12185,6 @@ save_DIFFRN_SOURCE
     _name.object_id               DIFFRN_SOURCE
     _name.ddl2_mandatory          no
     _category_key.name            '_diffrn_source.diffrn_id'
-
-    loop_
-      _ddl2_category_group.id
-         inclusive_group
-         diffrn_group
 
 save_
 
@@ -12947,12 +12322,6 @@ save_MAP
 ;   Example 1. Identifying an observed density map
                 and a calculated density map
 ;
-
-    loop_
-      _ddl2_category_group.id
-         inclusive_group
-         array_data_group
-         map_group
 
 save_
 
@@ -13126,12 +12495,6 @@ save_MAP_SEGMENT
                 segment, both using the same array structure
                 and mask.
 ;
-
-    loop_
-      _ddl2_category_group.id
-         inclusive_group
-         array_data_group
-         map_group
 
 save_
 
@@ -13462,11 +12825,6 @@ save_VARIANT
        left and 0.1 mm down.
 ;
 
-    loop_
-      _ddl2_category_group.id
-         inclusive_group
-         variant_group
-
 save_
 
 save_variant.details
@@ -13653,11 +13011,11 @@ save_
         + Add _diffrn_scan_frame_axis.diffrn_id
         + Add _diffrn_scan_frame_monitor.diffrn_id
 ;
-         1.8.8.2                  2025-06-10
+         1.8.8-dev2               2025-06-10
 ;
        Pick up minor type corrections from 1.8.9 dcitionary
 ;
-         1.8.8.1                  2025-05-25
+         1.8.8-dev1               2025-05-25
 ;
        Minor corrections to 1.8.8 found while working on 1.8.9
 ;
@@ -13908,7 +13266,7 @@ save_
     +  Fix typos in NeXus mappings
 
 ;
-         1.7                      2013-06-18
+         1.7.0                    2013-06-18
 ;  Additions to start merge of CBF, HDF5 and NeXus (HJB)
 
     +  Define new ARRAY_STRUCTURE_LIST_SECTION category
@@ -13987,7 +13345,7 @@ save_
        Improve definition of X-axis to cover the case of no goniometer
         and clean up more line folds (HJB)
 ;
-         1.5                      2007-07-25
+         1.5.0                    2007-07-25
 ;  This is a cumulative list of the changes proposed since the
    imgCIF workshop in Hawaii in July 2006.  It is the result
    of contributions by H. J. Bernstein, A. Hammersley,
@@ -14027,7 +13385,7 @@ save_
      + Fix unclosed text fields in various map definitions
 
 ;
-         1.4                      2006-07-04
+         1.4.0                    2006-07-04
 ;  This is a change to reintegrate all changes made in the course of
    publication of ITVG, by the RCSB from April 2005 through
    August 2008 and changes for the 2006 imgCIF workshop in
@@ -14151,7 +13509,7 @@ save_
        Correction of ATOM_ for ARRAY_ typos in various descriptions.
        (HJB)
 ;
-         1.2                      2003-02-07
+         1.2.0                    2003-02-07
 ;
        Corrections to encodings (remove extraneous hyphens) remove
        extraneous underscore in '_array_structure.encoding_type'
@@ -14169,7 +13527,7 @@ save_
 ;
        Several typo corrections by JW.
 ;
-         1.1                      2001-02-06
+         1.1.0                    2001-02-06
 ;
    Draft resulting from discussions on header for use at NSLS.  (HJB)
 
@@ -14206,7 +13564,7 @@ save_
    + Add examples for fairly complete headers thanks to R. Sweet and P.
      Ellis.
 ;
-         1.0                      2000-12-21
+         1.0.0                    2000-12-21
 ;
        Release version - few typos and tidying up.  (BM & HJB)
 
@@ -14268,7 +13626,7 @@ save_
 
        + Add missing quote marks for '_diffrn_scan.id' definition.
 ;
-         0.5                      1999-01-01
+         0.5.0                    1999-01-01
 ;
    Modifications for axis definitions and reduction of binary header.  (HJB)
 
@@ -14295,7 +13653,7 @@ save_
 
    + Add DIFFRN_SCAN... categories.
 ;
-         0.4                      1998-08-11
+         0.4.0                    1998-08-11
 ;
        Modifications to the 0.3 imgCIF draft.  (HJB)
 
@@ -14305,7 +13663,7 @@ save_
 
        + Change name to cbfext98.dic.
 ;
-         0.3                      1998-07-04
+         0.3.0                    1998-07-04
 ;
    Modifications for imgCIF.  (HJB)
 
@@ -14319,7 +13677,7 @@ save_
      '_diffrn_frame_data.binary_id' and '_array_intensities.binary_id'
      into pointers to this item.
 ;
-         0.2                      1997-12-02
+         0.2.0                    1997-12-02
 ;
    Modifications to the CBF draft.  (JW)
 
@@ -14335,7 +13693,7 @@ save_
      groups within a binary section.  The formal identification of the
      binary section is still fuzzy.
 ;
-         0.1                      1997-01-24
+         0.1.0                    1997-01-24
 ;
    First draft of this dictionary in DDL 2.1 compliant format by John
    Westbrook (JW).  This version is adapted from the Crystallographic
