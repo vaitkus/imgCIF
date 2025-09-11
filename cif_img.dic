@@ -2140,7 +2140,7 @@ save_array_intensities.gain_esd
     _name.linked_item_id          '_array_intensities.gain'
     _name.ddl2_mandatory          Yes
     _type.purpose                 SU
-    _type.source                  Assigned
+    _type.source                  Related
     _type.container               Single
     _type.contents                Real
     _type.ddl2_code               Float
@@ -5774,6 +5774,10 @@ save_axis.depends_on
     _name.object_id               depends_on
     _name.linked_item_id          '_axis.id'
     _name.ddl2_mandatory          No
+    _type.purpose                 Link
+    _type.source                  Related
+    _type.container               Single
+    _type.contents                Text
 
 save_
 
@@ -6137,7 +6141,7 @@ save_DIFFRN
     _definition.id                DIFFRN
     _definition.scope             Category
     _definition.class             Set
-    _definition.update            2025-09-10
+    _definition.update            2025-09-11
     _description.text
 ;              Data items in the DIFFRN category record details about the
                diffraction data and their measurement.
@@ -6157,10 +6161,6 @@ save_
 save_diffrn.id
 
     _definition.id                '_diffrn.id'
-    _alias.definition_id          '_diffrn.id'
-    _alias.deprecation_date       .
-    _alias.ddl2_version           5.385
-    _alias.dictionary_uri         mmcif_pdbx.dic
     _description.text
 ;              This data item uniquely identifies a set of diffraction
                data.
@@ -6629,7 +6629,7 @@ save_DIFFRN_DETECTOR
     _definition.id                DIFFRN_DETECTOR
     _definition.scope             Category
     _definition.class             Set
-    _definition.update            2025-09-10
+    _definition.update            2025-09-11
     _description.text
 ;
     Data items in the DIFFRN_DETECTOR category describe the
@@ -7467,7 +7467,7 @@ save_DIFFRN_MEASUREMENT
     _definition.id                DIFFRN_MEASUREMENT
     _definition.scope             Category
     _definition.class             Set
-    _definition.update            2025-09-10
+    _definition.update            2025-09-11
     _description.text
 ;
     Data items in the DIFFRN_MEASUREMENT category record details
@@ -7957,6 +7957,10 @@ save_diffrn_measurement_axis.diffrn_id
     _name.object_id               diffrn_id
     _name.linked_item_id          '_diffrn.id'
     _name.ddl2_mandatory          Implicit
+    _type.purpose                 Link
+    _type.source                  Related
+    _type.container               Single
+    _type.contents                Text
 
 save_
 
@@ -8037,7 +8041,7 @@ save_DIFFRN_RADIATION
     _definition.id                DIFFRN_RADIATION
     _definition.scope             Category
     _definition.class             Set
-    _definition.update            2025-09-10
+    _definition.update            2025-09-11
     _description.text
 ;             Data items in the DIFFRN_RADIATION category describe
               the radiation used for measuring diffraction intensities,
@@ -9363,6 +9367,10 @@ save_diffrn_reflns.diffrn_id
     _name.object_id               diffrn_id
     _name.linked_item_id          '_diffrn.id'
     _name.ddl2_mandatory          Yes
+    _type.purpose                 Link
+    _type.source                  Related
+    _type.container               Single
+    _type.contents                Text
 
 save_
 
@@ -10072,6 +10080,10 @@ save_diffrn_scan.diffrn_id
     _name.object_id               diffrn_id
     _name.linked_item_id          '_diffrn.id'
     _name.ddl2_mandatory          Implicit
+    _type.purpose                 Link
+    _type.source                  Related
+    _type.container               Single
+    _type.contents                Text
 
 save_
 
@@ -12180,7 +12192,7 @@ save_DIFFRN_SOURCE
     _definition.id                DIFFRN_SOURCE
     _definition.scope             Category
     _definition.class             Set
-    _definition.update            2025-09-10
+    _definition.update            2025-09-11
     _description.text
 ;              Data items in the DIFFRN_SOURCE category record details of
                the source of radiation used in the diffraction experiment.
@@ -12198,10 +12210,6 @@ save_
 save_diffrn_source.diffrn_id
 
     _definition.id                '_diffrn_source.diffrn_id'
-    _alias.definition_id          '_diffrn_source.diffrn_id'
-    _alias.deprecation_date       .
-    _alias.ddl2_version           5.384
-    _alias.dictionary_uri         mmcif_pdbx.dic
     _description.text
 ;              This data item is a pointer to _diffrn.id in the DIFFRN
                category.
@@ -12210,6 +12218,10 @@ save_diffrn_source.diffrn_id
     _name.object_id               diffrn_id
     _name.linked_item_id          '_diffrn.id'
     _name.ddl2_mandatory          Yes
+    _type.purpose                 Link
+    _type.source                  Related
+    _type.container               Single
+    _type.contents                Text
 
 save_
 
@@ -12222,9 +12234,8 @@ save_diffrn_source.source
       _alias.deprecation_date
       _alias.ddl2_version
       _alias.dictionary_uri
-         '_diffrn_source.source'           .        5.384        mmcif_pdbx.dic
-         '_diffrn_radiation_source'        .        1.0          cifdic.c91
-         '_diffrn_source'                  .        2.0          cif_core.dic
+         '_diffrn_radiation_source'         .         1.0         cifdic.c91
+         '_diffrn_source'                   .         2.0         cif_core.dic
 
     _description.text
 ;              The general class of the radiation source.
@@ -12252,15 +12263,10 @@ save_
 save_diffrn_source.type
 
     _definition.id                '_diffrn_source.type'
-
-    loop_
-      _alias.definition_id
-      _alias.deprecation_date
-      _alias.ddl2_version
-      _alias.dictionary_uri
-         '_diffrn_source.type'         .         5.384         mmcif_pdbx.dic
-         '_diffrn_source_type'         .         2.0.1         cif_core.dic
-
+    _alias.definition_id          '_diffrn_source_type'
+    _alias.deprecation_date       .
+    _alias.ddl2_version           2.0.1
+    _alias.dictionary_uri         cif_core.dic
     _description.text
 ;              The make, model or name of the source of radiation.
 ;
@@ -13476,48 +13482,6 @@ save_
     +  Fix typos in NeXus mappings
 
 ;
-         1.7.10                   2014-04-25
-;
-       Additions of esd's to polarization tags.  Change to NeXus mapping to use
-        NXtransformations instead of NXpoise (HJB)
-
-         + Add _diffrn_radiation.polarisn_norm_esd,
-         _diffrn_radiation.polarisn_ratio_esd,
-         _diffrn_radiation.polarizn_source_norm_esd,
-         _diffrn_radiation.polarizn_source_ratio_esd,
-         _diffrn_radiation.polarizn_Stokes_I_esd,
-         _diffrn_radiation.polarizn_Stokes_Q_esd,
-         _diffrn_radiation.polarizn_Stokes_U_esd,
-         _diffrn_radiation.polarizn_Stokes_V_esd,
-         _diffrn_scan_frame.polarizn_Stokes_I_esd,
-         _diffrn_scan_frame.polarizn_Stokes_Q_esd,
-         _diffrn_scan_frame.polarizn_Stokes_U_esd,
-         _diffrn_scan_frame.polarizn_Stokes_V_esd.
-         + Change NeXus mapping for ARRAY_STRUCTURE_LIST
-         ARRAY_STRUCTURE_LIST_AXIS, AXIS,
-         DIFFRN_DETECTOR_AXIS, DIFFRN_MEASUREMENT_AXIS,
-         DIFFRN_SCAN_FRAME_AXIS.
-;
-         1.7.11                   2018-12-03
-;
-       Changes for CBFlib 0.9.6 release (HJB)
-
-        + Remove _array_structure_list.array_section_id
-        + Revisions to _category.NX_mapping_details in most categories for
-        array sections.
-        + Change to uniform use of entry:NXentry
-        + Change to uniform use of identification of NXdetector by detector
-        element
-        + Change to uniform use of data_ARRAYID_BINARYID
-        + Add _array_structure_list.array_section_id
-        + Add _map_segment.mask_array_section_id
-        + Add _diffrn_scan_collection.scan_id
-        + Add _diffrn_scan_collection.type
-        + Add _diffrn_scan_collection.translation_width
-        + Add _diffrn_radiation.beam_width
-        + Add _diffrn_radiation.beam_height
-        + Add _diffrn_radiation.beam_flux
-;
          1.7.2                    2013-10-07
 ;  Add FEL detector positioning tags and change back to NXgoniometer
 
@@ -13592,6 +13556,48 @@ save_
     + Provide missing factor of 2 in _diffrn_radiation.polarizn_Stokes_V
     description and _diffrn_scan_frame.polarizn_Stokes_V description.
 
+;
+         1.7.10                   2014-04-25
+;
+       Additions of esd's to polarization tags.  Change to NeXus mapping to use
+        NXtransformations instead of NXpoise (HJB)
+
+         + Add _diffrn_radiation.polarisn_norm_esd,
+         _diffrn_radiation.polarisn_ratio_esd,
+         _diffrn_radiation.polarizn_source_norm_esd,
+         _diffrn_radiation.polarizn_source_ratio_esd,
+         _diffrn_radiation.polarizn_Stokes_I_esd,
+         _diffrn_radiation.polarizn_Stokes_Q_esd,
+         _diffrn_radiation.polarizn_Stokes_U_esd,
+         _diffrn_radiation.polarizn_Stokes_V_esd,
+         _diffrn_scan_frame.polarizn_Stokes_I_esd,
+         _diffrn_scan_frame.polarizn_Stokes_Q_esd,
+         _diffrn_scan_frame.polarizn_Stokes_U_esd,
+         _diffrn_scan_frame.polarizn_Stokes_V_esd.
+         + Change NeXus mapping for ARRAY_STRUCTURE_LIST
+         ARRAY_STRUCTURE_LIST_AXIS, AXIS,
+         DIFFRN_DETECTOR_AXIS, DIFFRN_MEASUREMENT_AXIS,
+         DIFFRN_SCAN_FRAME_AXIS.
+;
+         1.7.11                   2018-12-03
+;
+       Changes for CBFlib 0.9.6 release (HJB)
+
+        + Remove _array_structure_list.array_section_id
+        + Revisions to _category.NX_mapping_details in most categories for
+        array sections.
+        + Change to uniform use of entry:NXentry
+        + Change to uniform use of identification of NXdetector by detector
+        element
+        + Change to uniform use of data_ARRAYID_BINARYID
+        + Add _array_structure_list.array_section_id
+        + Add _map_segment.mask_array_section_id
+        + Add _diffrn_scan_collection.scan_id
+        + Add _diffrn_scan_collection.type
+        + Add _diffrn_scan_collection.translation_width
+        + Add _diffrn_radiation.beam_width
+        + Add _diffrn_radiation.beam_height
+        + Add _diffrn_radiation.beam_flux
 ;
          1.8.0                    2021-01-24
 ;   Changes for 2021 ITVG and conformance with Gold Standard and NXmx (HJB)
