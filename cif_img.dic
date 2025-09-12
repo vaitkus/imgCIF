@@ -5,7 +5,7 @@ data_CIF_IMG
     _dictionary.title             CIF_IMG
     _dictionary.class             Instance
     _dictionary.version           1.8.9
-    _dictionary.date              2025-06-10
+    _dictionary.date              2025-09-12
     _dictionary.ddl_conformance   3.14.0
     _dictionary.namespace         Ddlm
     _description.text
@@ -1265,6 +1265,7 @@ save_array_data.data
     _type.purpose                 Number
     _type.source                  Assigned
     _type.container               Array
+    _type.dimension               '[]'
     _type.contents                Complex
     _type.ddl2_code               Binary
     _units.code                   none
@@ -1893,6 +1894,7 @@ save_array_element_size.index
     _type.container               Single
     _type.contents                Integer
     _type.ddl2_code               Int
+    _enumeration.range            1:
     _units.code                   none
 
 save_
@@ -2065,6 +2067,7 @@ save_array_intensities.array_id
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               Code
+    _enumeration.default          1
 
 save_
 
@@ -2084,6 +2087,8 @@ save_array_intensities.binary_id
     _type.container               Single
     _type.contents                Integer
     _type.ddl2_code               Int
+    _enumeration.range            1:
+    _enumeration.default          1
     _units.code                   none
 
 save_
@@ -2967,6 +2972,7 @@ save_array_structure_list.array_id
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               Code
+    _enumeration.default          1
 
 save_
 
@@ -3777,6 +3783,7 @@ save_array_structure_list_section.array_id
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               Code
+    _enumeration.default          1
 
 save_
 
@@ -3856,6 +3863,7 @@ save_array_structure_list_section.index
     _type.container               Single
     _type.contents                Integer
     _type.ddl2_code               Int
+    _enumeration.range            1:
     _units.code                   none
 
 save_
@@ -6141,7 +6149,7 @@ save_DIFFRN
     _definition.id                DIFFRN
     _definition.scope             Category
     _definition.class             Set
-    _definition.update            2025-09-11
+    _definition.update            2025-09-12
     _description.text
 ;              Data items in the DIFFRN category record details about the
                diffraction data and their measurement.
@@ -6303,6 +6311,7 @@ save_diffrn_data_frame.array_id
     _type.container               Single
     _type.contents                Text
     _type.ddl2_code               Code
+    _enumeration.default          1
 
 save_
 
@@ -6345,6 +6354,8 @@ save_diffrn_data_frame.binary_id
     _type.container               Single
     _type.contents                Integer
     _type.ddl2_code               Int
+    _enumeration.range            1:
+    _enumeration.default          1
     _units.code                   none
 
 save_
@@ -6629,7 +6640,7 @@ save_DIFFRN_DETECTOR
     _definition.id                DIFFRN_DETECTOR
     _definition.scope             Category
     _definition.class             Set
-    _definition.update            2025-09-11
+    _definition.update            2025-09-12
     _description.text
 ;
     Data items in the DIFFRN_DETECTOR category describe the
@@ -7467,7 +7478,7 @@ save_DIFFRN_MEASUREMENT
     _definition.id                DIFFRN_MEASUREMENT
     _definition.scope             Category
     _definition.class             Set
-    _definition.update            2025-09-11
+    _definition.update            2025-09-12
     _description.text
 ;
     Data items in the DIFFRN_MEASUREMENT category record details
@@ -8041,7 +8052,7 @@ save_DIFFRN_RADIATION
     _definition.id                DIFFRN_RADIATION
     _definition.scope             Category
     _definition.class             Set
-    _definition.update            2025-09-11
+    _definition.update            2025-09-12
     _description.text
 ;             Data items in the DIFFRN_RADIATION category describe
               the radiation used for measuring diffraction intensities,
@@ -12192,7 +12203,7 @@ save_DIFFRN_SOURCE
     _definition.id                DIFFRN_SOURCE
     _definition.scope             Category
     _definition.class             Set
-    _definition.update            2025-09-11
+    _definition.update            2025-09-12
     _description.text
 ;              Data items in the DIFFRN_SOURCE category record details of
                the source of radiation used in the diffraction experiment.
@@ -13728,17 +13739,22 @@ save_
 ;
        Pick up minor type corrections from 1.8.9 dcitionary
 ;
-         1.8.9                    2025-06-10
-;
-       Addition of missing diffrn.id pointers
+         1.8.9                    2025-09-12
+;   Addition of missing diffrn.id pointers
 
-        + Add _diffrn_detector_element.diffrn_id
-        + Add _diffrn_measurement_axis.diffrn_id
-        + Add _diffrn_scan.diffrn_id
-        + Add _diffrn_scan_axis.diffrn_id
-        + Add _diffrn_scan_collection.diffrn_id
-        + Add _diffrn_scan_frame.diffrn_id
-        + Add _diffrn_scan_frame_axis.diffrn_id
-        + Add _diffrn_scan_frame_axis.diffrn_id
-        + Add _diffrn_scan_frame_monitor.diffrn_id
+    + Add _diffrn_detector_element.diffrn_id
+    + Add _diffrn_measurement_axis.diffrn_id
+    + Add _diffrn_scan.diffrn_id
+    + Add _diffrn_scan_axis.diffrn_id
+    + Add _diffrn_scan_collection.diffrn_id
+    + Add _diffrn_scan_frame.diffrn_id
+    + Add _diffrn_scan_frame_axis.diffrn_id
+    + Add _diffrn_scan_frame_axis.diffrn_id
+    + Add _diffrn_scan_frame_monitor.diffrn_id
+     (DDLm conversion) Specified Set categories ["diffrn_radiation", "diffrn_measurement", "diffrn_detector", "diffrn", "diffrn_source"]
+
+     (DDLm conversion) Removed redundant aliases and definitions for aliased data names ["_diffrn_frame_data.binary_id", "_diffrn_frame_data.id", "_diffrn_scan_frame_monitor.value", "_diffrn_frame_data.details", "_diffrn_measurement_axis.id", "_diffrn_frame_data.array_id", "_diffrn_frame_data.detector_element_id", "_diffrn_detector_axis.id"]
+
+     (DDLm conversion) Removed DDL2-only categories
+
 ;
