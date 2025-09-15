@@ -5,7 +5,7 @@ data_CIF_IMG
     _dictionary.title             CIF_IMG
     _dictionary.class             Instance
     _dictionary.version           1.8.9
-    _dictionary.date              2025-09-12
+    _dictionary.date              2025-09-15
     _dictionary.ddl_conformance   3.14.0
     _dictionary.namespace         Ddlm
     _description.text
@@ -6149,7 +6149,7 @@ save_DIFFRN
     _definition.id                DIFFRN
     _definition.scope             Category
     _definition.class             Set
-    _definition.update            2025-09-12
+    _definition.update            2025-09-15
     _description.text
 ;              Data items in the DIFFRN category record details about the
                diffraction data and their measurement.
@@ -6640,7 +6640,7 @@ save_DIFFRN_DETECTOR
     _definition.id                DIFFRN_DETECTOR
     _definition.scope             Category
     _definition.class             Set
-    _definition.update            2025-09-12
+    _definition.update            2025-09-15
     _description.text
 ;
     Data items in the DIFFRN_DETECTOR category describe the
@@ -7478,7 +7478,7 @@ save_DIFFRN_MEASUREMENT
     _definition.id                DIFFRN_MEASUREMENT
     _definition.scope             Category
     _definition.class             Set
-    _definition.update            2025-09-12
+    _definition.update            2025-09-15
     _description.text
 ;
     Data items in the DIFFRN_MEASUREMENT category record details
@@ -8052,7 +8052,7 @@ save_DIFFRN_RADIATION
     _definition.id                DIFFRN_RADIATION
     _definition.scope             Category
     _definition.class             Set
-    _definition.update            2025-09-12
+    _definition.update            2025-09-15
     _description.text
 ;             Data items in the DIFFRN_RADIATION category describe
               the radiation used for measuring diffraction intensities,
@@ -12203,7 +12203,7 @@ save_DIFFRN_SOURCE
     _definition.id                DIFFRN_SOURCE
     _definition.scope             Category
     _definition.class             Set
-    _definition.update            2025-09-12
+    _definition.update            2025-09-15
     _description.text
 ;              Data items in the DIFFRN_SOURCE category record details of
                the source of radiation used in the diffraction experiment.
@@ -13739,7 +13739,7 @@ save_
 ;
        Pick up minor type corrections from 1.8.9 dcitionary
 ;
-         1.8.9                    2025-09-12
+         1.8.9                    2025-09-15
 ;   Addition of missing diffrn.id pointers
 
     + Add _diffrn_detector_element.diffrn_id
