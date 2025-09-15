@@ -773,9 +773,8 @@ save_CIF_IMG_HEAD
     _name.object_id               CIF_IMG_HEAD
 
     _import.get
-        [{'dupl':Ignore
-          'file':multi_block_core.dic
-          'mode':Full  'save':multiblock_core}]
+        [{'dupl':Ignore  'file':multi_block_core.dic  'mode':Full
+          'save':multiblock_core}]
 
 save_
 
@@ -6716,39 +6715,6 @@ save_diffrn_detector.details
 
 save_
 
-save_diffrn_detector.detector
-
-    _definition.id                '_diffrn_detector.detector'
-
-    loop_
-      _alias.definition_id
-      _alias.deprecation_date
-      _alias.ddl2_version
-      _alias.dictionary_uri
-         '_diffrn_radiation_detector'        .        1.0        cifdic.c91
-         '_diffrn_detector'                  .        2.0        cif_core.dic
-
-    _description.text
-;             The general class of the radiation detector.
-;
-    _name.category_id             diffrn_detector
-    _name.object_id               detector
-    _name.ddl2_mandatory          No
-    _type.purpose                 Describe
-    _type.source                  Assigned
-    _type.container               Single
-    _type.contents                Text
-    _type.ddl2_code               Text
-
-    loop_
-      _description_example.case
-         'photographic film'
-         'scintillation counter'
-         'CCD plate'
-         'BF~3~ counter'
-
-save_
-
 save_diffrn_detector.diffrn_id
 
     _definition.id                '_diffrn_detector.diffrn_id'
@@ -6900,27 +6866,6 @@ save_diffrn_detector.number_of_axes
     _type.ddl2_code               Int
     _enumeration.range            1:
     _units.code                   none
-
-save_
-
-save_diffrn_detector.type
-
-    _definition.id                '_diffrn_detector.type'
-    _alias.definition_id          '_diffrn_detector_type'
-    _alias.deprecation_date       .
-    _alias.ddl2_version           2.0.1
-    _alias.dictionary_uri         cif_core.dic
-    _description.text
-;             The make, model or name of the detector device used.
-;
-    _name.category_id             diffrn_detector
-    _name.object_id               type
-    _name.ddl2_mandatory          No
-    _type.purpose                 Describe
-    _type.source                  Assigned
-    _type.container               Single
-    _type.contents                Text
-    _type.ddl2_code               Text
 
 save_
 
@@ -7587,46 +7532,6 @@ save_diffrn_measurement.details
 
 save_
 
-save_diffrn_measurement.device
-
-    _definition.id                '_diffrn_measurement.device'
-    _alias.definition_id          '_diffrn_measurement_device'
-    _alias.deprecation_date       .
-    _alias.ddl2_version           2.0.1
-    _alias.dictionary_uri         cif_core.dic
-    _description.text
-;             The general class of goniometer or device used to support
-              and orient the specimen.
-
-              If the value of _diffrn_measurement.device is not given,
-              it is implicitly equal to the value of
-              _diffrn_measurement.diffrn_id.
-
-              Either _diffrn_measurement.device or
-              _diffrn_measurement.id may be used to link to other
-              categories.  If the experimental setup admits multiple
-              devices, then _diffrn_measurement.id is used to provide
-              a unique link.
-;
-    _name.category_id             diffrn_measurement
-    _name.object_id               device
-    _name.ddl2_mandatory          Implicit
-    _type.purpose                 Key
-    _type.source                  Assigned
-    _type.container               Single
-    _type.contents                Text
-    _type.ddl2_code               Text
-
-    loop_
-      _description_example.case
-         '3-circle camera'
-         '4-circle camera'
-         'kappa-geometry camera'
-         'oscillation camera'
-         'precession camera'
-
-save_
-
 save_diffrn_measurement.device_details
 
     _definition.id                '_diffrn_measurement.device_details'
@@ -7650,35 +7555,6 @@ save_diffrn_measurement.device_details
 ;                                 commercial goniometer modified locally to
                                   allow for 90\% \t arc
 ;
-
-save_
-
-save_diffrn_measurement.device_type
-
-    _definition.id                '_diffrn_measurement.device_type'
-    _alias.definition_id          '_diffrn_measurement_device_type'
-    _alias.deprecation_date       .
-    _alias.ddl2_version           2.0.1
-    _alias.dictionary_uri         cif_core.dic
-    _description.text
-;             The make, model or name of the measurement device
-              (goniometer) used.
-;
-    _name.category_id             diffrn_measurement
-    _name.object_id               device_type
-    _name.ddl2_mandatory          No
-    _type.purpose                 Describe
-    _type.source                  Assigned
-    _type.container               Single
-    _type.contents                Text
-    _type.ddl2_code               Text
-
-    loop_
-      _description_example.case
-         'Supper model q'
-         'Huber model r'
-         'Enraf-Nonius model s'
-         'home-made'
 
 save_
 
@@ -12236,67 +12112,6 @@ save_diffrn_source.diffrn_id
 
 save_
 
-save_diffrn_source.source
-
-    _definition.id                '_diffrn_source.source'
-
-    loop_
-      _alias.definition_id
-      _alias.deprecation_date
-      _alias.ddl2_version
-      _alias.dictionary_uri
-         '_diffrn_radiation_source'         .         1.0         cifdic.c91
-         '_diffrn_source'                   .         2.0         cif_core.dic
-
-    _description.text
-;              The general class of the radiation source.
-;
-    _name.category_id             diffrn_source
-    _name.object_id               source
-    _name.ddl2_mandatory          No
-    _type.purpose                 Describe
-    _type.source                  Assigned
-    _type.container               Single
-    _type.contents                Text
-    _type.ddl2_code               Text
-
-    loop_
-      _description_example.case
-         'sealed X-ray tube'
-         'nuclear reactor'
-         'spallation source'
-         'electron microscope'
-         'rotating-anode X-ray tube'
-         'synchrotron'
-
-save_
-
-save_diffrn_source.type
-
-    _definition.id                '_diffrn_source.type'
-    _alias.definition_id          '_diffrn_source_type'
-    _alias.deprecation_date       .
-    _alias.ddl2_version           2.0.1
-    _alias.dictionary_uri         cif_core.dic
-    _description.text
-;              The make, model or name of the source of radiation.
-;
-    _name.category_id             diffrn_source
-    _name.object_id               type
-    _name.ddl2_mandatory          No
-    _type.purpose                 Describe
-    _type.source                  Assigned
-    _type.container               Single
-    _type.contents                Text
-    _type.ddl2_code               Text
-
-    loop_
-      _description_example.case
-         'NSLS beamline X8C'
-         'Rigaku RU200'
-
-save_
-
 save_MAP
 
     _definition.id                MAP
@@ -13754,6 +13569,10 @@ save_
      (DDLm conversion) Specified Set categories ["diffrn_radiation", "diffrn_measurement", "diffrn_detector", "diffrn", "diffrn_source"]
 
      (DDLm conversion) Removed redundant aliases and definitions for aliased data names ["_diffrn_frame_data.binary_id", "_diffrn_frame_data.id", "_diffrn_scan_frame_monitor.value", "_diffrn_frame_data.details", "_diffrn_measurement_axis.id", "_diffrn_frame_data.array_id", "_diffrn_frame_data.detector_element_id", "_diffrn_detector_axis.id"]
+
+     (DDLm conversion) Removed DDL2-only categories
+
+     (DDLm conversion) Specified Set categories ["diffrn", "diffrn_detector", "diffrn_measurement", "diffrn_radiation", "diffrn_source"]
 
      (DDLm conversion) Removed DDL2-only categories
 
