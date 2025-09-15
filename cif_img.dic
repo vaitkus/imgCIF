@@ -774,7 +774,7 @@ save_CIF_IMG_HEAD
 
     _import.get
         [{'dupl':Ignore
-          'file':https://raw.githubusercontent.com/COMCIFS/MultiBlock_Dictionary/main/multi_block_core.dic
+          'file':multi_block_core.dic
           'mode':Full  'save':multiblock_core}]
 
 save_
