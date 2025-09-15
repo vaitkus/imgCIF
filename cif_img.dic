@@ -774,7 +774,7 @@ save_CIF_IMG_HEAD
 
     _import.get
         [{'dupl':Ignore
-          'file':multi_block_core.dic
+          'file':https://raw.githubusercontent.com/COMCIFS/MultiBlock_Dictionary/main/multi_block_core.dic
           'mode':Full  'save':multiblock_core}]
 
 save_
@@ -983,7 +983,7 @@ save_array_data.array_id
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
     _enumeration.default          1
 
@@ -1292,7 +1292,7 @@ save_array_data.external_data_id
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
     _enumeration.default          1
 
@@ -1342,7 +1342,7 @@ save_array_data.header_convention
     _type.purpose                 Describe
     _type.source                  Assigned
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -1367,7 +1367,7 @@ save_array_data.variant
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
     _enumeration.default          .
 
@@ -1687,7 +1687,7 @@ save_array_data_external_data.frame
     _type.purpose                 Describe
     _type.source                  Assigned
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
     _enumeration.default          1
     _description_example.case     4
@@ -1713,7 +1713,7 @@ save_array_data_external_data.id
     _type.purpose                 Key
     _type.source                  Assigned
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
     _enumeration.default          1
 
@@ -1759,7 +1759,7 @@ save_array_data_external_data.uri
     _type.purpose                 Describe
     _type.source                  Assigned
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -1783,7 +1783,7 @@ save_array_data_external_data.variant
     _type.purpose                 Describe
     _type.source                  Assigned
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
     _enumeration.default          .
 
@@ -1802,7 +1802,7 @@ save_array_data_external_data.version
     _type.purpose                 Describe
     _type.source                  Assigned
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -1873,7 +1873,7 @@ save_array_element_size.array_id
     _type.purpose                 Key
     _type.source                  Assigned
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -1940,7 +1940,7 @@ save_array_element_size.variant
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
     _enumeration.default          .
 
@@ -2065,7 +2065,7 @@ save_array_intensities.array_id
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
     _enumeration.default          1
 
@@ -2197,7 +2197,7 @@ save_array_intensities.linearity
     _type.purpose                 State
     _type.source                  Assigned
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
     loop_
@@ -2303,7 +2303,7 @@ save_array_intensities.pixel_binning_method
     _type.purpose                 State
     _type.source                  Assigned
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
     loop_
@@ -2486,7 +2486,7 @@ save_array_intensities.variant
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
     _enumeration.default          .
 
@@ -2682,7 +2682,7 @@ save_array_structure.encoding_type
     _type.purpose                 State
     _type.source                  Assigned
     _type.container               Single
-    _type.contents                Code
+    _type.contents                Text
     _type.ddl2_code               Uline
 
     loop_
@@ -2717,7 +2717,7 @@ save_array_structure.id
     _type.purpose                 Key
     _type.source                  Assigned
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
     _enumeration.default          1
 
@@ -2743,7 +2743,7 @@ save_array_structure.variant
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
     _enumeration.default          .
 
@@ -2970,7 +2970,7 @@ save_array_structure_list.array_id
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
     _enumeration.default          1
 
@@ -2989,7 +2989,7 @@ save_array_structure_list.array_section_id
     _type.purpose                 Describe
     _type.source                  Assigned
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -3018,7 +3018,7 @@ save_array_structure_list.axis_set_id
     _type.purpose                 Describe
     _type.source                  Assigned
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -3055,7 +3055,7 @@ save_array_structure_list.direction
     _type.purpose                 State
     _type.source                  Assigned
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
     loop_
@@ -3131,7 +3131,7 @@ save_array_structure_list.variant
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
     _enumeration.default          .
 
@@ -3435,7 +3435,7 @@ save_array_structure_list_axis.axis_id
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -3464,7 +3464,7 @@ save_array_structure_list_axis.axis_set_id
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -3661,7 +3661,7 @@ save_array_structure_list_axis.variant
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
     _enumeration.default          .
 
@@ -3781,7 +3781,7 @@ save_array_structure_list_section.array_id
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
     _enumeration.default          1
 
@@ -3834,7 +3834,7 @@ save_array_structure_list_section.id
     _type.purpose                 Key
     _type.source                  Assigned
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -3952,7 +3952,7 @@ save_array_structure_list_section.variant
     _type.purpose                 Key
     _type.source                  Assigned
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
     _enumeration.default          .
 
@@ -5785,7 +5785,7 @@ save_axis.depends_on
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
 
 save_
 
@@ -5855,7 +5855,7 @@ save_axis.id
     _type.purpose                 Key
     _type.source                  Assigned
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -6072,7 +6072,7 @@ save_axis.variant
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
     _enumeration.default          .
 
@@ -6179,7 +6179,7 @@ save_diffrn.id
     _type.purpose                 Key
     _type.source                  Assigned
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -6309,7 +6309,7 @@ save_diffrn_data_frame.array_id
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
     _enumeration.default          1
 
@@ -6329,7 +6329,7 @@ save_diffrn_data_frame.array_section_id
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -6469,7 +6469,7 @@ save_diffrn_data_frame.center_units
     _type.purpose                 State
     _type.source                  Assigned
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
     loop_
@@ -6563,7 +6563,7 @@ save_diffrn_data_frame.detector_element_id
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -6582,7 +6582,7 @@ save_diffrn_data_frame.diffrn_id
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -6604,7 +6604,7 @@ save_diffrn_data_frame.id
     _type.purpose                 Key
     _type.source                  Assigned
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -6629,7 +6629,7 @@ save_diffrn_data_frame.variant
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
     _enumeration.default          .
 
@@ -6766,7 +6766,7 @@ save_diffrn_detector.diffrn_id
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -6844,7 +6844,7 @@ save_diffrn_detector.id
     _type.purpose                 Key
     _type.source                  Assigned
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -6944,7 +6944,7 @@ save_diffrn_detector.variant
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
     _enumeration.default          .
 
@@ -6999,7 +6999,7 @@ save_diffrn_detector_axis.axis_id
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -7026,7 +7026,7 @@ save_diffrn_detector_axis.detector_id
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -7045,7 +7045,7 @@ save_diffrn_detector_axis.diffrn_id
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -7070,7 +7070,7 @@ save_diffrn_detector_axis.variant
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
     _enumeration.default          .
 
@@ -7248,7 +7248,7 @@ save_diffrn_detector_element.detector_id
     _type.purpose                 Key
     _type.source                  Assigned
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -7267,7 +7267,7 @@ save_diffrn_detector_element.diffrn_id
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -7285,7 +7285,7 @@ save_diffrn_detector_element.id
     _type.purpose                 Key
     _type.source                  Assigned
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -7386,7 +7386,7 @@ save_diffrn_detector_element.reference_center_units
     _type.purpose                 State
     _type.source                  Assigned
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
     loop_
@@ -7418,7 +7418,7 @@ save_diffrn_detector_element.variant
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
     _enumeration.default          .
 
@@ -7696,7 +7696,7 @@ save_diffrn_measurement.diffrn_id
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -7726,7 +7726,7 @@ save_diffrn_measurement.id
     _type.purpose                 Key
     _type.source                  Assigned
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -7895,7 +7895,7 @@ save_diffrn_measurement.variant
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
     _enumeration.default          .
 
@@ -7956,7 +7956,7 @@ save_diffrn_measurement_axis.axis_id
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -7971,7 +7971,7 @@ save_diffrn_measurement_axis.diffrn_id
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
 
 save_
 
@@ -8016,7 +8016,7 @@ save_diffrn_measurement_axis.measurement_id
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -8041,7 +8041,7 @@ save_diffrn_measurement_axis.variant
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
     _enumeration.default          .
 
@@ -8399,7 +8399,7 @@ save_diffrn_radiation.diffrn_id
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -9194,7 +9194,7 @@ save_diffrn_radiation.variant
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
     _enumeration.default          .
 
@@ -9214,7 +9214,7 @@ save_diffrn_radiation.wavelength_id
     _type.purpose                 Describe
     _type.source                  Assigned
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -9303,7 +9303,7 @@ save_diffrn_refln.diffrn_id
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -9322,7 +9322,7 @@ save_diffrn_refln.frame_id
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -9340,7 +9340,7 @@ save_diffrn_refln.id
     _type.purpose                 Key
     _type.source                  Assigned
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -9365,7 +9365,7 @@ save_diffrn_refln.variant
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
     _enumeration.default          .
 
@@ -9381,7 +9381,7 @@ save_diffrn_reflns.diffrn_id
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
 
 save_
 
@@ -10094,7 +10094,7 @@ save_diffrn_scan.diffrn_id
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
 
 save_
 
@@ -10115,7 +10115,7 @@ save_diffrn_scan.frame_id_end
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -10137,7 +10137,7 @@ save_diffrn_scan.frame_id_start
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -10176,7 +10176,7 @@ save_diffrn_scan.id
     _type.purpose                 Key
     _type.source                  Assigned
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -10280,7 +10280,7 @@ save_diffrn_scan.variant
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
     _enumeration.default          .
 
@@ -10479,7 +10479,7 @@ save_diffrn_scan_axis.axis_id
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -10497,7 +10497,7 @@ save_diffrn_scan_axis.diffrn_id
     _type.purpose                 Describe
     _type.source                  Assigned
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -10694,7 +10694,7 @@ save_diffrn_scan_axis.scan_id
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -10719,7 +10719,7 @@ save_diffrn_scan_axis.variant
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
     _enumeration.default          .
 
@@ -10809,7 +10809,7 @@ save_diffrn_scan_collection.diffrn_id
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -10832,7 +10832,7 @@ save_diffrn_scan_collection.scan_id
     _type.purpose                 Key
     _type.source                  Assigned
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -10902,7 +10902,7 @@ save_diffrn_scan_collection.variant
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
     _enumeration.default          .
 
@@ -10993,7 +10993,7 @@ save_diffrn_scan_frame.diffrn_id
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -11015,7 +11015,7 @@ save_diffrn_scan_frame.frame_id
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -11366,7 +11366,7 @@ save_diffrn_scan_frame.scan_id
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -11444,7 +11444,7 @@ save_diffrn_scan_frame.variant
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
     _enumeration.default          .
 
@@ -11616,7 +11616,7 @@ save_diffrn_scan_frame_axis.axis_id
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -11635,7 +11635,7 @@ save_diffrn_scan_frame_axis.diffrn_id
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -11736,7 +11736,7 @@ save_diffrn_scan_frame_axis.frame_id
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -11818,7 +11818,7 @@ save_diffrn_scan_frame_axis.variant
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
     _enumeration.default          .
 
@@ -12032,7 +12032,7 @@ save_diffrn_scan_frame_monitor.detector_id
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -12051,7 +12051,7 @@ save_diffrn_scan_frame_monitor.diffrn_id
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -12070,7 +12070,7 @@ save_diffrn_scan_frame_monitor.frame_id
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -12167,7 +12167,7 @@ save_diffrn_scan_frame_monitor.scan_id
     _type.purpose                 Key
     _type.source                  Assigned
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -12192,7 +12192,7 @@ save_diffrn_scan_frame_monitor.variant
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
     _enumeration.default          .
 
@@ -12232,7 +12232,7 @@ save_diffrn_source.diffrn_id
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
 
 save_
 
@@ -12401,7 +12401,7 @@ save_map.diffrn_id
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -12419,7 +12419,7 @@ save_map.entry_id
     _type.purpose                 Key
     _type.source                  Assigned
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -12437,7 +12437,7 @@ save_map.id
     _type.purpose                 Key
     _type.source                  Assigned
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -12462,7 +12462,7 @@ save_map.variant
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
     _enumeration.default          .
 
@@ -12538,7 +12538,7 @@ save_map_segment.array_id
     _type.purpose                 Describe
     _type.source                  Assigned
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -12557,7 +12557,7 @@ save_map_segment.array_section_id
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -12622,7 +12622,7 @@ save_map_segment.id
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -12640,7 +12640,7 @@ save_map_segment.map_id
     _type.purpose                 Key
     _type.source                  Assigned
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -12672,7 +12672,7 @@ save_map_segment.mask_array_id
     _type.purpose                 Describe
     _type.source                  Assigned
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -12690,7 +12690,7 @@ save_map_segment.mask_array_section_id
     _type.purpose                 Describe
     _type.source                  Assigned
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -12738,7 +12738,7 @@ save_map_segment.variant
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
     _enumeration.default          .
 
@@ -12883,7 +12883,7 @@ save_variant.diffrn_id
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -12901,7 +12901,7 @@ save_variant.entry_id
     _type.purpose                 Key
     _type.source                  Assigned
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
@@ -12925,7 +12925,7 @@ save_variant.role
     _type.purpose                 State
     _type.source                  Assigned
     _type.container               Single
-    _type.contents                Code
+    _type.contents                Text
     _type.ddl2_code               Uline
 
     loop_
@@ -12988,7 +12988,7 @@ save_variant.variant
     _type.purpose                 Key
     _type.source                  Assigned
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
     _enumeration.default          .
 
@@ -13012,7 +13012,7 @@ save_variant.variant_of
     _type.purpose                 Describe
     _type.source                  Assigned
     _type.container               Single
-    _type.contents                Text
+    _type.contents                Word
     _type.ddl2_code               Code
 
 save_
