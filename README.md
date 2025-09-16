@@ -53,5 +53,5 @@ in testing. This implies that all dictionaries are in the same directory.
 `ddl2` version can be recovered by running
 
 ```
-julia ddl_to_ddl.jl -o cif_img_ddl2.dic cif_img.dic
+julia ddl_to_ddl.jl -o cif_img_ddl2.dic cif_img_expanded.dic
 ```
