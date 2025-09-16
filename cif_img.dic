@@ -5,7 +5,7 @@ data_CIF_IMG
     _dictionary.title             CIF_IMG
     _dictionary.class             Instance
     _dictionary.version           1.8.9
-    _dictionary.date              2025-09-15
+    _dictionary.date              2025-09-16
     _dictionary.ddl_conformance   3.14.0
     _dictionary.namespace         Ddlm
     _description.text
@@ -6148,7 +6148,7 @@ save_DIFFRN
     _definition.id                DIFFRN
     _definition.scope             Category
     _definition.class             Set
-    _definition.update            2025-09-15
+    _definition.update            2025-09-16
     _description.text
 ;              Data items in the DIFFRN category record details about the
                diffraction data and their measurement.
@@ -6639,7 +6639,7 @@ save_DIFFRN_DETECTOR
     _definition.id                DIFFRN_DETECTOR
     _definition.scope             Category
     _definition.class             Set
-    _definition.update            2025-09-15
+    _definition.update            2025-09-16
     _description.text
 ;
     Data items in the DIFFRN_DETECTOR category describe the
@@ -7369,61 +7369,12 @@ save_diffrn_detector_element.variant
 
 save_
 
-save_DIFFRN_FRAME_DATA
-
-    _definition.id                DIFFRN_FRAME_DATA
-    _definition.scope             Category
-    _definition.class             Loop
-    _description.text
-;
-    Data items in the DIFFRN_FRAME_DATA category record
-     the details about each frame of data.
-
-     The items in this category are now in the
-     DIFFRN_DATA_FRAME category.
-
-     The items in the DIFFRN_FRAME_DATA category
-     are now deprecated.  The items from this category
-     are provided as aliases in the 1.0 dictionary
-     or, in the case of _diffrn_frame_data.details,
-     in the 1.4 dictionary.  THESE ITEMS SHOULD NOT
-     BE USED FOR NEW WORK.
-
-     The items from the old category are provided
-     in this dictionary for completeness
-     but should not be used or cited.  To avoid
-     confusion, the example has been removed
-     and the redundant parent-child links to other
-     categories have been removed.
-
-     All _item.mandatory_code values have been changed to 'no'.
-;
-    _name.category_id             CIF_IMG_HEAD
-    _name.object_id               DIFFRN_FRAME_DATA
-    _name.ddl2_mandatory          No
-
-    loop_
-      _category_key.name
-         '_diffrn_frame_data.id'
-         '_diffrn_frame_data.detector_element_id'
-
-    _description_example.case
-;
-    # EXAMPLE REMOVED #
-;
-    _description_example.detail
-;
-    THE DIFFRN_FRAME_DATA category is deprecated and should not be used.
-;
-
-save_
-
 save_DIFFRN_MEASUREMENT
 
     _definition.id                DIFFRN_MEASUREMENT
     _definition.scope             Category
     _definition.class             Set
-    _definition.update            2025-09-15
+    _definition.update            2025-09-16
     _description.text
 ;
     Data items in the DIFFRN_MEASUREMENT category record details
@@ -7928,7 +7879,7 @@ save_DIFFRN_RADIATION
     _definition.id                DIFFRN_RADIATION
     _definition.scope             Category
     _definition.class             Set
-    _definition.update            2025-09-15
+    _definition.update            2025-09-16
     _description.text
 ;             Data items in the DIFFRN_RADIATION category describe
               the radiation used for measuring diffraction intensities,
@@ -12079,7 +12030,7 @@ save_DIFFRN_SOURCE
     _definition.id                DIFFRN_SOURCE
     _definition.scope             Category
     _definition.class             Set
-    _definition.update            2025-09-15
+    _definition.update            2025-09-16
     _description.text
 ;              Data items in the DIFFRN_SOURCE category record details of
                the source of radiation used in the diffraction experiment.
@@ -13554,7 +13505,7 @@ save_
 ;
        Pick up minor type corrections from 1.8.9 dcitionary
 ;
-         1.8.9                    2025-09-15
+         1.8.9                    2025-09-16
 ;   Addition of missing diffrn.id pointers
 
     + Add _diffrn_detector_element.diffrn_id
