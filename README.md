@@ -40,11 +40,11 @@ restated to be `Set` categories in the translated dictionary
 in testing. This implies that all dictionaries are in the same directory.
 
 6. (`--strict`): Modifications to satisfy DDLm style and strict semantic requirements:
-   (a) All DDL2-specific categories generated at (2) are dropped
-   (b) Data names defined as aliases have any separate definition blocks removed
-   (c) Version numbers enhanced to conform to semantic versioning
-   (d) Version numbers re-ordered to be ascending order
-   (e) Aliases defined in both `cif_img.dic` and the imported dictionary are removed from
+    1. All DDL2-specific categories generated at (2) are dropped
+    2. Data names defined as aliases have any separate definition blocks removed
+    3. Version numbers enhanced to conform to semantic versioning
+    4. Version numbers re-ordered to be ascending order
+    5. Aliases defined in both `cif_img.dic` and the imported dictionary are removed from
        `cif_img.dic`
 
 ## Rederiving the DDL2 version
