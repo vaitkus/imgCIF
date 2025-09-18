@@ -49,9 +49,9 @@ in testing. This implies that all dictionaries are in the same directory.
 
 ## Rederiving the DDL2 version
 
-`cif_img_expanded.dic` is generated as above, but without the `--strict` and `-t` options. The
+`expanded/cif_img_expanded.dic` is generated as above, but without the `--strict` and `-t` options. The
 `ddl2` version can be recovered by running
 
 ```
-julia ddl_to_ddl.jl -o cif_img_ddl2.dic cif_img.dic
+julia ddl_to_ddl.jl -o cif_img_ddl2.dic cif_img_expanded.dic
 ```
