@@ -5,7 +5,7 @@ data_CIF_IMG
     _dictionary.title             CIF_IMG
     _dictionary.class             Instance
     _dictionary.version           1.8.9
-    _dictionary.date              2025-09-18
+    _dictionary.date              2025-09-22
     _dictionary.ddl_conformance   3.14.0
     _dictionary.namespace         Ddlm
     _description.text
@@ -764,7 +764,7 @@ save_CIF_IMG_HEAD
     _definition.id                CIF_IMG_HEAD
     _definition.scope             Category
     _definition.class             Head
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;
     The HEAD category is the parent category of all definitions in the
@@ -784,7 +784,7 @@ save_ARRAY_DATA
     _definition.id                ARRAY_DATA
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;
     Data items in the ARRAY_DATA category are the containers for
@@ -970,7 +970,7 @@ save_
 save_array_data.array_id
 
     _definition.id                '_array_data.array_id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             This item is a pointer to _array_structure.id in the
               ARRAY_STRUCTURE category.
@@ -994,7 +994,7 @@ save_
 save_array_data.binary_id
 
     _definition.id                '_array_data.binary_id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             This item is an integer identifier which, along with
               _array_data.array_id, should uniquely identify the
@@ -1028,7 +1028,7 @@ save_
 save_array_data.data
 
     _definition.id                '_array_data.data'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _array_data.data contains the array data
               encapsulated in a STAR string.  The value of this item is 
@@ -1279,7 +1279,7 @@ save_
 save_array_data.external_data_id
 
     _definition.id                '_array_data.external_data_id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             This item is a pointer to _array_data_external_data.id in the
               ARRAY_DATA_EXTERNAL_DATA category.
@@ -1306,7 +1306,7 @@ save_
 save_array_data.header_contents
 
     _definition.id                '_array_data.header_contents'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             This item is a text field for use in minimal CBF files to carry
               essential header information to be kept with image data
@@ -1331,7 +1331,7 @@ save_
 save_array_data.header_convention
 
     _definition.id                '_array_data.header_convention'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             This item is an identifier for the convention followed in
               constructing the contents of _array_data.header_contents
@@ -1357,7 +1357,7 @@ save_
 save_array_data.variant
 
     _definition.id                '_array_data.variant'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _array_data.variant gives the variant
               to which the given ARRAY_DATA row is related.
@@ -1386,7 +1386,7 @@ save_ARRAY_DATA_EXTERNAL_DATA
     _definition.id                ARRAY_DATA_EXTERNAL_DATA
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;
     Data items in the ARRAY_DATA_EXTERNAL_DATA category optionally
@@ -1437,7 +1437,7 @@ save_
 save_array_data_external_data.archive_format
 
     _definition.id                '_array_data_external_data.archive_format'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;
     The type of single-file archive in which image data or multi-image
@@ -1446,6 +1446,11 @@ save_array_data_external_data.archive_format
 ;
     _name.category_id             array_data_external_data
     _name.object_id               archive_format
+    _type.purpose                 State
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Word
+    _type.ddl2_code               Code
 
     loop_
       _enumeration_set.state
@@ -1462,7 +1467,7 @@ save_
 save_array_data_external_data.archive_path
 
     _definition.id                '_array_data_external_data.archive_path'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;
     The location of the image or multi-image image container,
@@ -1481,7 +1486,7 @@ save_
 save_array_data_external_data.file_compression
 
     _definition.id                '_array_data_external_data.file_compression'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;
     The type of compression used for the file corresponding to
@@ -1490,6 +1495,11 @@ save_array_data_external_data.file_compression
     _name.category_id             array_data_external_data
     _name.object_id               file_compression
     _name.ddl2_mandatory          No
+    _type.purpose                 State
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Word
+    _type.ddl2_code               Code
 
     loop_
       _enumeration_set.state
@@ -1505,7 +1515,7 @@ save_
 save_array_data_external_data.format
 
     _definition.id                '_array_data_external_data.format'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;
     The format in which raw array data referenced by
@@ -1535,6 +1545,11 @@ save_array_data_external_data.format
     _name.category_id             array_data_external_data
     _name.object_id               format
     _name.ddl2_mandatory          No
+    _type.purpose                 State
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Word
+    _type.ddl2_code               Code
 
     loop_
       _enumeration_set.state
@@ -1674,7 +1689,7 @@ save_
 save_array_data_external_data.frame
 
     _definition.id                '_array_data_external_data.frame'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;
 
@@ -1713,7 +1728,7 @@ save_
 save_array_data_external_data.id
 
     _definition.id                '_array_data_external_data.id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _array_data_external_data.id must uniquely identify
               each item of array_data_external_data.              
@@ -1737,7 +1752,7 @@ save_
 save_array_data_external_data.path
 
     _definition.id                '_array_data_external_data.path'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;
     An optional format-dependent path that is used to locate the
@@ -1766,7 +1781,7 @@ save_
 save_array_data_external_data.uri
 
     _definition.id                '_array_data_external_data.uri'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;
     A URI describing the location of an image external to the current data block
@@ -1784,7 +1799,7 @@ save_
 save_array_data_external_data.variant
 
     _definition.id                '_array_data_external_data.variant'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _array_data_external_data.variant gives the variant
               to which the given ARRAY_DATA_EXTERNAL_DATA row is related.
@@ -1810,7 +1825,7 @@ save_
 save_array_data_external_data.version
 
     _definition.id                '_array_data_external_data.version'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;
     An identifier for the version of the file format described by
@@ -1831,7 +1846,7 @@ save_ARRAY_ELEMENT_SIZE
     _definition.id                ARRAY_ELEMENT_SIZE
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;
     Data items in the ARRAY_ELEMENT_SIZE category record the physical
@@ -1883,7 +1898,7 @@ save_
 save_array_element_size.array_id
 
     _definition.id                '_array_element_size.array_id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             This item is a pointer to _array_structure.id in the
               ARRAY_STRUCTURE category.
@@ -1902,7 +1917,7 @@ save_
 save_array_element_size.index
 
     _definition.id                '_array_element_size.index'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             This item is a pointer to _array_structure_list.index in
               the ARRAY_STRUCTURE_LIST category.
@@ -1924,7 +1939,7 @@ save_
 save_array_element_size.size
 
     _definition.id                '_array_element_size.size'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The size in metres of an image element in this
               dimension. This supposes that the elements are arranged
@@ -1946,7 +1961,7 @@ save_
 save_array_element_size.variant
 
     _definition.id                '_array_element_size.variant'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _array_element_size.variant gives the variant
               to which the given ARRAY_ELEMENT_SIZE row is related.
@@ -1975,7 +1990,7 @@ save_ARRAY_INTENSITIES
     _definition.id                ARRAY_INTENSITIES
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;
     Data items in the ARRAY_INTENSITIES category record the
@@ -2079,7 +2094,7 @@ save_
 save_array_intensities.array_id
 
     _definition.id                '_array_intensities.array_id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             This item is a pointer to _array_structure.id in the
               ARRAY_STRUCTURE category.
@@ -2100,7 +2115,7 @@ save_
 save_array_intensities.binary_id
 
     _definition.id                '_array_intensities.binary_id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             This item is a pointer to _array_data.binary_id in the
               ARRAY_DATA category.
@@ -2123,7 +2138,7 @@ save_
 save_array_intensities.details
 
     _definition.id                '_array_intensities.details'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             A description of special aspects of the calculation of array 
               intensities.
@@ -2143,7 +2158,7 @@ save_
 save_array_intensities.gain
 
     _definition.id                '_array_intensities.gain'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             Detector 'gain'. The factor by which linearized
               intensity count values should be divided to produce
@@ -2165,7 +2180,7 @@ save_
 save_array_intensities.gain_esd
 
     _definition.id                '_array_intensities.gain_esd'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The standard uncertainty (estimated standard deviation, e.s.d.)
               of detector 'gain'.
@@ -2187,7 +2202,7 @@ save_
 save_array_intensities.linearity
 
     _definition.id                '_array_intensities.linearity'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The intensity linearity scaling method used to convert
               from the raw intensity to the stored element value:
@@ -2281,7 +2296,7 @@ save_
 save_array_intensities.offset
 
     _definition.id                '_array_intensities.offset'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             Offset value to add to array element values in the manner
               described by the item _array_intensities.linearity.
@@ -2301,7 +2316,7 @@ save_
 save_array_intensities.overload
 
     _definition.id                '_array_intensities.overload'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The saturation intensity level for this data array, i.e. the
               value at or above which correct intensities may not be recorded.
@@ -2326,7 +2341,7 @@ save_
 save_array_intensities.pixel_binning_method
 
     _definition.id                '_array_intensities.pixel_binning_method'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _array_intensities.pixel_binning_method specifies
               the method used to derive array elements from multiple pixels.
@@ -2377,7 +2392,7 @@ save_
 save_array_intensities.pixel_fast_bin_size
 
     _definition.id                '_array_intensities.pixel_fast_bin_size'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _array_intensities.pixel_fast_bin_size specifies
               the number of pixels that compose one element in the direction
@@ -2409,7 +2424,7 @@ save_
 save_array_intensities.pixel_slow_bin_size
 
     _definition.id                '_array_intensities.pixel_slow_bin_size'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _array_intensities.pixel_slow_bin_size specifies
               the number of pixels that compose one element in the direction
@@ -2441,7 +2456,7 @@ save_
 save_array_intensities.scaling
 
     _definition.id                '_array_intensities.scaling'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             Multiplicative scaling value to be applied to array data
               in the manner described by the item
@@ -2462,7 +2477,7 @@ save_
 save_array_intensities.undefined_value
 
     _definition.id                '_array_intensities.undefined_value'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             A value to be substituted for undefined values in
               the data array.
@@ -2482,7 +2497,7 @@ save_
 save_array_intensities.underload
 
     _definition.id                '_array_intensities.underload'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The lowest value at which pixels for this detector are
               measured.
@@ -2508,7 +2523,7 @@ save_
 save_array_intensities.variant
 
     _definition.id                '_array_intensities.variant'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _array_intensities.variant gives the variant
               to which the given ARRAY_INTENSITIES row is related.
@@ -2537,7 +2552,7 @@ save_ARRAY_STRUCTURE
     _definition.id                ARRAY_STRUCTURE
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;
     Data items in the ARRAY_STRUCTURE category record the organization and
@@ -2581,7 +2596,7 @@ save_
 save_array_structure.byte_order
 
     _definition.id                '_array_structure.byte_order'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The order of bytes for integer values which require more
               than 1 byte.
@@ -2618,7 +2633,7 @@ save_
 save_array_structure.compression_type
 
     _definition.id                '_array_structure.compression_type'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             Type of data-compression method used to compress the array
               data.
@@ -2669,7 +2684,7 @@ save_
 save_array_structure.compression_type_flag
 
     _definition.id                '_array_structure.compression_type_flag'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             Flags modifying the type of data-compression method used to 
               compress the arraydata.
@@ -2705,7 +2720,7 @@ save_
 save_array_structure.encoding_type
 
     _definition.id                '_array_structure.encoding_type'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             Data encoding of a single element of array data.
 
@@ -2748,7 +2763,7 @@ save_
 save_array_structure.id
 
     _definition.id                '_array_structure.id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _array_structure.id must uniquely identify
               each item of array data.              
@@ -2772,7 +2787,7 @@ save_
 save_array_structure.variant
 
     _definition.id                '_array_structure.variant'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _array_structure.variant gives the variant
               to which the given ARRAY_STRUCTURE row is related.
@@ -2801,7 +2816,7 @@ save_ARRAY_STRUCTURE_LIST
     _definition.id                ARRAY_STRUCTURE_LIST
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;    Data items in the ARRAY_STRUCTURE_LIST category record the size
      and organization of each array dimension.
@@ -3007,7 +3022,7 @@ save_
 save_array_structure_list.array_id
 
     _definition.id                '_array_structure_list.array_id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             This item is a pointer to _array_structure.id in the
               ARRAY_STRUCTURE category.
@@ -3028,7 +3043,7 @@ save_
 save_array_structure_list.array_section_id
 
     _definition.id                '_array_structure_list.array_section_id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             This item is a pointer to _array_structure_list_section.id in the
               ARRAY_STRUCTURE_LIST_SECTION category.
@@ -3047,7 +3062,7 @@ save_
 save_array_structure_list.axis_set_id
 
     _definition.id                '_array_structure_list.axis_set_id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             This is a descriptor for the physical axis or set of axes
               corresponding to an array index.
@@ -3077,7 +3092,7 @@ save_
 save_array_structure_list.dimension
 
     _definition.id                '_array_structure_list.dimension'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The number of elements stored in the array structure in 
               this dimension.
@@ -3098,7 +3113,7 @@ save_
 save_array_structure_list.direction
 
     _definition.id                '_array_structure_list.direction'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             Identifies the direction in which this array index changes.
 ;
@@ -3126,7 +3141,7 @@ save_
 save_array_structure_list.index
 
     _definition.id                '_array_structure_list.index'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             Identifies the one-based index of the row or column in the
               array structure.
@@ -3147,7 +3162,7 @@ save_
 save_array_structure_list.precedence
 
     _definition.id                '_array_structure_list.precedence'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             Identifies the rank order in which this array index changes
               with respect to other array indices.  The precedence of 1
@@ -3169,7 +3184,7 @@ save_
 save_array_structure_list.variant
 
     _definition.id                '_array_structure_list.variant'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _array_structure_list.variant gives the variant
               to which the given ARRAY_STRUCTURE_LIST row is related.
@@ -3198,7 +3213,7 @@ save_ARRAY_STRUCTURE_LIST_AXIS
     _definition.id                ARRAY_STRUCTURE_LIST_AXIS
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;
     Data items in the ARRAY_STRUCTURE_LIST_AXIS category describe
@@ -3393,7 +3408,7 @@ save_
 save_array_structure_list_axis.angle
 
     _definition.id                '_array_structure_list_axis.angle'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The setting of the specified axis in degrees for the first
                data point of the array index with the corresponding value
@@ -3420,7 +3435,7 @@ save_
 save_array_structure_list_axis.angle_increment
 
     _definition.id                '_array_structure_list_axis.angle_increment'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The pixel-centre-to-pixel-centre increment in the angular
                setting of the specified axis in degrees.  This is not
@@ -3447,7 +3462,7 @@ save_
 save_array_structure_list_axis.angular_pitch
 
     _definition.id                '_array_structure_list_axis.angular_pitch'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The pixel-centre-to-pixel-centre distance for a one-step
                change in the setting of the specified axis in millimetres.
@@ -3477,7 +3492,7 @@ save_
 save_array_structure_list_axis.axis_id
 
     _definition.id                '_array_structure_list_axis.axis_id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of this data item is the identifier of one of
               the axes in the set of axes for which settings are being
@@ -3504,7 +3519,7 @@ save_
 save_array_structure_list_axis.axis_set_id
 
     _definition.id                '_array_structure_list_axis.axis_set_id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of this data item is the identifier of the
                set of axes for which axis settings are being specified.
@@ -3534,7 +3549,7 @@ save_
 save_array_structure_list_axis.displacement
 
     _definition.id                '_array_structure_list_axis.displacement'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The setting of the specified axis in millimetres for the first
                data point of the array index with the corresponding value
@@ -3562,7 +3577,7 @@ save_array_structure_list_axis.displacement_increment
 
     _definition.id
         '_array_structure_list_axis.displacement_increment'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The pixel-centre-to-pixel-centre increment for the displacement
                setting of the specified axis in millimetres.
@@ -3585,7 +3600,7 @@ save_array_structure_list_axis.fract_displacement
 
     _definition.id
         '_array_structure_list_axis.fract_displacement'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The setting of the specified axis as a decimal fraction of 
                the axis unit vector for the first data point of the array 
@@ -3614,7 +3629,7 @@ save_array_structure_list_axis.fract_displacement_increment
 
     _definition.id
         '_array_structure_list_axis.fract_displacement_increment'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The pixel-centre-to-pixel-centre increment for the displacement
                setting of the specified axis as a decimal fraction of the
@@ -3637,7 +3652,7 @@ save_
 save_array_structure_list_axis.radial_pitch
 
     _definition.id                '_array_structure_list_axis.radial_pitch'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The radial distance from one 'cylinder' of pixels to the
                next in millimetres.  If the scan is a 'constant velocity'
@@ -3662,7 +3677,7 @@ save_
 save_array_structure_list_axis.reference_angle
 
     _definition.id                '_array_structure_list_axis.reference_angle'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _array_structure_list_axis.reference_angle
                specifies the setting of the angle of this axis used for 
@@ -3688,7 +3703,7 @@ save_array_structure_list_axis.reference_displacement
 
     _definition.id
         '_array_structure_list_axis.reference_displacement'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _array_structure_list_axis.reference_displacement
                specifies the setting of the displacement of this axis used 
@@ -3713,7 +3728,7 @@ save_
 save_array_structure_list_axis.variant
 
     _definition.id                '_array_structure_list_axis.variant'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;            The value of _array_structure_list_axis.variant gives the variant
               to which the given ARRAY_STRUCTURE_LIST_AXIS row is related.
@@ -3742,7 +3757,7 @@ save_ARRAY_STRUCTURE_LIST_SECTION
     _definition.id                ARRAY_STRUCTURE_LIST_SECTION
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;   Data items in the ARRAY_STRUCTURE_LIST_SECTION category identify
     the dimension-by-dimension start, end and stride of each section of an
@@ -3841,7 +3856,7 @@ save_
 save_array_structure_list_section.array_id
 
     _definition.id                '_array_structure_list_section.array_id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             This item is a pointer to _array_structure.id in the
               ARRAY_STRUCTURE category.
@@ -3862,7 +3877,7 @@ save_
 save_array_structure_list_section.end
 
     _definition.id                '_array_structure_list_section.end'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             Identifies the ending ordinal, numbered from 1, for an array
               element of index _array_structure_list_section.index in the
@@ -3893,7 +3908,7 @@ save_
 save_array_structure_list_section.id
 
     _definition.id                '_array_structure_list_section.id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             Uniquely identifies the array section chosen.
 
@@ -3916,7 +3931,7 @@ save_
 save_array_structure_list_section.index
 
     _definition.id                '_array_structure_list_section.index'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             This item is a pointer to _array_structure_list.index
               in the ARRAY_STRUCTURE_LIST category.
@@ -3946,7 +3961,7 @@ save_
 save_array_structure_list_section.start
 
     _definition.id                '_array_structure_list_section.start'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             Identifies the starting ordinal, numbered from 1,
               for an array element of index _array_structure_list_section.index
@@ -3987,7 +4002,7 @@ save_
 save_array_structure_list_section.stride
 
     _definition.id                '_array_structure_list_section.stride'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             Identifies the incremental steps to be taken when moving
               element to element in the section in that particular
@@ -4012,7 +4027,7 @@ save_
 save_array_structure_list_section.variant
 
     _definition.id                '_array_structure_list_section.variant'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _array_structure_list_section.variant gives the
               variant to which the given ARRAY_STRUCTURE_LIST_SECTION row
@@ -4041,7 +4056,7 @@ save_AXIS
     _definition.id                AXIS
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;   Data items in the AXIS category record the information required
      to describe the various goniometer, detector, source and other
@@ -5848,7 +5863,7 @@ save_
 save_axis.depends_on
 
     _definition.id                '_axis.depends_on'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;            The value of _axis.depends_on specifies the next outermost
               axis upon which this axis depends, unless
@@ -5872,7 +5887,7 @@ save_
 save_axis.equipment
 
     _definition.id                '_axis.equipment'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;            The value of  _axis.equipment specifies the type of
               equipment using the axis:  'goniometer', 'detector',
@@ -5903,7 +5918,7 @@ save_
 save_axis.equipment_component
 
     _definition.id                '_axis.equipment_component'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;            The value of  _axis.equipment_component specifies
               an arbitrary identifier of a component of the equipment to which
@@ -5924,7 +5939,7 @@ save_
 save_axis.id
 
     _definition.id                '_axis.id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;            The value of _axis.id must uniquely identify
               each axis relevant to the experiment.  Note that multiple
@@ -5946,7 +5961,7 @@ save_
 save_axis.offset[1]
 
     _definition.id                '_axis.offset[1]'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The [1] element of the three-element vector used to specify
                the offset to the base of a rotation or translation axis.
@@ -5970,7 +5985,7 @@ save_
 save_axis.offset[2]
 
     _definition.id                '_axis.offset[2]'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The [2] element of the three-element vector used to specify
                the offset to the base of a rotation or translation axis.
@@ -5994,7 +6009,7 @@ save_
 save_axis.offset[3]
 
     _definition.id                '_axis.offset[3]'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The [3] element of the three-element vector used to specify
                the offset to the base of a rotation or translation axis.
@@ -6018,7 +6033,7 @@ save_
 save_axis.rotation
 
     _definition.id                '_axis.rotation'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;            The value of _axis.rotation specifies
               the fixed base rotation angle for _axis.rotation_axis
@@ -6042,7 +6057,7 @@ save_
 save_axis.rotation_axis
 
     _definition.id                '_axis.rotation_axis'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;            The value of _axis.rotation_axis specifies
               an optional additional dependency for this axis to be applied
@@ -6064,7 +6079,7 @@ save_
 save_axis.system
 
     _definition.id                '_axis.system'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;            The value of  _axis.system specifies the coordinate
               system used to define the axis: 'laboratory', 'McStas', 'direct', 
@@ -6116,7 +6131,7 @@ save_
 save_axis.type
 
     _definition.id                '_axis.type'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;            The value of _axis.type specifies the type of
               axis:  'rotation' or 'translation' (or 'general' when
@@ -6145,7 +6160,7 @@ save_
 save_axis.variant
 
     _definition.id                '_axis.variant'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;            The value of _axis.variant gives the variant
               to which the given AXIS row is related.
@@ -6172,7 +6187,7 @@ save_
 save_axis.vector[1]
 
     _definition.id                '_axis.vector[1]'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The [1] element of the three-element vector used to specify
                the direction of a rotation or translation axis.
@@ -6195,7 +6210,7 @@ save_
 save_axis.vector[2]
 
     _definition.id                '_axis.vector[2]'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The [2] element of the three-element vector used to specify
                the direction of a rotation or translation axis.
@@ -6218,7 +6233,7 @@ save_
 save_axis.vector[3]
 
     _definition.id                '_axis.vector[3]'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The [3] element of the three-element vector used to specify
                the direction of a rotation or translation axis.
@@ -6243,7 +6258,7 @@ save_DIFFRN
     _definition.id                DIFFRN
     _definition.scope             Category
     _definition.class             Set
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;              Data items in the DIFFRN category record details about the
                diffraction data and their measurement.
@@ -6263,7 +6278,7 @@ save_
 save_diffrn.id
 
     _definition.id                '_diffrn.id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;              This data item uniquely identifies a set of diffraction
                data.
@@ -6284,7 +6299,7 @@ save_DIFFRN_DATA_FRAME
     _definition.id                DIFFRN_DATA_FRAME
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;            Data items in the DIFFRN_DATA_FRAME category record
               the details about each frame of data.
@@ -6393,8 +6408,8 @@ save_diffrn_data_frame.array_id
     _alias.definition_id          '_diffrn_frame_data.array_id'
     _alias.deprecation_date       .
     _alias.ddl2_version           1.0
-    _alias.dictionary_uri         cif_img.dic
-    _definition.update            2025-09-18
+    _alias.dictionary_uri         ftp://ftp.iucr.org/pub/cifdics/cif_img_1.0.dic
+    _definition.update            2025-09-22
     _description.text
 ;            This item is a pointer to _array_structure.id in the
               ARRAY_STRUCTURE category.
@@ -6415,7 +6430,7 @@ save_
 save_diffrn_data_frame.array_section_id
 
     _definition.id                '_diffrn_data_frame.array_section_id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;            This item is a pointer to _array_structure_list_section.id
               in the ARRAY_STRUCTURE_LIST_SECTION category.
@@ -6438,8 +6453,8 @@ save_diffrn_data_frame.binary_id
     _alias.definition_id          '_diffrn_frame_data.binary_id'
     _alias.deprecation_date       .
     _alias.ddl2_version           1.0
-    _alias.dictionary_uri         cif_img.dic
-    _definition.update            2025-09-18
+    _alias.dictionary_uri         ftp://ftp.iucr.org/pub/cifdics/cif_img_1.0.dic
+    _definition.update            2025-09-22
     _description.text
 ;            This item is a pointer to _array_data.binary_id in the
               ARRAY_DATA category.
@@ -6462,7 +6477,7 @@ save_
 save_diffrn_data_frame.center_derived
 
     _definition.id                '_diffrn_data_frame.center_derived'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _diffrn_data_frame.center_derived
               is assumed to be 'yes', i.e. that values of
@@ -6485,7 +6500,7 @@ save_
 save_diffrn_data_frame.center_fast
 
     _definition.id                '_diffrn_data_frame.center_fast'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;            The value of _diffrn_data_frame.center_fast is 
               the fast index axis beam centre position relative to the detector
@@ -6517,7 +6532,7 @@ save_
 save_diffrn_data_frame.center_slow
 
     _definition.id                '_diffrn_data_frame.center_slow'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _diffrn_data_frame.center_slow is
               the slow index axis beam centre position relative to the detector
@@ -6547,7 +6562,7 @@ save_
 save_diffrn_data_frame.center_units
 
     _definition.id                '_diffrn_data_frame.center_units'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _diffrn_data_frame.center_units
               specifies the units in which the values of 
@@ -6590,8 +6605,11 @@ save_diffrn_data_frame.details
     _alias.definition_id          '_diffrn_frame_data.details'
     _alias.deprecation_date       .
     _alias.ddl2_version           1.4
-    _alias.dictionary_uri         cif_img.dic
-    _definition.update            2025-09-18
+    _alias.dictionary_uri
+;
+https://github.com/dials/cbflib/raw/refs/heads/main/doc/cif_img_1.4_4Jul06_draft.dic
+;
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _diffrn_data_frame.details should give a
               description of special aspects of each frame of data.
@@ -6655,8 +6673,8 @@ save_diffrn_data_frame.detector_element_id
     _alias.definition_id          '_diffrn_frame_data.detector_element_id'
     _alias.deprecation_date       .
     _alias.ddl2_version           1.0
-    _alias.dictionary_uri         cif_img.dic
-    _definition.update            2025-09-18
+    _alias.dictionary_uri         ftp://ftp.iucr.org/pub/cifdics/cif_img_1.0.dic
+    _definition.update            2025-09-22
     _description.text
 ;             This item is a pointer to _diffrn_detector_element.id
               in the DIFFRN_DETECTOR_ELEMENT category.
@@ -6676,7 +6694,7 @@ save_
 save_diffrn_data_frame.diffrn_id
 
     _definition.id                '_diffrn_data_frame.diffrn_id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             This item is a pointer to '_diffrn.id'
               in the DIFFRN category.
@@ -6699,8 +6717,8 @@ save_diffrn_data_frame.id
     _alias.definition_id          '_diffrn_frame_data.id'
     _alias.deprecation_date       .
     _alias.ddl2_version           1.0
-    _alias.dictionary_uri         cif_img.dic
-    _definition.update            2025-09-18
+    _alias.dictionary_uri         ftp://ftp.iucr.org/pub/cifdics/cif_img_1.0.dic
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _diffrn_data_frame.id must uniquely identify
               each complete frame of data.
@@ -6719,7 +6737,7 @@ save_
 save_diffrn_data_frame.variant
 
     _definition.id                '_diffrn_data_frame.variant'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _diffrn_data_frame.variant gives the variant
               to which the given DIFFRN_DATA_FRAME row is related.
@@ -6748,7 +6766,7 @@ save_DIFFRN_DETECTOR
     _definition.id                DIFFRN_DETECTOR
     _definition.scope             Category
     _definition.class             Set
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;
     Data items in the DIFFRN_DETECTOR category describe the
@@ -6809,7 +6827,7 @@ save_diffrn_detector.details
     _alias.deprecation_date       .
     _alias.ddl2_version           2.0.1
     _alias.dictionary_uri         cif_core.dic
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             A description of special aspects of the radiation detector.
 ;
@@ -6828,7 +6846,7 @@ save_
 save_diffrn_detector.diffrn_id
 
     _definition.id                '_diffrn_detector.diffrn_id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             This data item is a pointer to '_diffrn.id' in the DIFFRN
               category.
@@ -6857,10 +6875,12 @@ save_diffrn_detector.dtime
       _alias.deprecation_date
       _alias.ddl2_version
       _alias.dictionary_uri
-         '_diffrn_radiation_detector_dtime'      .      1.0      cifdic.c91
-         '_diffrn_detector_dtime'                .      2.0      cif_core.dic
+         '_diffrn_radiation_detector_dtime'                .                1.0
+         ftp://ftp.iucr.org/pub/cifdics/cifdic.C91
+         '_diffrn_detector_dtime'                          .                2.0
+         cif_core.dic
 
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The deadtime in microseconds of the detector(s) used to
               measure the diffraction intensities.
@@ -6882,7 +6902,7 @@ save_
 save_diffrn_detector.gain_setting
 
     _definition.id                '_diffrn_detector.gain_setting'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The gain setting for detector.   This is a text string usually
               reflecting a detector setting that may have a simple or very
@@ -6909,7 +6929,7 @@ save_
 save_diffrn_detector.id
 
     _definition.id                '_diffrn_detector.id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _diffrn_detector.id must uniquely identify
               each detector used to collect each diffraction data set.
@@ -6932,7 +6952,7 @@ save_
 save_diffrn_detector.layer_thickness
 
     _definition.id                '_diffrn_detector.layer_thickness'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The thickness in mm of the sensing layer of the detector
               for use in angular corrections.
@@ -6954,7 +6974,7 @@ save_
 save_diffrn_detector.number_of_axes
 
     _definition.id                '_diffrn_detector.number_of_axes'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _diffrn_detector.number_of_axes gives the
               number of axes of the positioner for the detector identified
@@ -6988,7 +7008,7 @@ save_
 save_diffrn_detector.variant
 
     _definition.id                '_diffrn_detector.variant'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _diffrn_detector.variant gives the variant
               to which the given DIFFRN_DETECTOR row is related.
@@ -7017,7 +7037,7 @@ save_DIFFRN_DETECTOR_AXIS
     _definition.id                DIFFRN_DETECTOR_AXIS
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;
     Data items in the DIFFRN_DETECTOR_AXIS category associate
@@ -7051,7 +7071,7 @@ save_
 save_diffrn_detector_axis.axis_id
 
     _definition.id                '_diffrn_detector_axis.axis_id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             This data item is a pointer to _axis.id in
                the AXIS category.
@@ -7074,8 +7094,8 @@ save_diffrn_detector_axis.detector_id
     _alias.definition_id          '_diffrn_detector_axis.id'
     _alias.deprecation_date       .
     _alias.ddl2_version           1.0
-    _alias.dictionary_uri         cif_img.dic
-    _definition.update            2025-09-18
+    _alias.dictionary_uri         ftp://ftp.iucr.org/pub/cifdics/cif_img_1.0.dic
+    _definition.update            2025-09-22
     _description.text
 ;             This data item is a pointer to _diffrn_detector.id in
               the DIFFRN_DETECTOR category.
@@ -7099,7 +7119,7 @@ save_
 save_diffrn_detector_axis.diffrn_id
 
     _definition.id                '_diffrn_detector_axis.diffrn_id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             This data item is a pointer to '_diffrn.id' in
               the DIFFRN category.
@@ -7119,7 +7139,7 @@ save_
 save_diffrn_detector_axis.variant
 
     _definition.id                '_diffrn_detector_axis.variant'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;            The value of _diffrn_detector_axis.variant gives the variant
              to which the given DIFFRN_DETECTOR_AXIS row is related.
@@ -7148,7 +7168,7 @@ save_DIFFRN_DETECTOR_ELEMENT
     _definition.id                DIFFRN_DETECTOR_ELEMENT
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;
     Data items in the DIFFRN_DETECTOR_ELEMENT category record
@@ -7232,7 +7252,7 @@ save_
 save_diffrn_detector_element.center[1]
 
     _definition.id                '_diffrn_detector_element.center[1]'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _diffrn_detector_element.center[1] is the X
               component of the distortion-corrected beam centre in
@@ -7270,7 +7290,7 @@ save_
 save_diffrn_detector_element.center[2]
 
     _definition.id                '_diffrn_detector_element.center[2]'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _diffrn_detector_element.center[2] is the Y
               component of the distortion-corrected beam centre in
@@ -7308,7 +7328,7 @@ save_
 save_diffrn_detector_element.detector_id
 
     _definition.id                '_diffrn_detector_element.detector_id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             This item is a pointer to _diffrn_detector.id
               in the DIFFRN_DETECTOR category.
@@ -7327,7 +7347,7 @@ save_
 save_diffrn_detector_element.diffrn_id
 
     _definition.id                '_diffrn_detector_element.diffrn_id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             This item is a pointer to _diffrn.id
               in the DIFFRN category.
@@ -7347,7 +7367,7 @@ save_
 save_diffrn_detector_element.id
 
     _definition.id                '_diffrn_detector_element.id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;            The value of _diffrn_detector_element.id must uniquely
              identify each element of a detector.
@@ -7367,7 +7387,7 @@ save_diffrn_detector_element.reference_center_fast
 
     _definition.id
         '_diffrn_detector_element.reference_center_fast'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _diffrn_detector_element.reference_center_fast is 
               the fast index axis beam centre position relative to the detector
@@ -7403,7 +7423,7 @@ save_diffrn_detector_element.reference_center_slow
 
     _definition.id
         '_diffrn_detector_element.reference_center_slow'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _diffrn_detector_element.reference_center_slow is
               the slow index axis beam centre position relative to the detector
@@ -7437,7 +7457,7 @@ save_diffrn_detector_element.reference_center_units
 
     _definition.id
         '_diffrn_detector_element.reference_center_units'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _diffrn_detector_element.reference_center_units
               specifies the units in which the values of 
@@ -7477,7 +7497,7 @@ save_
 save_diffrn_detector_element.variant
 
     _definition.id                '_diffrn_detector_element.variant'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _diffrn_detector_element.variant gives the variant
               to which the given DIFFRN_DETECTOR_ELEMENT row is related.
@@ -7506,7 +7526,7 @@ save_DIFFRN_MEASUREMENT
     _definition.id                DIFFRN_MEASUREMENT
     _definition.scope             Category
     _definition.class             Set
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;
     Data items in the DIFFRN_MEASUREMENT category record details
@@ -7596,7 +7616,7 @@ save_diffrn_measurement.details
     _alias.deprecation_date       .
     _alias.ddl2_version           2.0.1
     _alias.dictionary_uri         cif_core.dic
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             A description of special aspects of the intensity
               measurement.
@@ -7623,7 +7643,7 @@ save_diffrn_measurement.device_details
     _alias.deprecation_date       .
     _alias.ddl2_version           2.0.1
     _alias.dictionary_uri         cif_core.dic
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             A description of special aspects of the device used to
               measure the diffraction intensities.
@@ -7646,7 +7666,7 @@ save_
 save_diffrn_measurement.diffrn_id
 
     _definition.id                '_diffrn_measurement.diffrn_id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             This data item is a pointer to _diffrn.id in the DIFFRN
               category.
@@ -7666,7 +7686,7 @@ save_
 save_diffrn_measurement.id
 
     _definition.id                '_diffrn_measurement.id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _diffrn_measurement.id must uniquely identify
               the set of mechanical characteristics of the device used to
@@ -7701,7 +7721,7 @@ save_diffrn_measurement.method
     _alias.deprecation_date       .
     _alias.ddl2_version           2.0.1
     _alias.dictionary_uri         cif_core.dic
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             Method used to measure intensities.
 ;
@@ -7721,7 +7741,7 @@ save_
 save_diffrn_measurement.number_of_axes
 
     _definition.id                '_diffrn_measurement.number_of_axes'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _diffrn_measurement.number_of_axes gives the
               number of axes of the positioner for the goniometer or
@@ -7747,7 +7767,7 @@ save_
 save_diffrn_measurement.sample_detector_distance
 
     _definition.id                '_diffrn_measurement.sample_detector_distance'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _diffrn_measurement.sample_detector_distance gives
               the unsigned distance in millimetres from the sample to the 
@@ -7771,7 +7791,7 @@ save_diffrn_measurement.sample_detector_distance_derived
 
     _definition.id
         '_diffrn_measurement.sample_detector_distance_derived'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _diffrn_measurement.sample_detector_distance_derived
               is assumed to be 'yes', i.e. that value of 
@@ -7793,7 +7813,7 @@ save_
 save_diffrn_measurement.sample_detector_voffset
 
     _definition.id                '_diffrn_measurement.sample_detector_voffset'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _diffrn_measurement.sample_detector_voffset gives
               the signed distance in millimetres in the vertical
@@ -7821,7 +7841,7 @@ save_diffrn_measurement.specimen_support
     _alias.deprecation_date       .
     _alias.ddl2_version           2.0.1
     _alias.dictionary_uri         cif_core.dic
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The physical device used to support the crystal during data
               collection.
@@ -7847,7 +7867,7 @@ save_
 save_diffrn_measurement.variant
 
     _definition.id                '_diffrn_measurement.variant'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;            The value of _diffrn_measurement.variant gives the variant
              to which the given DIFFRN_MEASUREMENT row is related.
@@ -7876,7 +7896,7 @@ save_DIFFRN_MEASUREMENT_AXIS
     _definition.id                DIFFRN_MEASUREMENT_AXIS
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;
     Data items in the DIFFRN_MEASUREMENT_AXIS category associate
@@ -7916,7 +7936,7 @@ save_
 save_diffrn_measurement_axis.axis_id
 
     _definition.id                '_diffrn_measurement_axis.axis_id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             This data item is a pointer to _axis.id in
               the AXIS category.
@@ -7936,7 +7956,7 @@ save_
 save_diffrn_measurement_axis.diffrn_id
 
     _definition.id                '_diffrn_measurement_axis.diffrn_id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _name.category_id             diffrn_measurement_axis
     _name.object_id               diffrn_id
     _name.linked_item_id          '_diffrn.id'
@@ -7951,7 +7971,7 @@ save_
 save_diffrn_measurement_axis.measurement_device
 
     _definition.id                '_diffrn_measurement_axis.measurement_device'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             This data item is a pointer to _diffrn_measurement.device
               in the DIFFRN_MEASUREMENT category.
@@ -7974,8 +7994,8 @@ save_diffrn_measurement_axis.measurement_id
     _alias.definition_id          '_diffrn_measurement_axis.id'
     _alias.deprecation_date       .
     _alias.ddl2_version           1.0
-    _alias.dictionary_uri         cif_img.dic
-    _definition.update            2025-09-18
+    _alias.dictionary_uri         ftp://ftp.iucr.org/pub/cifdics/cif_img_1.0.dic
+    _definition.update            2025-09-22
     _description.text
 ;             This data item is a pointer to _diffrn_measurement.id in
               the DIFFRN_MEASUREMENT category.
@@ -7999,7 +8019,7 @@ save_
 save_diffrn_measurement_axis.variant
 
     _definition.id                '_diffrn_measurement_axis.variant'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _diffrn_measurement_axis.variant gives the variant
               to which the given DIFFRN_MEASUREMENT_AXIS row is related.
@@ -8028,7 +8048,7 @@ save_DIFFRN_RADIATION
     _definition.id                DIFFRN_RADIATION
     _definition.scope             Category
     _definition.class             Set
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             Data items in the DIFFRN_RADIATION category describe
               the radiation used for measuring diffraction intensities,
@@ -8164,7 +8184,7 @@ save_
 save_diffrn_radiation.beam_flux
 
     _definition.id                '_diffrn_radiation.beam_flux'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The instantaneous flux spacially integrated over the portion
               of the beam available to be incident on a sample (e.g. after 
@@ -8188,7 +8208,7 @@ save_
 save_diffrn_radiation.beam_flux_density
 
     _definition.id                '_diffrn_radiation.beam_flux_density'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The instantaneous flux per unit area orhtogonal to the beam.
 ;
@@ -8209,7 +8229,7 @@ save_diffrn_radiation.beam_flux_density_integrated
 
     _definition.id
         '_diffrn_radiation.beam_flux_density_integrated'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The time integral of the flux density.  The time over 
               which the beam flux density is integrated is given in 
@@ -8231,7 +8251,7 @@ save_
 save_diffrn_radiation.beam_flux_integrated
 
     _definition.id                '_diffrn_radiation.beam_flux_integrated'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The time integral of the flux spacially integrated over the 
               portion of the beam available to be incident on a sample 
@@ -8255,7 +8275,7 @@ save_
 save_diffrn_radiation.beam_flux_integration_time
 
     _definition.id                '_diffrn_radiation.beam_flux_integration_time'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The time interval over which beam flux, beam incident flux
               beam density is integrated.  
@@ -8276,7 +8296,7 @@ save_
 save_diffrn_radiation.beam_incident_flux
 
     _definition.id                '_diffrn_radiation.beam_incident_flux'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The instantaneous flux spacially integrated over the portion of 
               the beam actually incident on the sample.  If the incident flux 
@@ -8300,7 +8320,7 @@ save_diffrn_radiation.beam_incident_flux_integrated
 
     _definition.id
         '_diffrn_radiation.beam_incident_flux_integrated'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The time integral of the flux spacially integrated over the
               portion of the beam actually incident on the sample.  The 
@@ -8324,7 +8344,7 @@ save_
 save_diffrn_radiation.beam_width
 
     _definition.id                '_diffrn_radiation.beam_width'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             Full width at half maximum of the beam incident on the sample
               in the plane of polarization (or horizontally if unpolarized).
@@ -8349,7 +8369,7 @@ save_diffrn_radiation.collimation
     _alias.deprecation_date       .
     _alias.ddl2_version           2.0.1
     _alias.dictionary_uri         cif_core.dic
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The collimation or focusing applied to the radiation.
 ;
@@ -8373,7 +8393,7 @@ save_
 save_diffrn_radiation.diffrn_id
 
     _definition.id                '_diffrn_radiation.diffrn_id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             This data item is a pointer to _diffrn.id in the DIFFRN
               category.
@@ -8393,7 +8413,7 @@ save_
 save_diffrn_radiation.div_x_source
 
     _definition.id                '_diffrn_radiation.div_x_source'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             Beam crossfire in degrees parallel to the laboratory X axis
               (see AXIS category).
@@ -8427,7 +8447,7 @@ save_
 save_diffrn_radiation.div_x_y_source
 
     _definition.id                '_diffrn_radiation.div_x_y_source'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             Beam crossfire correlation in degrees squared between the
               crossfire laboratory X-axis component and the crossfire
@@ -8465,7 +8485,7 @@ save_
 save_diffrn_radiation.div_y_source
 
     _definition.id                '_diffrn_radiation.div_y_source'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             Beam crossfire in degrees parallel to the laboratory Y axis
               (see AXIS category).
@@ -8504,7 +8524,7 @@ save_diffrn_radiation.filter_edge
     _alias.deprecation_date       .
     _alias.ddl2_version           2.0.1
     _alias.dictionary_uri         cif_core.dic
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;              Absorption edge in \%angstr\"oms of the radiation filter used.
 ;
@@ -8529,7 +8549,7 @@ save_diffrn_radiation.inhomogeneity
     _alias.deprecation_date       .
     _alias.ddl2_version           2.0.1
     _alias.dictionary_uri         cif_core.dic
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             Half-width in millimetres of the incident beam in the
               direction perpendicular to the diffraction plane.
@@ -8555,7 +8575,7 @@ save_diffrn_radiation.monochromator
     _alias.deprecation_date       .
     _alias.ddl2_version           2.0.1
     _alias.dictionary_uri         cif_core.dic
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The method used to obtain monochromatic radiation. If a
               monochromator crystal is used, the material and the
@@ -8586,7 +8606,7 @@ save_diffrn_radiation.polarisn_norm
     _alias.deprecation_date       .
     _alias.ddl2_version           2.0.1
     _alias.dictionary_uri         cif_core.dic
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The angle in degrees, as viewed from the specimen, between the
               perpendicular component of the polarization and the diffraction
@@ -8609,7 +8629,7 @@ save_
 save_diffrn_radiation.polarisn_norm_esd
 
     _definition.id                '_diffrn_radiation.polarisn_norm_esd'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The standard uncertainty (estimated standard deviation, e.s.d.) of
               _diffrn_radiation.polarisn_norm,
@@ -8638,7 +8658,7 @@ save_diffrn_radiation.polarisn_ratio
     _alias.deprecation_date       .
     _alias.ddl2_version           2.0.1
     _alias.dictionary_uri         cif_core.dic
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             Polarization ratio of the diffraction beam incident on the
               crystal. This is the ratio of the perpendicularly polarized to
@@ -8664,7 +8684,7 @@ save_
 save_diffrn_radiation.polarisn_ratio_esd
 
     _definition.id                '_diffrn_radiation.polarisn_ratio_esd'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The standard uncertainty (estimated standard deviation, e.s.d.) of
               _diffrn_radiation.polarisn_ratio,
@@ -8687,7 +8707,7 @@ save_
 save_diffrn_radiation.polarizn_source_norm
 
     _definition.id                '_diffrn_radiation.polarizn_source_norm'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The angle in degrees, as viewed from the specimen, between
               the normal to the polarization plane and the laboratory
@@ -8728,7 +8748,7 @@ save_
 save_diffrn_radiation.polarizn_source_norm_esd
 
     _definition.id                '_diffrn_radiation.polarizn_source_norm_esd'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The standard uncertainty (estimated standard deviation, e.s.d.)
               of _diffrn_radiation.polarizn_source_norm,
@@ -8753,7 +8773,7 @@ save_
 save_diffrn_radiation.polarizn_source_ratio
 
     _definition.id                '_diffrn_radiation.polarizn_source_ratio'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The quantity (Ip-In)/(Ip+In), where Ip is the intensity
               (amplitude squared) of the electric vector in the plane of
@@ -8809,7 +8829,7 @@ save_
 save_diffrn_radiation.polarizn_source_ratio_esd
 
     _definition.id                '_diffrn_radiation.polarizn_source_ratio_esd'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The standard uncertainty (estimated standard deviation, e.s.d.)
               of _diffrn_radiation.polarizn_source_ratio,
@@ -8835,7 +8855,7 @@ save_
 save_diffrn_radiation.polarizn_stokes_i
 
     _definition.id                '_diffrn_radiation.polarizn_Stokes_I'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The quantity Ip+In+Inp, where Ip is the intensity (amplitude
               squared) of the electric vector in the plane of polarization,
@@ -8881,7 +8901,7 @@ save_
 save_diffrn_radiation.polarizn_stokes_i_esd
 
     _definition.id                '_diffrn_radiation.polarizn_Stokes_I_esd'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The standard uncertainty (estimated standard deviation, e.s.d.)
               of _diffrn_radiation.polarizn_Stokes_I,
@@ -8908,7 +8928,7 @@ save_
 save_diffrn_radiation.polarizn_stokes_q
 
     _definition.id                '_diffrn_radiation.polarizn_Stokes_Q'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The quantity (Ip-In)*cos(2*theta), where Ip is the intensity
               (amplitude squared) of the electric vector in the plane of
@@ -8951,7 +8971,7 @@ save_
 save_diffrn_radiation.polarizn_stokes_q_esd
 
     _definition.id                '_diffrn_radiation.polarizn_Stokes_Q_esd'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The standard uncertainty (estimated standard deviation, e.s.d.)
               of _diffrn_radiation.polarizn_Stokes_Q,
@@ -8980,7 +9000,7 @@ save_
 save_diffrn_radiation.polarizn_stokes_u
 
     _definition.id                '_diffrn_radiation.polarizn_Stokes_U'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The quantity (Ip-In)*sin(2*theta), where Ip is the intensity
               (amplitude squared) of the electric vector in the plane of
@@ -9023,7 +9043,7 @@ save_
 save_diffrn_radiation.polarizn_stokes_u_esd
 
     _definition.id                '_diffrn_radiation.polarizn_Stokes_U_esd'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The standard uncertainty (estimated standard deviation, e.s.d.)
               of _diffrn_radiation.polarizn_Stokes_U,
@@ -9052,7 +9072,7 @@ save_
 save_diffrn_radiation.polarizn_stokes_v
 
     _definition.id                '_diffrn_radiation.polarizn_Stokes_V'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The quantity +/-2*sqrt(IpIn), with a + sign for right-handed
               circular polarization, where Ip is the intensity
@@ -9096,7 +9116,7 @@ save_
 save_diffrn_radiation.polarizn_stokes_v_esd
 
     _definition.id                '_diffrn_radiation.polarizn_Stokes_V_esd'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The standard uncertainty (estimated standard deviation, e.s.d.)
               of _diffrn_radiation.polarizn_Stokes_V,
@@ -9130,7 +9150,7 @@ save_diffrn_radiation.probe
     _alias.deprecation_date       .
     _alias.ddl2_version           2.0.1
     _alias.dictionary_uri         cif_core.dic
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             Name of the type of radiation used. It is strongly
               recommended that this be given so that the
@@ -9161,7 +9181,7 @@ save_diffrn_radiation.type
     _alias.deprecation_date       .
     _alias.ddl2_version           2.0.1
     _alias.dictionary_uri         cif_core.dic
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The nature of the radiation. This is typically a description
               of the X-ray wavelength in Siegbahn notation.
@@ -9187,7 +9207,7 @@ save_
 save_diffrn_radiation.variant
 
     _definition.id                '_diffrn_radiation.variant'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _diffrn_radiation.variant gives the variant
               to which the given DIFFRN_RADIATION row is related.
@@ -9214,7 +9234,7 @@ save_
 save_diffrn_radiation.wavelength_id
 
     _definition.id                '_diffrn_radiation.wavelength_id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             This data item is a pointer to
               _diffrn_radiation_wavelength.id in the
@@ -9238,7 +9258,7 @@ save_diffrn_radiation.xray_symbol
     _alias.deprecation_date       .
     _alias.ddl2_version           2.0.1
     _alias.dictionary_uri         cif_core.dic
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The IUPAC symbol for the X-ray wavelength for the probe
               radiation.
@@ -9267,7 +9287,7 @@ save_DIFFRN_REFLN
     _definition.id                DIFFRN_REFLN
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;
     This category redefinition has been added to extend the key of
@@ -9306,7 +9326,7 @@ save_
 save_diffrn_refln.diffrn_id
 
     _definition.id                '_diffrn_refln.diffrn_id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             This item is a placeholder for the definition in the
               PDBx/mmCIF dictionary
@@ -9326,7 +9346,7 @@ save_
 save_diffrn_refln.frame_id
 
     _definition.id                '_diffrn_refln.frame_id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             This item is a pointer to _diffrn_data_frame.id
               in the DIFFRN_DATA_FRAME category.
@@ -9346,7 +9366,7 @@ save_
 save_diffrn_refln.id
 
     _definition.id                '_diffrn_refln.id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             This item is a placeholder for the definition in the
               PDBx/mmCIF dictionary.
@@ -9365,7 +9385,7 @@ save_
 save_diffrn_refln.variant
 
     _definition.id                '_diffrn_refln.variant'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _diffrn_refln.variant gives the variant
               to which the given DIFFRN_REFLN row is related.
@@ -9392,7 +9412,7 @@ save_
 save_diffrn_reflns.diffrn_id
 
     _definition.id                '_diffrn_reflns.diffrn_id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _name.category_id             diffrn_reflns
     _name.object_id               diffrn_id
     _name.linked_item_id          '_diffrn.id'
@@ -9409,7 +9429,7 @@ save_DIFFRN_SCAN
     _definition.id                DIFFRN_SCAN
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;
     Data items in the DIFFRN_SCAN category describe the parameters of one
@@ -10051,7 +10071,7 @@ save_
 save_diffrn_scan.date_end
 
     _definition.id                '_diffrn_scan.date_end'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The date and time of the end of the scan.  Note that this
               may be an estimate generated during the scan, before the
@@ -10072,7 +10092,7 @@ save_
 save_diffrn_scan.date_end_estimated
 
     _definition.id                '_diffrn_scan.date_end_estimated'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The estimated date and time of the end of the scan.  Note 
               that this may be generated at the start or during the scan,
@@ -10092,7 +10112,7 @@ save_
 save_diffrn_scan.date_start
 
     _definition.id                '_diffrn_scan.date_start'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The date and time of the start of the scan.
 ;
@@ -10110,7 +10130,7 @@ save_
 save_diffrn_scan.diffrn_id
 
     _definition.id                '_diffrn_scan.diffrn_id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _name.category_id             diffrn_scan
     _name.object_id               diffrn_id
     _name.linked_item_id          '_diffrn.id'
@@ -10125,7 +10145,7 @@ save_
 save_diffrn_scan.frame_id_end
 
     _definition.id                '_diffrn_scan.frame_id_end'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of this data item is the identifier of the
               last frame in the scan.
@@ -10148,7 +10168,7 @@ save_
 save_diffrn_scan.frame_id_start
 
     _definition.id                '_diffrn_scan.frame_id_start'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of this data item is the identifier of the
               first frame in the scan.
@@ -10171,7 +10191,7 @@ save_
 save_diffrn_scan.frames
 
     _definition.id                '_diffrn_scan.frames'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of this data item is the number of frames in
               the scan.
@@ -10192,7 +10212,7 @@ save_
 save_diffrn_scan.id
 
     _definition.id                '_diffrn_scan.id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _diffrn_scan.id uniquely identifies each
               scan.  The identifier is used to tie together all the
@@ -10212,7 +10232,7 @@ save_
 save_diffrn_scan.integration_time
 
     _definition.id                '_diffrn_scan.integration_time'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             Approximate average time in seconds to integrate each
               step of the scan.  The precise time for integration
@@ -10236,7 +10256,7 @@ save_
 save_diffrn_scan.time_period
 
     _definition.id                '_diffrn_scan.time_period'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             Approximate average time in seconds between the start
               of each step of the scan.  The precise start-to-start
@@ -10259,7 +10279,7 @@ save_
 save_diffrn_scan.time_rstrt_incr
 
     _definition.id                '_diffrn_scan.time_rstrt_incr'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             Approximate average time in seconds between the end
               of integration of each step of the scan and the start
@@ -10294,7 +10314,7 @@ save_
 save_diffrn_scan.variant
 
     _definition.id                '_diffrn_scan.variant'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _diffrn_scan.variant gives the variant
               to which the given DIFFRN_SCAN row is related.
@@ -10323,7 +10343,7 @@ save_DIFFRN_SCAN_AXIS
     _definition.id                DIFFRN_SCAN_AXIS
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;
     Data items in the DIFFRN_SCAN_AXIS category describe the settings of
@@ -10387,7 +10407,7 @@ save_
 save_diffrn_scan_axis.angle_increment
 
     _definition.id                '_diffrn_scan_axis.angle_increment'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The increment for each step for the specified axis
               in degrees.  In general, this will agree with
@@ -10420,7 +10440,7 @@ save_
 save_diffrn_scan_axis.angle_range
 
     _definition.id                '_diffrn_scan_axis.angle_range'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The total range covered during the scan from the starting position 
               to the end of the final step for the specified axis in degrees.
@@ -10442,7 +10462,7 @@ save_
 save_diffrn_scan_axis.angle_rstrt_incr
 
     _definition.id                '_diffrn_scan_axis.angle_rstrt_incr'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The increment after each step for the specified axis
               in degrees.  In general, this will agree with
@@ -10478,7 +10498,7 @@ save_
 save_diffrn_scan_axis.angle_start
 
     _definition.id                '_diffrn_scan_axis.angle_start'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The starting position for the specified axis in degrees.
 ;
@@ -10499,7 +10519,7 @@ save_
 save_diffrn_scan_axis.axis_id
 
     _definition.id                '_diffrn_scan_axis.axis_id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of this data item is the identifier of one of
               the axes for the scan for which settings are being specified.
@@ -10525,7 +10545,7 @@ save_
 save_diffrn_scan_axis.diffrn_id
 
     _definition.id                '_diffrn_scan_axis.diffrn_id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             This data item is a pointer to '_diffrn.id' in
               the DIFFRN category.
@@ -10544,7 +10564,7 @@ save_
 save_diffrn_scan_axis.displacement_increment
 
     _definition.id                '_diffrn_scan_axis.displacement_increment'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The increment for each step for the specified axis
               in millimetres.  In general, this will agree with
@@ -10577,7 +10597,7 @@ save_
 save_diffrn_scan_axis.displacement_range
 
     _definition.id                '_diffrn_scan_axis.displacement_range'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The range from the starting position for the specified axis
               in millimetres.
@@ -10599,7 +10619,7 @@ save_
 save_diffrn_scan_axis.displacement_rstrt_incr
 
     _definition.id                '_diffrn_scan_axis.displacement_rstrt_incr'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The increment for each step for the specified axis
               in millimetres.  In general, this will agree with
@@ -10635,7 +10655,7 @@ save_
 save_diffrn_scan_axis.displacement_start
 
     _definition.id                '_diffrn_scan_axis.displacement_start'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The starting position for the specified axis in millimetres.
 ;
@@ -10656,7 +10676,7 @@ save_
 save_diffrn_scan_axis.reference_angle
 
     _definition.id                '_diffrn_scan_axis.reference_angle'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The setting of the specified axis in degrees
               against which measurements of the reference beam centre
@@ -10690,7 +10710,7 @@ save_
 save_diffrn_scan_axis.reference_displacement
 
     _definition.id                '_diffrn_scan_axis.reference_displacement'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The setting of the specified axis in millimetres
               against which measurements of the reference beam centre
@@ -10722,7 +10742,7 @@ save_
 save_diffrn_scan_axis.scan_id
 
     _definition.id                '_diffrn_scan_axis.scan_id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of this data item is the identifier of the
               scan for which axis settings are being specified.
@@ -10748,7 +10768,7 @@ save_
 save_diffrn_scan_axis.variant
 
     _definition.id                '_diffrn_scan_axis.variant'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _diffrn_scan_axis.variant gives the variant
               to which the given DIFFRN_SCAN_AXIS row is related.
@@ -10777,7 +10797,7 @@ save_DIFFRN_SCAN_COLLECTION
     _definition.id                DIFFRN_SCAN_COLLECTION
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;
     Data items in the DIFFRN_SCAN_COLLECTION category describe
@@ -10828,7 +10848,7 @@ save_
 save_diffrn_scan_collection.details
 
     _definition.id                '_diffrn_scan_collection.details'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _diffrn_scan_collection.details should give a
               description of special aspects of each collection strategy.
@@ -10847,7 +10867,7 @@ save_
 save_diffrn_scan_collection.diffrn_id
 
     _definition.id                '_diffrn_scan_collection.diffrn_id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             This data item is a pointer to '_diffrn.id' in
               the DIFFRN category.
@@ -10867,7 +10887,7 @@ save_
 save_diffrn_scan_collection.scan_id
 
     _definition.id                '_diffrn_scan_collection.scan_id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _diffrn_scan_collection.scan_id identifies the scan
               containing this frame.
@@ -10891,7 +10911,7 @@ save_
 save_diffrn_scan_collection.translation_width
 
     _definition.id                '_diffrn_scan_collection.translation_width'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _diffrn_scan_collection.translation_width
               gives the average single step translation in micrometres
@@ -10915,7 +10935,7 @@ save_
 save_diffrn_scan_collection.type
 
     _definition.id                '_diffrn_scan_collection.type'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _diffrn_scan_collection.type identifies
               the strategy used in this scan, e.g. `rotation', 'raster',
@@ -10938,7 +10958,7 @@ save_
 save_diffrn_scan_collection.variant
 
     _definition.id                '_diffrn_scan_collection.variant'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _diffrn_scan_collection.variant gives the variant
               to which the given DIFFRN_SCAN_COLLECTION row is related.
@@ -10967,7 +10987,7 @@ save_DIFFRN_SCAN_FRAME
     _definition.id                DIFFRN_SCAN_FRAME
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;
     Data items in the DIFFRN_SCAN_FRAME category describe
@@ -11020,7 +11040,7 @@ save_
 save_diffrn_scan_frame.date
 
     _definition.id                '_diffrn_scan_frame.date'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The date and time of the start of the frame being scanned.
 ;
@@ -11038,7 +11058,7 @@ save_
 save_diffrn_scan_frame.diffrn_id
 
     _definition.id                '_diffrn_scan_frame.diffrn_id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             This data item is a pointer to '_diffrn.id' in
               the DIFFRN category.
@@ -11058,7 +11078,7 @@ save_
 save_diffrn_scan_frame.frame_id
 
     _definition.id                '_diffrn_scan_frame.frame_id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of this data item is the identifier of the
               frame being examined.
@@ -11081,7 +11101,7 @@ save_
 save_diffrn_scan_frame.frame_number
 
     _definition.id                '_diffrn_scan_frame.frame_number'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of this data item is the number of the frame
               within the scan, starting with 1.  It is not necessarily
@@ -11105,7 +11125,7 @@ save_
 save_diffrn_scan_frame.integration_time
 
     _definition.id                '_diffrn_scan_frame.integration_time'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The time in seconds to integrate this step of the scan.
               This should be the precise time of integration of each
@@ -11129,7 +11149,7 @@ save_
 save_diffrn_scan_frame.polarizn_stokes_i
 
     _definition.id                '_diffrn_scan_frame.polarizn_Stokes_I'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The quantity Ip+In+Inp, where Ip is the intensity (amplitude
               squared) of the electric vector in the plane of polarization,
@@ -11175,7 +11195,7 @@ save_
 save_diffrn_scan_frame.polarizn_stokes_i_esd
 
     _definition.id                '_diffrn_scan_frame.polarizn_Stokes_I_esd'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The standard uncertainty (estimated standard deviation, e.s.d.)
               of _diffrn_scan_frame.polarizn_Stokes_I,
@@ -11202,7 +11222,7 @@ save_
 save_diffrn_scan_frame.polarizn_stokes_q
 
     _definition.id                '_diffrn_scan_frame.polarizn_Stokes_Q'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The quantity (Ip-In)*cos(2*theta), where Ip is the intensity
               (amplitude squared) of the electric vector in the plane of
@@ -11245,7 +11265,7 @@ save_
 save_diffrn_scan_frame.polarizn_stokes_q_esd
 
     _definition.id                '_diffrn_scan_frame.polarizn_Stokes_Q_esd'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The standard uncertainty (estimated standard deviation, e.s.d.)
               of _diffrn_scan_frame.polarizn_Stokes_Q,
@@ -11274,7 +11294,7 @@ save_
 save_diffrn_scan_frame.polarizn_stokes_u
 
     _definition.id                '_diffrn_scan_frame.polarizn_Stokes_U'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The quantity (Ip-In)*sin(2*theta), where Ip is the intensity
               (amplitude squared) of the electric vector in the plane of
@@ -11317,7 +11337,7 @@ save_
 save_diffrn_scan_frame.polarizn_stokes_u_esd
 
     _definition.id                '_diffrn_scan_frame.polarizn_Stokes_U_esd'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The standard uncertainty (estimated standard deviation, e.s.d.)
               of _diffrn_scan_frame.polarizn_Stokes_U,
@@ -11346,7 +11366,7 @@ save_
 save_diffrn_scan_frame.polarizn_stokes_v
 
     _definition.id                '_diffrn_scan_frame.polarizn_Stokes_V'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The quantity +/-2*sqrt(IpIn), with a + sign for right-handed
               circular polarization, where Ip is the intensity
@@ -11390,7 +11410,7 @@ save_
 save_diffrn_scan_frame.polarizn_stokes_v_esd
 
     _definition.id                '_diffrn_scan_frame.polarizn_Stokes_V_esd'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The standard uncertainty (estimated standard deviation, e.s.d.)
               of _diffrn_scan_frame.polarizn_Stokes_V,
@@ -11420,7 +11440,7 @@ save_
 save_diffrn_scan_frame.scan_id
 
     _definition.id                '_diffrn_scan_frame.scan_id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _diffrn_scan_frame.scan_id identifies the scan
               containing this frame.
@@ -11443,7 +11463,7 @@ save_
 save_diffrn_scan_frame.time_period
 
     _definition.id                '_diffrn_scan_frame.time_period'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The time in seconds between the start of this frame and the
               start of the next frame, if any.  If there is no next frame,
@@ -11465,7 +11485,7 @@ save_
 save_diffrn_scan_frame.time_rstrt_incr
 
     _definition.id                '_diffrn_scan_frame.time_rstrt_incr'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The time in seconds between the end of integration of this step of the scan
               and the start of integration of the next step.
@@ -11498,7 +11518,7 @@ save_
 save_diffrn_scan_frame.variant
 
     _definition.id                '_diffrn_scan_frame.variant'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _diffrn_scan_frame.variant gives the variant
               to which the given DIFFRN_SCAN_FRAME row is related.
@@ -11527,7 +11547,7 @@ save_DIFFRN_SCAN_FRAME_AXIS
     _definition.id                DIFFRN_SCAN_FRAME_AXIS
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;
     Data items in the DIFFRN_SCAN_FRAME_AXIS category describe the
@@ -11599,7 +11619,7 @@ save_
 save_diffrn_scan_frame_axis.angle
 
     _definition.id                '_diffrn_scan_frame_axis.angle'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The setting of the specified axis in degrees for this frame.
               This is the setting at the start of the integration time.
@@ -11621,7 +11641,7 @@ save_
 save_diffrn_scan_frame_axis.angle_increment
 
     _definition.id                '_diffrn_scan_frame_axis.angle_increment'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The increment for this frame for the angular setting of
               the specified axis in degrees.  The sum of the values
@@ -11647,7 +11667,7 @@ save_
 save_diffrn_scan_frame_axis.angle_rstrt_incr
 
     _definition.id                '_diffrn_scan_frame_axis.angle_rstrt_incr'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The increment after this frame for the angular setting of
               the specified axis in degrees.  The sum of the values
@@ -11675,7 +11695,7 @@ save_
 save_diffrn_scan_frame_axis.axis_id
 
     _definition.id                '_diffrn_scan_frame_axis.axis_id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of this data item is the identifier of one of
               the axes for the frame for which settings are being specified.
@@ -11701,7 +11721,7 @@ save_
 save_diffrn_scan_frame_axis.diffrn_id
 
     _definition.id                '_diffrn_scan_frame_axis.diffrn_id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             This data item is a pointer to '_diffrn.id' in
               the DIFFRN category.
@@ -11721,7 +11741,7 @@ save_
 save_diffrn_scan_frame_axis.displacement
 
     _definition.id                '_diffrn_scan_frame_axis.displacement'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The setting of the specified axis in millimetres for this
               frame.  This is the setting at the start of the integration
@@ -11745,7 +11765,7 @@ save_diffrn_scan_frame_axis.displacement_increment
 
     _definition.id
         '_diffrn_scan_frame_axis.displacement_increment'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The increment for this frame for the displacement setting of
               the specified axis in millimetres.  The sum of the values
@@ -11772,7 +11792,7 @@ save_diffrn_scan_frame_axis.displacement_rstrt_incr
 
     _definition.id
         '_diffrn_scan_frame_axis.displacement_rstrt_incr'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The increment for this frame for the displacement setting of
               the specified axis in millimetres.  The sum of the values
@@ -11800,7 +11820,7 @@ save_
 save_diffrn_scan_frame_axis.frame_id
 
     _definition.id                '_diffrn_scan_frame_axis.frame_id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of this data item is the identifier of the
               frame for which axis settings are being specified.
@@ -11826,7 +11846,7 @@ save_
 save_diffrn_scan_frame_axis.reference_angle
 
     _definition.id                '_diffrn_scan_frame_axis.reference_angle'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The setting of the specified axis in degrees
               against which measurements of the reference beam centre
@@ -11856,7 +11876,7 @@ save_diffrn_scan_frame_axis.reference_displacement
 
     _definition.id
         '_diffrn_scan_frame_axis.reference_displacement'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The setting of the specified axis in millimetres for this
               frame against which measurements of the reference beam centre
@@ -11885,7 +11905,7 @@ save_
 save_diffrn_scan_frame_axis.variant
 
     _definition.id                '_diffrn_scan_frame_axis.variant'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _diffrn_scan_frame_axis.variant gives the variant
               to which the given DIFFRN_SCAN_FRAME_AXIS row is related.
@@ -11914,7 +11934,7 @@ save_DIFFRN_SCAN_FRAME_MONITOR
     _definition.id                DIFFRN_SCAN_FRAME_MONITOR
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;
     Data items in the DIFFRN_SCAN_FRAME_MONITOR category record
@@ -12106,7 +12126,7 @@ save_
 save_diffrn_scan_frame_monitor.detector_id
 
     _definition.id                '_diffrn_scan_frame_monitor.detector_id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             This data item is a pointer to _diffrn_detector.id in
               the DIFFRN_DETECTOR category.
@@ -12127,7 +12147,7 @@ save_
 save_diffrn_scan_frame_monitor.diffrn_id
 
     _definition.id                '_diffrn_scan_frame_monitor.diffrn_id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             This data item is a pointer to '_diffrn.id' in
               the DIFFRN category.
@@ -12147,7 +12167,7 @@ save_
 save_diffrn_scan_frame_monitor.frame_id
 
     _definition.id                '_diffrn_scan_frame_monitor.frame_id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             This item is a pointer to _diffrn_data_frame.id
               in the DIFFRN_DATA_FRAME category.
@@ -12167,7 +12187,7 @@ save_
 save_diffrn_scan_frame_monitor.id
 
     _definition.id                '_diffrn_scan_frame_monitor.id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             This item is an integer identifier which, along with
               _diffrn_scan_frame_monitor.detector_id,
@@ -12195,7 +12215,7 @@ save_
 save_diffrn_scan_frame_monitor.integration_time
 
     _definition.id                '_diffrn_scan_frame_monitor.integration_time'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The precise time for integration of the monitor value given in
               _diffrn_scan_frame_monitor.monitor_value
@@ -12220,8 +12240,11 @@ save_diffrn_scan_frame_monitor.monitor_value
     _alias.definition_id          '_diffrn_scan_frame_monitor.value'
     _alias.deprecation_date       .
     _alias.ddl2_version           1.8.2
-    _alias.dictionary_uri         cif_img.dic
-    _definition.update            2025-09-18
+    _alias.dictionary_uri
+;
+    https://github.com/dials/cbflib/raw/refs/heads/main/doc/cif_img_1.8.2.dic
+;
+    _definition.update            2025-09-22
     _description.text
 ;             The value reported by the monitor detector should be given in
               _diffrn_scan_frame_monitor.monitor_value.
@@ -12249,7 +12272,7 @@ save_
 save_diffrn_scan_frame_monitor.scan_id
 
     _definition.id                '_diffrn_scan_frame_monitor.scan_id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             This item is a pointer to _diffrn_scan.id in
               the DIFFRN_SCAN category.
@@ -12268,7 +12291,7 @@ save_
 save_diffrn_scan_frame_monitor.variant
 
     _definition.id                '_diffrn_scan_frame_monitor.variant'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _diffrn_scan_frame_monitor.variant gives the variant
               to which the given DIFFRN_SCAN_FRAME_MONITOR row is related.
@@ -12297,7 +12320,7 @@ save_DIFFRN_SOURCE
     _definition.id                DIFFRN_SOURCE
     _definition.scope             Category
     _definition.class             Set
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;              Data items in the DIFFRN_SOURCE category record details of
                the source of radiation used in the diffraction experiment.
@@ -12315,7 +12338,7 @@ save_
 save_diffrn_source.diffrn_id
 
     _definition.id                '_diffrn_source.diffrn_id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;              This data item is a pointer to _diffrn.id in the DIFFRN
                category.
@@ -12336,7 +12359,7 @@ save_MAP
     _definition.id                MAP
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;
     Data items in the MAP category record
@@ -12387,7 +12410,7 @@ save_
 save_map.details
 
     _definition.id                '_map.details'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;              The value of _map.details should give a
                description of special aspects of each map.
@@ -12426,7 +12449,7 @@ save_
 save_map.diffrn_id
 
     _definition.id                '_map.diffrn_id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             This item is a pointer to _diffrn.id in the
               DIFFRN category.
@@ -12446,7 +12469,7 @@ save_
 save_map.entry_id
 
     _definition.id                '_map.entry_id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             This item is a pointer to _entry.id in the
               ENTRY category.
@@ -12465,7 +12488,7 @@ save_
 save_map.id
 
     _definition.id                '_map.id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _map.id must uniquely identify
               each map for the given '_diffrn.id' or entry.id.
@@ -12484,7 +12507,7 @@ save_
 save_map.variant
 
     _definition.id                '_map.variant'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _map.variant gives the variant
               to which the given map row is related.
@@ -12513,7 +12536,7 @@ save_MAP_SEGMENT
     _definition.id                MAP_SEGMENT
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;
     Data items in the MAP_SEGMENT category record
@@ -12566,7 +12589,7 @@ save_
 save_map_segment.array_id
 
     _definition.id                '_map_segment.array_id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _map_segment.array_id identifies the array 
               structure into which the map is organized.
@@ -12588,7 +12611,7 @@ save_
 save_map_segment.array_section_id
 
     _definition.id                '_map_segment.array_section_id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             This item is a pointer to _array_structure_list_section.id
               in the ARRAY_STRUCTURE_LIST_SECTION category.
@@ -12608,7 +12631,7 @@ save_
 save_map_segment.binary_id
 
     _definition.id                '_map_segment.binary_id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _map_segment.binary_id distinguishes the particular 
               set of data organized according to _map_segment.array_id in 
@@ -12632,7 +12655,7 @@ save_
 save_map_segment.details
 
     _definition.id                '_map_segment.details'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _map_segment.details should give a
               description of special aspects of each segment of a map.
@@ -12656,7 +12679,7 @@ save_
 save_map_segment.id
 
     _definition.id                '_map_segment.id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _map_segment.id must uniquely
               identify each segment of a map.
@@ -12676,7 +12699,7 @@ save_
 save_map_segment.map_id
 
     _definition.id                '_map_segment.map_id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             This item is a pointer to _map.id
               in the MAP category.
@@ -12695,7 +12718,7 @@ save_
 save_map_segment.mask_array_id
 
     _definition.id                '_map_segment.mask_array_id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _map_segment.mask_array_id, if given, describes
               the array structure into which the mask for the map is
@@ -12728,7 +12751,7 @@ save_
 save_map_segment.mask_array_section_id
 
     _definition.id                '_map_segment.mask_array_section_id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             This item is a pointer to _array_structure_list_section.id
               in the ARRAY_STRUCTURE_LIST_SECTION category.
@@ -12747,7 +12770,7 @@ save_
 save_map_segment.mask_binary_id
 
     _definition.id                '_map_segment.mask_binary_id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _map_segment.mask_binary_id identifies the 
               particular set of data organized according to 
@@ -12771,7 +12794,7 @@ save_
 save_map_segment.variant
 
     _definition.id                '_map_segment.variant'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _map_segment.variant gives the variant
               to which the given map segment is related.
@@ -12800,7 +12823,7 @@ save_VARIANT
     _definition.id                VARIANT
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;
     Data items in the VARIANT category record
@@ -12906,7 +12929,7 @@ save_
 save_variant.details
 
     _definition.id                '_variant.details'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             A description of special aspects of the variant.
 ;
@@ -12925,7 +12948,7 @@ save_
 save_variant.diffrn_id
 
     _definition.id                '_variant.diffrn_id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             This item is a pointer to _diffrn.id in the
               diffrn category.
@@ -12945,7 +12968,7 @@ save_
 save_variant.entry_id
 
     _definition.id                '_variant.entry_id'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             This item is a pointer to _entry.id in the
               entry category
@@ -12964,7 +12987,7 @@ save_
 save_variant.role
 
     _definition.id                '_variant.role'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _variant.role  specified a role
               for this variant.  Possible roles are null, 'preferred',
@@ -13011,7 +13034,7 @@ save_
 save_variant.timestamp
 
     _definition.id                '_variant.timestamp'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The date and time identifying a variant.  This is not 
               necessarily the precise time of the measurement or calculation
@@ -13032,7 +13055,7 @@ save_
 save_variant.variant
 
     _definition.id                '_variant.variant'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;             The value of _variant.variant must uniquely identify
               each variant for the given diffraction experiment and/or entry
@@ -13055,7 +13078,7 @@ save_
 save_variant.variant_of
 
     _definition.id                '_variant.variant_of'
-    _definition.update            2025-09-18
+    _definition.update            2025-09-22
     _description.text
 ;            The value of _variant.variant_of gives the variant
              from which this variant was derived.  If this value is not given,
@@ -13798,7 +13821,7 @@ save_
 ;
        Pick up minor type corrections from 1.8.9 dcitionary
 ;
-         1.8.9                    2025-09-18
+         1.8.9                    2025-09-22
 ;   Addition of missing diffrn.id pointers
 
     + Add _diffrn_detector_element.diffrn_id
@@ -13813,10 +13836,6 @@ save_
      (DDLm conversion) Specified Set categories ["diffrn_radiation", "diffrn_measurement", "diffrn_detector", "diffrn", "diffrn_source"]
 
      (DDLm conversion) Removed redundant aliases and definitions for aliased data names ["_diffrn_frame_data.binary_id", "_diffrn_frame_data.id", "_diffrn_scan_frame_monitor.value", "_diffrn_frame_data.details", "_diffrn_measurement_axis.id", "_diffrn_frame_data.array_id", "_diffrn_frame_data.detector_element_id", "_diffrn_detector_axis.id"]
-
-     (DDLm conversion) Removed DDL2-only categories
-
-     (DDLm conversion) Specified Set categories ["diffrn", "diffrn_detector", "diffrn_measurement", "diffrn_radiation", "diffrn_source"]
 
      (DDLm conversion) Removed DDL2-only categories
 
