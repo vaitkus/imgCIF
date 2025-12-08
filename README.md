@@ -1,3 +1,5 @@
+[![CIF dictionary check](https://github.com/COMCIFS/imgCIF/actions/workflows/main.yml/badge.svg)](https://github.com/COMCIFS/imgCIF/actions)
+
 # A CIF dictionary for raw image data
 
 The imgCIF dictionary provides 
