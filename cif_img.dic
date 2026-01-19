@@ -5,7 +5,7 @@ data_CIF_IMG
     _dictionary.title             CIF_IMG
     _dictionary.class             Instance
     _dictionary.version           1.8.9
-    _dictionary.date              2025-09-23
+    _dictionary.date              2026-01-19
     _dictionary.uri               https://github.com/COMCIFS/imgCIF/cif_img.dic
     _dictionary.ddl_conformance   3.14.0
     _dictionary.namespace         Ddlm
@@ -12107,7 +12107,7 @@ save_
 ;
        Pick up minor type corrections from 1.8.9 dcitionary
 ;
-         1.8.9                    2025-09-23
+         1.8.9                    2026-01-19
 ;   Addition of missing diffrn.id pointers
 
     + Add _diffrn_detector_element.diffrn_id
