@@ -5,11 +5,18 @@
 The imgCIF dictionary provides 
 data names for description of raw image data, usually from diffraction experiments. 
 Currently the main development of imgCIF takes place
-in the [cbflib repository](https://github.com/yayahjb/cbf_imgcif_dictionary).
+in the [wwPDB repository](https://github.com/wwpdb-dictionaries/cbf_imgcif_dictionary).
 
-This repository holds a DDLm version of the imgCIF dictionary found in the
-main branch of that repository in this repository's main branch. This DDLm
-version may be used as a data name reference.
+The present repository holds a DDLm version of the DDL2 imgCIF dictionary found in the
+main branch of that repository. The DDLm version here may be used as a data name reference
+for DDLm-based work.
+
+## Caveats
+
+Ideally, DDL2 and DDLm dictionaries can be used interchangeably as a reference when reading and writing data names (the data names themselves are identical). The following
+caveats to this ideal situation apply:
+
+(none at preset)
 
 ## Deriving the DDLm version from the DDL2 version
 
