@@ -29,7 +29,7 @@ julia ddl_to_ddl.jl -c multi_block_core.dic -i --short --strict -t CIF_IMG -o ci
 
 using the `ddl_to_ddl.jl` tool and associated translation dictionaries from the
 `https://github.com/jamesrhester/ddl_to_ddl` repository and the `multi_block_core.dic`
-found in the [COMCIFS `MultiBlock_Dictionary` repository](https://github.com/COMCIFS/cif_multiblock).
+found in the [COMCIFS Multi-Block dictionary repository](https://github.com/COMCIFS/cif_multiblock).
 
 In particular, the translation options above perform the following:
 
