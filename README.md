@@ -49,16 +49,17 @@ The DDLm version was automatically obtained from the DDL2 version by running the
 commands:
 
 ```
-julia ddl_to_ddl.jl -c multi_block_core.dic -i --short --strict -t CIF_IMG -o cif_img.dic cif_img_1.8.9.1.dic ddl2
+julia ddl_to_ddl.jl -c multi_block_core.dic -i --short --strict -t CIF_IMG -o cif_img.dic cbf_imgcif_dictionary/ddl2/cif_img.dic ddl2
 ```
 
 using the `ddl_to_ddl.jl` and `remove_category.jl` tools and associated DDL
 translation dictionaries from the `https://github.com/jamesrhester/ddl_to_ddl`
 repository and the `multi_block_core.dic` found in the [COMCIFS Multi-Block
-dictionary repository](https://github.com/COMCIFS/cif_multiblock).  A [local
+dictionary repository](https://github.com/COMCIFS/cif_multiblock).  A [COMCIFS
 fork of the DDL2 imgCIF
 dictionary](https://github.com/COMCIFS/cbf_imgcif_dictionary) was used as the
-DDL2 dictionary source.
+DDL2 dictionary source.  Currently this fork contains some corrections for
+minor errors in the original.
 
 The `ddl_to_ddl.jl` command above does the following:
 
@@ -106,5 +107,5 @@ separate data blocks.
 `ddl2` version can be recovered by running
 
 ```
-julia ddl_to_ddl.jl -o cif_img_ddl2.dic cif_img_expanded.dic ddlm
+julia ddl_to_ddl.jl -o cif_img_ddl2.dic expanded/cif_img_expanded.dic ddlm
 ```
