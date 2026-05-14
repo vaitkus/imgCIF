@@ -65,7 +65,7 @@ save_ARRAY_DATA
      For full processing and archiving, most of the tags in this
      dictionary will need to be populated.
 ;
-    _name.category_id             CIF_IMG_HEAD
+    _name.category_id             VARIANT_HEAD
     _name.object_id               array_data
 
     loop_
@@ -243,7 +243,7 @@ save_ARRAY_DATA_EXTERNAL_DATA
      record the location and essential characteristics of arrays of data for
     use in  ARRAY_DATA that are found external to the cif_img file.
 ;
-    _name.category_id             CIF_IMG_HEAD
+    _name.category_id             VARIANT_HEAD
     _name.object_id               array_data_external_data
     _category_key.name            '_array_data_external_data.id'
 
@@ -286,7 +286,7 @@ save_ARRAY_ELEMENT_SIZE
     Data items in the ARRAY_ELEMENT_SIZE category record the physical
      size of array elements along each array dimension.
 ;
-    _name.category_id             CIF_IMG_HEAD
+    _name.category_id             VARIANT_HEAD
     _name.object_id               array_element_size
 
     loop_
@@ -360,7 +360,7 @@ save_ARRAY_INTENSITIES
      value of _array_intensities.linearity will be 'raw'
      and _array_intensities.gain will not be used.
 ;
-    _name.category_id             CIF_IMG_HEAD
+    _name.category_id             VARIANT_HEAD
     _name.object_id               array_intensities
 
     loop_
@@ -426,7 +426,7 @@ save_ARRAY_STRUCTURE
     Data items in the ARRAY_STRUCTURE category record the organization and
      encoding of array data that may be stored in the ARRAY_DATA category.
 ;
-    _name.category_id             CIF_IMG_HEAD
+    _name.category_id             VARIANT_HEAD
     _name.object_id               array_structure
 
     loop_
@@ -486,7 +486,7 @@ save_ARRAY_STRUCTURE_LIST
 
      The relationship to physical axes may be given.
 ;
-    _name.category_id             CIF_IMG_HEAD
+    _name.category_id             VARIANT_HEAD
     _name.object_id               array_structure_list
 
     loop_
@@ -568,7 +568,7 @@ save_ARRAY_STRUCTURE_LIST_AXIS
      Axes may be specified either for an entire array or for just a section
      of an array.
 ;
-    _name.category_id             CIF_IMG_HEAD
+    _name.category_id             VARIANT_HEAD
     _name.object_id               array_structure_list_axis
 
     loop_
@@ -635,7 +635,7 @@ save_ARRAY_STRUCTURE_LIST_SECTION
     _array_structure_list_section.array_id and not by the ordering implied
     by the stride.
 ;
-    _name.category_id             CIF_IMG_HEAD
+    _name.category_id             VARIANT_HEAD
     _name.object_id               array_structure_list_section
 
     loop_
@@ -1058,7 +1058,7 @@ save_AXIS
      Entry Format Description. Report, February 1992. Brookhaven, NY, USA:
      Brookhaven National Laboratory.
 ;
-    _name.category_id             CIF_IMG_HEAD
+    _name.category_id             VARIANT_HEAD
     _name.object_id               axis
 
     loop_
@@ -2529,7 +2529,7 @@ save_DIFFRN_DATA_FRAME
               The items from the old category are provided
               as aliases but should not be used for new work.
 ;
-    _name.category_id             CIF_IMG_HEAD
+    _name.category_id             VARIANT_HEAD
     _name.object_id               diffrn_data_frame
 
     loop_
@@ -2602,7 +2602,7 @@ save_DIFFRN_DETECTOR
      detector used to measure the scattered radiation, including
      any analyser and post-sample collimation.
 ;
-    _name.category_id             CIF_IMG_HEAD
+    _name.category_id             VARIANT_HEAD
     _name.object_id               diffrn_detector
 
     loop_
@@ -2662,7 +2662,7 @@ save_DIFFRN_DETECTOR_AXIS
     Data items in the DIFFRN_DETECTOR_AXIS category associate
      axes with detectors.
 ;
-    _name.category_id             CIF_IMG_HEAD
+    _name.category_id             VARIANT_HEAD
     _name.object_id               diffrn_detector_axis
 
     loop_
@@ -2716,7 +2716,7 @@ save_DIFFRN_DETECTOR_ELEMENT
      is preferable to simply providing the centre of the
      detector element.
 ;
-    _name.category_id             CIF_IMG_HEAD
+    _name.category_id             VARIANT_HEAD
     _name.object_id               diffrn_detector_element
 
     loop_
@@ -2797,7 +2797,7 @@ save_DIFFRN_MEASUREMENT
      during data measurement and the manner in which the
      diffraction data were measured.
 ;
-    _name.category_id             CIF_IMG_HEAD
+    _name.category_id             VARIANT_HEAD
     _name.object_id               diffrn_measurement
 
     loop_
@@ -2874,7 +2874,7 @@ save_DIFFRN_MEASUREMENT_AXIS
     Data items in the DIFFRN_MEASUREMENT_AXIS category associate
      axes with goniometers.
 ;
-    _name.category_id             CIF_IMG_HEAD
+    _name.category_id             VARIANT_HEAD
     _name.object_id               diffrn_measurement_axis
 
     loop_
@@ -2927,7 +2927,7 @@ save_DIFFRN_RADIATION
               Post-sample treatment of the beam is described by data
               items in the DIFFRN_DETECTOR category.
 ;
-    _name.category_id             CIF_IMG_HEAD
+    _name.category_id             VARIANT_HEAD
     _name.object_id               diffrn_radiation
 
     loop_
@@ -3011,7 +3011,7 @@ save_DIFFRN_REFLN
      data set identified by _diffrn_reflns.diffrn_id and
      _diffrn_refln.frame_id
 ;
-    _name.category_id             CIF_IMG_HEAD
+    _name.category_id             VARIANT_HEAD
     _name.object_id               diffrn_refln
 
     loop_
@@ -3060,7 +3060,7 @@ save_DIFFRN_SCAN
     Data items in the DIFFRN_SCAN category describe the parameters of one
      or more scans, relating axis positions to frames.
 ;
-    _name.category_id             CIF_IMG_HEAD
+    _name.category_id             VARIANT_HEAD
     _name.object_id               diffrn_scan
 
     loop_
@@ -3695,7 +3695,7 @@ save_DIFFRN_SCAN_AXIS
      axes for particular scans.  Unspecified axes are assumed to be at
      their zero points.
 ;
-    _name.category_id             CIF_IMG_HEAD
+    _name.category_id             VARIANT_HEAD
     _name.object_id               diffrn_scan_axis
 
     loop_
@@ -3746,7 +3746,7 @@ save_DIFFRN_SCAN_COLLECTION
      This category is a preliminary version being developed as
      synchrotron and XFEL collection strategies evolve.
 ;
-    _name.category_id             CIF_IMG_HEAD
+    _name.category_id             VARIANT_HEAD
     _name.object_id               diffrn_scan_collection
 
     loop_
@@ -3807,7 +3807,7 @@ save_DIFFRN_SCAN_FRAME
     Data items in the DIFFRN_SCAN_FRAME category describe
      the relationships of particular frames to scans.
 ;
-    _name.category_id             CIF_IMG_HEAD
+    _name.category_id             VARIANT_HEAD
     _name.object_id               diffrn_scan_frame
 
     loop_
@@ -3859,7 +3859,7 @@ save_DIFFRN_SCAN_FRAME_AXIS
      those values should be given explicitly in this category and not
      simply inferred from values in DIFFRN_SCAN_AXIS.
 ;
-    _name.category_id             CIF_IMG_HEAD
+    _name.category_id             VARIANT_HEAD
     _name.object_id               diffrn_scan_frame_axis
 
     loop_
@@ -3929,7 +3929,7 @@ save_DIFFRN_SCAN_FRAME_MONITOR
      _diffrn_scan_frame_monitor.id may be
      omitted.
 ;
-    _name.category_id             CIF_IMG_HEAD
+    _name.category_id             VARIANT_HEAD
     _name.object_id               diffrn_scan_frame_monitor
 
     loop_
@@ -4119,7 +4119,7 @@ save_MAP
 
      Examples are given in the MAP_SEGMENT category.
 ;
-    _name.category_id             CIF_IMG_HEAD
+    _name.category_id             VARIANT_HEAD
     _name.object_id               map
 
     loop_
@@ -4192,7 +4192,7 @@ save_MAP_SEGMENT
     Data items in the MAP_SEGMENT category record
      the details about each segment (section or brick) of a map.
 ;
-    _name.category_id             CIF_IMG_HEAD
+    _name.category_id             VARIANT_HEAD
     _name.object_id               map_segment
 
     loop_
@@ -4311,7 +4311,7 @@ save_VARIANT
      be combined, _variant.diffrn_id and/or _variant.entry_id may
      be used.
 ;
-    _name.category_id             variant_head
+    _name.category_id             VARIANT_HEAD
     _name.object_id               variant
     _category_key.name            '_variant.variant'
     _description_example.case
